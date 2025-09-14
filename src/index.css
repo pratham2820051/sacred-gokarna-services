@@ -127,6 +127,24 @@
   h1, h2, h3, h4, h5, h6 {
     font-family: 'Playfair Display', serif;
   }
+
+  /* Language-specific font classes */
+  [lang="kn"] {
+    font-family: 'Noto Sans Kannada', sans-serif;
+  }
+
+  [lang="te"] {
+    font-family: 'Noto Sans Telugu', sans-serif;
+  }
+
+  [lang="en"] {
+    font-family: 'Inter', sans-serif;
+  }
+
+  /* Dynamic language font application */
+  .font-current-language {
+    font-family: var(--font-family-current, 'Inter', sans-serif);
+  }
 }
 
 @layer components {

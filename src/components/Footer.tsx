@@ -1,7 +1,9 @@
 import { Link } from "react-router-dom";
 import { Phone, Mail, MapPin } from "lucide-react";
+import { useTranslation } from "react-i18next";
 
 const Footer = () => {
+  const { t } = useTranslation();
   return (
     <footer className="bg-gradient-divine text-white">
       <div className="container mx-auto px-4 py-12">
@@ -11,56 +13,55 @@ const Footer = () => {
             <div className="flex items-center space-x-2">
               <div className="text-2xl">🕉️</div>
               <h3 className="text-lg font-playfair font-bold">
-                Gokarna Pooja Services
+                {t("header.title")}
               </h3>
             </div>
             <p className="text-white/80 text-sm leading-relaxed">
-              Authentic temple rituals and sacred ceremonies performed by 
-              experienced priests in the divine atmosphere of Gokarna.
+              {t("footer.description")}
             </p>
           </div>
 
           {/* Quick Links */}
           <div className="space-y-4">
-            <h4 className="text-lg font-playfair font-semibold">Quick Links</h4>
+            <h4 className="text-lg font-playfair font-semibold">{t("footer.quickLinks")}</h4>
             <nav className="flex flex-col space-y-2">
               <Link to="/about" className="text-white/80 hover:text-white transition-colors text-sm">
-                About Us
+                {t("header.about")}
               </Link>
               <Link to="/poojas" className="text-white/80 hover:text-white transition-colors text-sm">
-                Poojas & Sevas
+                {t("header.poojas")}
               </Link>
               <Link to="/how-to-reach" className="text-white/80 hover:text-white transition-colors text-sm">
-                How to Reach
+                {t("header.howToReach")}
               </Link>
               <Link to="/blogs" className="text-white/80 hover:text-white transition-colors text-sm">
-                Blogs
+                {t("header.blogs")}
               </Link>
             </nav>
           </div>
 
           {/* Services */}
           <div className="space-y-4">
-            <h4 className="text-lg font-playfair font-semibold">Popular Services</h4>
+            <h4 className="text-lg font-playfair font-semibold">{t("footer.services")}</h4>
             <nav className="flex flex-col space-y-2">
               <Link to="/poojas" className="text-white/80 hover:text-white transition-colors text-sm">
-                Rudrabhisheka
+                {t("footer.rudrabhisheka")}
               </Link>
               <Link to="/poojas" className="text-white/80 hover:text-white transition-colors text-sm">
-                Narayan Bali
+                {t("footer.narayanBali")}
               </Link>
               <Link to="/poojas" className="text-white/80 hover:text-white transition-colors text-sm">
-                Tripindi Shraddha
+                {t("footer.tripindiShraddha")}
               </Link>
               <Link to="/poojas" className="text-white/80 hover:text-white transition-colors text-sm">
-                Mahamrityunjaya Jap
+                {t("footer.mahamrityunjaya")}
               </Link>
             </nav>
           </div>
 
           {/* Contact Info */}
           <div className="space-y-4">
-            <h4 className="text-lg font-playfair font-semibold">Contact Info</h4>
+            <h4 className="text-lg font-playfair font-semibold">{t("footer.contact")}</h4>
             <div className="space-y-3">
               <a 
                 href="tel:+919876543210" 
@@ -89,8 +90,7 @@ const Footer = () => {
 
         <div className="border-t border-white/20 mt-8 pt-8 text-center">
           <p className="text-white/60 text-sm">
-            © 2024 Gokarna Pooja Services. All rights reserved. | 
-            Blessed by the divine grace of Lord Shiva
+            {t("footer.copyright")}
           </p>
         </div>
       </div>

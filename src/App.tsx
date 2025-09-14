@@ -4,6 +4,8 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { useState, useEffect } from "react";
+import { useTranslation } from "react-i18next";
+import "./i18n";
 import LoadingScreen from "./components/LoadingScreen";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
@@ -20,6 +22,7 @@ const queryClient = new QueryClient();
 
 const App = () => {
   const [loading, setLoading] = useState(true);
+  const { i18n } = useTranslation();
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -28,6 +31,15 @@ const App = () => {
 
     return () => clearTimeout(timer);
   }, []);
+
+  // Set document language attribute for proper font rendering
+  useEffect(() => {
+    document.documentElement.lang = i18n.language;
+    const fontFamily = i18n.language === 'kn' ? "'Noto Sans Kannada', sans-serif" :
+                      i18n.language === 'te' ? "'Noto Sans Telugu', sans-serif" :
+                      "'Inter', sans-serif";
+    document.documentElement.style.setProperty('--font-family-current', fontFamily);
+  }, [i18n.language]);
 
   if (loading) {
     return <LoadingScreen />;

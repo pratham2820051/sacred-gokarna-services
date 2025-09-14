@@ -2,18 +2,21 @@ import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { useTranslation } from "react-i18next";
+import LanguageSwitcher from "./LanguageSwitcher";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const location = useLocation();
+  const { t } = useTranslation();
 
   const navigation = [
-    { name: "Home", href: "/" },
-    { name: "About Us", href: "/about" },
-    { name: "Poojas & Sevas", href: "/poojas" },
-    { name: "How to Reach", href: "/how-to-reach" },
-    { name: "Blogs", href: "/blogs" },
-    { name: "Contact", href: "/contact" },
+    { name: t("header.home"), href: "/" },
+    { name: t("header.about"), href: "/about" },
+    { name: t("header.poojas"), href: "/poojas" },
+    { name: t("header.howToReach"), href: "/how-to-reach" },
+    { name: t("header.blogs"), href: "/blogs" },
+    { name: t("header.contact"), href: "/contact" },
   ];
 
   const isActive = (href: string) => location.pathname === href;
@@ -27,9 +30,9 @@ const Header = () => {
             <div className="text-3xl">🕉️</div>
             <div>
               <h1 className="text-xl font-playfair font-bold text-primary">
-                Gokarna Pooja Services
+                {t("header.title")}
               </h1>
-              <p className="text-xs text-muted-foreground">Authentic Temple Rituals</p>
+              <p className="text-xs text-muted-foreground">{t("header.subtitle")}</p>
             </div>
           </Link>
 
@@ -48,12 +51,13 @@ const Header = () => {
             ))}
           </nav>
 
-          {/* CTA Button */}
+          {/* CTA Button & Language Switcher */}
           <div className="hidden lg:flex items-center space-x-4">
+            <LanguageSwitcher />
             <Button asChild className="btn-divine">
               <Link to="/contact">
                 <Phone className="w-4 h-4 mr-2" />
-                Book Now
+                {t("header.bookNow")}
               </Link>
             </Button>
           </div>
@@ -83,12 +87,15 @@ const Header = () => {
                   {item.name}
                 </Link>
               ))}
-              <Button asChild className="btn-divine mt-4">
-                <Link to="/contact" onClick={() => setIsMenuOpen(false)}>
-                  <Phone className="w-4 h-4 mr-2" />
-                  Book Now
-                </Link>
-              </Button>
+              <div className="mt-4 space-y-3">
+                <LanguageSwitcher />
+                <Button asChild className="btn-divine w-full">
+                  <Link to="/contact" onClick={() => setIsMenuOpen(false)}>
+                    <Phone className="w-4 h-4 mr-2" />
+                    {t("header.bookNow")}
+                  </Link>
+                </Button>
+              </div>
             </nav>
           </div>
         )}

@@ -1,0 +1,63 @@
+{
+  "header": {
+    "title": "Gokarna Pooja Services",
+    "subtitle": "Authentic Temple Rituals",
+    "home": "Home",
+    "about": "About Us",
+    "poojas": "Poojas & Sevas",
+    "howToReach": "How to Reach",
+    "blogs": "Blogs",
+    "contact": "Contact",
+    "bookNow": "Book Now"
+  },
+  "home": {
+    "hero": {
+      "title": "Book Authentic Gokarna Poojas Online",
+      "subtitle": "Experience divine blessings through traditional Vedic rituals performed by experienced priests in the sacred atmosphere of Gokarna",
+      "bookNow": "Book Sacred Ritual"
+    },
+    "quickLinks": {
+      "title": "Sacred Rituals & Ceremonies",
+      "subtitle": "Choose from our authentic Vedic ceremonies"
+    },
+    "whyChoose": {
+      "title": "Why Choose Our Services",
+      "authentic": {
+        "title": "Authentic Rituals",
+        "description": "Traditional Vedic ceremonies performed according to ancient scriptures"
+      },
+      "experienced": {
+        "title": "Experienced Priests",
+        "description": "Learned Sanskrit scholars with decades of ritual experience"
+      },
+      "sacred": {
+        "title": "Sacred Location",
+        "description": "Performed in the divine atmosphere of Gokarna temples"
+      },
+      "support": {
+        "title": "Complete Support",
+        "description": "Full assistance from booking to ritual completion"
+      }
+    },
+    "testimonials": {
+      "title": "Devotee Experiences"
+    },
+    "cta": {
+      "title": "Ready to Book Your Sacred Ritual?",
+      "subtitle": "Connect with us for personalized guidance and instant booking",
+      "whatsapp": "WhatsApp Now",
+      "call": "Call Now"
+    }
+  },
+  "footer": {
+    "description": "Authentic temple rituals and sacred ceremonies performed by experienced priests in the divine atmosphere of Gokarna.",
+    "quickLinks": "Quick Links",
+    "services": "Popular Services",
+    "contact": "Contact Info",
+    "copyright": "© 2024 Gokarna Pooja Services. All rights reserved. | Blessed by the divine grace of Lord Shiva",
+    "rudrabhisheka": "Rudrabhisheka",
+    "narayanBali": "Narayan Bali",
+    "tripindiShraddha": "Tripindi Shraddha",
+    "mahamrityunjaya": "Mahamrityunjaya Jap"
+  }
+}

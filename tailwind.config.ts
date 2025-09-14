@@ -16,6 +16,8 @@ export default {
       fontFamily: {
         'playfair': ['Playfair Display', 'serif'],
         'inter': ['Inter', 'sans-serif'],
+        'kannada': ['Noto Sans Kannada', 'sans-serif'],
+        'telugu': ['Noto Sans Telugu', 'sans-serif'],
       },
       colors: {
         border: "hsl(var(--border))",
