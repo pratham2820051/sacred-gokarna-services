@@ -1,60 +1,44 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Train, Bus, Car, Clock, MapPin, Info } from "lucide-react";
+import { useTranslation } from "react-i18next";
 
 const HowToReach = () => {
+  const { t } = useTranslation();
   const travelOptions = [
     {
       icon: Train,
-      title: "By Train",
-      description: "Most convenient way to reach Gokarna",
-      details: [
-        "Nearest railway station: Gokarna Road (GOK) - 10km from temple",
-        "Major trains: Matsyagandha Express, Konkan Kanya Express",
-        "Auto-rickshaws and buses available from station to temple",
-        "Journey time from Bangalore: 10-12 hours",
-        "Journey time from Mumbai: 8-10 hours"
-      ]
+      title: t('howToReach.travel.byTrain.title'),
+      description: t('howToReach.travel.byTrain.description'),
+      details: t('howToReach.travel.byTrain.details', { returnObjects: true })
     },
     {
       icon: Bus,
-      title: "By Bus", 
-      description: "Regular bus services from major cities",
-      details: [
-        "State transport buses available from Bangalore, Mumbai, Pune",
-        "Private bus operators: Airavat, VRL, SRS Travels",
-        "Overnight buses recommended for comfort",
-        "Journey time from Bangalore: 8-10 hours",
-        "Journey time from Goa: 3-4 hours"
-      ]
+      title: t('howToReach.travel.byBus.title'),
+      description: t('howToReach.travel.byBus.description'),
+      details: t('howToReach.travel.byBus.details', { returnObjects: true })
     },
     {
       icon: Car,
-      title: "By Car/Taxi",
-      description: "Drive through scenic Western Ghats",
-      details: [
-        "Well-connected by NH-66 (coastal highway)",
-        "Parking available near temple complex",
-        "Fuel stations available en route",
-        "Scenic drive through coastal Karnataka",
-        "GPS coordinates: 14.5426° N, 74.3188° E"
-      ]
+      title: t('howToReach.travel.byCar.title'),
+      description: t('howToReach.travel.byCar.description'),
+      details: t('howToReach.travel.byCar.details', { returnObjects: true })
     }
   ];
 
   const travelTips = [
     {
-      title: "Temple Timings",
-      description: "4:30 AM to 12:30 PM & 5:00 PM to 8:30 PM",
+      title: t('howToReach.travelInfo.templeTimings.title'),
+      description: t('howToReach.travelInfo.templeTimings.description'),
       icon: Clock
     },
     {
-      title: "Dress Code",
-      description: "Traditional attire preferred. Remove footwear before entering",
+      title: t('howToReach.travelInfo.dressCode.title'),
+      description: t('howToReach.travelInfo.dressCode.description'),
       icon: Info
     },
     {
-      title: "Best Time to Visit",
-      description: "October to March for pleasant weather",
+      title: t('howToReach.travelInfo.bestTime.title'),
+      description: t('howToReach.travelInfo.bestTime.description'),
       icon: MapPin
     }
   ];
@@ -66,10 +50,10 @@ const HowToReach = () => {
         <div className="container mx-auto px-4">
           <div className="text-center max-w-4xl mx-auto">
             <h1 className="text-5xl font-playfair font-bold text-primary mb-6">
-              How to Reach Gokarna
+              {t('howToReach.hero.title')}
             </h1>
             <p className="text-xl text-muted-foreground mb-8">
-              Your journey to spiritual bliss begins here. Find the best way to reach the sacred land of Gokarna
+              {t('howToReach.hero.subtitle')}
             </p>
           </div>
         </div>
@@ -80,10 +64,10 @@ const HowToReach = () => {
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-playfair font-bold text-primary mb-4">
-              Travel Options
+              {t('howToReach.travel.title')}
             </h2>
             <p className="text-muted-foreground max-w-2xl mx-auto">
-              Choose the most convenient way to reach the divine destination
+              {t('howToReach.travel.subtitle')}
             </p>
           </div>
           
@@ -127,10 +111,10 @@ const HowToReach = () => {
         <div className="container mx-auto px-4">
           <div className="text-center mb-8">
             <h2 className="text-4xl font-playfair font-bold text-primary mb-4">
-              Temple Location
+              {t('howToReach.location.title')}
             </h2>
             <p className="text-muted-foreground">
-              Mahabaleshwar Temple, Gokarna, Uttara Kannada, Karnataka
+              {t('howToReach.location.address')}
             </p>
           </div>
           
@@ -154,10 +138,10 @@ const HowToReach = () => {
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-playfair font-bold text-primary mb-4">
-              Important Travel Information
+              {t('howToReach.travelInfo.title')}
             </h2>
             <p className="text-muted-foreground max-w-2xl mx-auto">
-              Essential details to make your spiritual journey smooth and meaningful
+              {t('howToReach.travelInfo.subtitle')}
             </p>
           </div>
           
@@ -187,25 +171,25 @@ const HowToReach = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             <div>
               <h3 className="text-2xl font-playfair font-bold text-primary mb-6">
-                Accommodation Options
+                {t('howToReach.accommodation.title')}
               </h3>
               <div className="space-y-4">
                 <div className="bg-white p-4 rounded-lg shadow-sm">
-                  <h4 className="font-semibold mb-2">Temple Guest Houses</h4>
+                  <h4 className="font-semibold mb-2">{t('howToReach.accommodation.templeGuest.title')}</h4>
                   <p className="text-sm text-muted-foreground">
-                    Simple, clean rooms near the temple. Advance booking recommended during festivals.
+                    {t('howToReach.accommodation.templeGuest.description')}
                   </p>
                 </div>
                 <div className="bg-white p-4 rounded-lg shadow-sm">
-                  <h4 className="font-semibold mb-2">Beach Resorts</h4>
+                  <h4 className="font-semibold mb-2">{t('howToReach.accommodation.beachResorts.title')}</h4>
                   <p className="text-sm text-muted-foreground">
-                    Comfortable stays with sea views. Located 2-3 km from main temple.
+                    {t('howToReach.accommodation.beachResorts.description')}
                   </p>
                 </div>
                 <div className="bg-white p-4 rounded-lg shadow-sm">
-                  <h4 className="font-semibold mb-2">Budget Hotels</h4>
+                  <h4 className="font-semibold mb-2">{t('howToReach.accommodation.budgetHotels.title')}</h4>
                   <p className="text-sm text-muted-foreground">
-                    Affordable options in Gokarna town with basic amenities and local food.
+                    {t('howToReach.accommodation.budgetHotels.description')}
                   </p>
                 </div>
               </div>
@@ -213,25 +197,25 @@ const HowToReach = () => {
             
             <div>
               <h3 className="text-2xl font-playfair font-bold text-primary mb-6">
-                Nearby Sacred Places
+                {t('howToReach.nearbyPlaces.title')}
               </h3>
               <div className="space-y-4">
                 <div className="bg-white p-4 rounded-lg shadow-sm">
-                  <h4 className="font-semibold mb-2">Om Beach</h4>
+                  <h4 className="font-semibold mb-2">{t('howToReach.nearbyPlaces.omBeach.title')}</h4>
                   <p className="text-sm text-muted-foreground">
-                    Sacred beach shaped like Om symbol, perfect for meditation and spiritual reflection.
+                    {t('howToReach.nearbyPlaces.omBeach.description')}
                   </p>
                 </div>
                 <div className="bg-white p-4 rounded-lg shadow-sm">
-                  <h4 className="font-semibold mb-2">Kudle Beach</h4>
+                  <h4 className="font-semibold mb-2">{t('howToReach.nearbyPlaces.kudleBeach.title')}</h4>
                   <p className="text-sm text-muted-foreground">
-                    Peaceful beach for evening prayers and watching beautiful sunsets.
+                    {t('howToReach.nearbyPlaces.kudleBeach.description')}
                   </p>
                 </div>
                 <div className="bg-white p-4 rounded-lg shadow-sm">
-                  <h4 className="font-semibold mb-2">Mirjan Fort</h4>
+                  <h4 className="font-semibold mb-2">{t('howToReach.nearbyPlaces.mirjanFort.title')}</h4>
                   <p className="text-sm text-muted-foreground">
-                    Historic fort located 22 km away, perfect for a day trip after temple visit.
+                    {t('howToReach.nearbyPlaces.mirjanFort.description')}
                   </p>
                 </div>
               </div>
@@ -244,17 +228,17 @@ const HowToReach = () => {
       <section className="py-16 bg-gradient-divine text-white">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-4xl font-playfair font-bold mb-4">
-            Need Travel Assistance?
+            {t('howToReach.travelAssistance.title')}
           </h2>
           <p className="text-xl mb-8 text-white/90 max-w-2xl mx-auto">
-            Our team can help you plan your journey and arrange local transportation
+            {t('howToReach.travelAssistance.subtitle')}
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a 
               href="tel:+919876543210"
               className="inline-flex items-center justify-center px-8 py-4 bg-white text-primary rounded-full font-semibold hover:bg-white/90 transition-colors"
             >
-              Call: +91 98765 43210
+{t('howToReach.travelAssistance.call')}
             </a>
             <a 
               href="https://wa.me/919876543210"
@@ -262,7 +246,7 @@ const HowToReach = () => {
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center px-8 py-4 border-2 border-white text-white rounded-full font-semibold hover:bg-white hover:text-primary transition-colors"
             >
-              WhatsApp Us
+{t('howToReach.travelAssistance.whatsapp')}
             </a>
           </div>
         </div>

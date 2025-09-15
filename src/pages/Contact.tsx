@@ -6,9 +6,11 @@ import { Textarea } from "@/components/ui/textarea";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Phone, Mail, MapPin, MessageCircle, Clock, Send } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
+import { useTranslation } from "react-i18next";
 
 const Contact = () => {
   const { toast } = useToast();
+  const { t } = useTranslation();
   const [formData, setFormData] = useState({
     name: "",
     phone: "",
@@ -24,8 +26,8 @@ const Contact = () => {
     // Basic validation
     if (!formData.name || !formData.phone || !formData.poojaType) {
       toast({
-        title: "Please fill in required fields",
-        description: "Name, phone, and pooja type are required.",
+        title: t('contact.form.requiredFields'),
+        description: t('contact.form.requiredDescription'),
         variant: "destructive"
       });
       return;
@@ -33,8 +35,8 @@ const Contact = () => {
 
     // In a real app, this would send data to a server
     toast({
-      title: "🙏 Thank you for your inquiry!",
-      description: "Our priests will contact you within 24 hours to discuss your requirements.",
+      title: t('contact.form.thankYou'),
+      description: t('contact.form.thankYouDescription'),
     });
 
     // Reset form
@@ -69,10 +71,10 @@ const Contact = () => {
         <div className="container mx-auto px-4">
           <div className="text-center max-w-4xl mx-auto">
             <h1 className="text-5xl font-playfair font-bold text-primary mb-6">
-              Contact Our Sacred Team
+              {t('contact.hero.title')}
             </h1>
             <p className="text-xl text-muted-foreground mb-8">
-              Ready to begin your spiritual journey? Connect with our expert priests for personalized guidance
+              {t('contact.hero.subtitle')}
             </p>
           </div>
         </div>
@@ -85,13 +87,13 @@ const Contact = () => {
             {/* Contact Form */}
             <div>
               <h2 className="text-3xl font-playfair font-bold text-primary mb-6">
-                Book Your Spiritual Consultation
+                {t('contact.form.title')}
               </h2>
               
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div>
-                    <label className="block text-sm font-medium mb-2">Full Name *</label>
+                    <label className="block text-sm font-medium mb-2">{t('contact.form.fullName')}</label>
                     <Input
                       type="text"
                       value={formData.name}
@@ -101,7 +103,7 @@ const Contact = () => {
                     />
                   </div>
                   <div>
-                    <label className="block text-sm font-medium mb-2">Phone Number *</label>
+                    <label className="block text-sm font-medium mb-2">{t('contact.form.phoneNumber')}</label>
                     <Input
                       type="tel"
                       value={formData.phone}
@@ -113,7 +115,7 @@ const Contact = () => {
                 </div>
 
                 <div>
-                  <label className="block text-sm font-medium mb-2">Email Address</label>
+                  <label className="block text-sm font-medium mb-2">{t('contact.form.emailAddress')}</label>
                   <Input
                     type="email"
                     value={formData.email}
@@ -123,10 +125,10 @@ const Contact = () => {
                 </div>
 
                 <div>
-                  <label className="block text-sm font-medium mb-2">Pooja/Service Type *</label>
+                  <label className="block text-sm font-medium mb-2">{t('contact.form.poojaType')}</label>
                   <Select value={formData.poojaType} onValueChange={(value) => handleChange("poojaType", value)}>
                     <SelectTrigger>
-                      <SelectValue placeholder="Select the ritual you're interested in" />
+                      <SelectValue placeholder={t('contact.form.selectPooja')} />
                     </SelectTrigger>
                     <SelectContent>
                       {poojaOptions.map((option) => (
@@ -139,7 +141,7 @@ const Contact = () => {
                 </div>
 
                 <div>
-                  <label className="block text-sm font-medium mb-2">Preferred Date</label>
+                  <label className="block text-sm font-medium mb-2">{t('contact.form.preferredDate')}</label>
                   <Input
                     type="date"
                     value={formData.preferredDate}
@@ -148,18 +150,18 @@ const Contact = () => {
                 </div>
 
                 <div>
-                  <label className="block text-sm font-medium mb-2">Additional Message</label>
+                  <label className="block text-sm font-medium mb-2">{t('contact.form.additionalMessage')}</label>
                   <Textarea
                     value={formData.message}
                     onChange={(e) => handleChange("message", e.target.value)}
-                    placeholder="Tell us about your specific requirements, family details, or any questions you have..."
+                    placeholder={t('contact.form.messagePlaceholder')}
                     rows={4}
                   />
                 </div>
 
                 <Button type="submit" className="btn-divine w-full">
                   <Send className="w-4 h-4 mr-2" />
-                  Send Inquiry
+{t('contact.form.sendInquiry')}
                 </Button>
               </form>
             </div>
@@ -168,11 +170,10 @@ const Contact = () => {
             <div className="space-y-8">
               <div>
                 <h2 className="text-3xl font-playfair font-bold text-primary mb-6">
-                  Get in Touch
+                  {t('contact.info.title')}
                 </h2>
                 <p className="text-muted-foreground mb-8">
-                  Our dedicated team is here to assist you with all your spiritual needs. 
-                  Contact us through any of the following channels:
+                  {t('contact.info.subtitle')}
                 </p>
               </div>
 
@@ -185,15 +186,15 @@ const Contact = () => {
                         <Phone className="w-6 h-6 text-primary" />
                       </div>
                       <div>
-                        <h3 className="font-semibold mb-1">Call Us</h3>
+                        <h3 className="font-semibold mb-1">{t('contact.info.call.title')}</h3>
                         <a 
                           href="tel:+919876543210" 
                           className="text-primary hover:underline"
                         >
-                          +91 98765 43210
+                          {t('contact.info.call.phone')}
                         </a>
                         <p className="text-sm text-muted-foreground">
-                          Available 24/7 for spiritual guidance
+                          {t('contact.info.call.availability')}
                         </p>
                       </div>
                     </div>
@@ -207,17 +208,17 @@ const Contact = () => {
                         <MessageCircle className="w-6 h-6 text-primary" />
                       </div>
                       <div>
-                        <h3 className="font-semibold mb-1">WhatsApp</h3>
+                        <h3 className="font-semibold mb-1">{t('contact.info.whatsapp.title')}</h3>
                         <a 
                           href="https://wa.me/919876543210" 
                           target="_blank" 
                           rel="noopener noreferrer"
                           className="text-primary hover:underline"
                         >
-                          +91 98765 43210
+                          {t('contact.info.whatsapp.phone')}
                         </a>
                         <p className="text-sm text-muted-foreground">
-                          Instant messaging and quick responses
+                          {t('contact.info.whatsapp.description')}
                         </p>
                       </div>
                     </div>
@@ -231,15 +232,15 @@ const Contact = () => {
                         <Mail className="w-6 h-6 text-primary" />
                       </div>
                       <div>
-                        <h3 className="font-semibold mb-1">Email</h3>
+                        <h3 className="font-semibold mb-1">{t('contact.info.email.title')}</h3>
                         <a 
                           href="mailto:info@gokarnapoojas.com" 
                           className="text-primary hover:underline"
                         >
-                          info@gokarnapoojas.com
+                          {t('contact.info.email.email')}
                         </a>
                         <p className="text-sm text-muted-foreground">
-                          Detailed inquiries and documentation
+                          {t('contact.info.email.description')}
                         </p>
                       </div>
                     </div>
@@ -253,11 +254,9 @@ const Contact = () => {
                         <MapPin className="w-6 h-6 text-primary" />
                       </div>
                       <div>
-                        <h3 className="font-semibold mb-1">Temple Address</h3>
-                        <p className="text-muted-foreground text-sm">
-                          Mahabaleshwar Temple Complex<br />
-                          Gokarna, Uttara Kannada<br />
-                          Karnataka - 581326, India
+                        <h3 className="font-semibold mb-1">{t('contact.info.address.title')}</h3>
+                        <p className="text-muted-foreground text-sm" style={{whiteSpace: 'pre-line'}}>
+                          {t('contact.info.address.address')}
                         </p>
                       </div>
                     </div>
@@ -271,10 +270,9 @@ const Contact = () => {
                         <Clock className="w-6 h-6 text-primary" />
                       </div>
                       <div>
-                        <h3 className="font-semibold mb-1">Service Hours</h3>
-                        <p className="text-sm text-muted-foreground">
-                          Temple: 4:30 AM - 12:30 PM & 5:00 PM - 8:30 PM<br />
-                          Support: 24/7 available
+                        <h3 className="font-semibold mb-1">{t('contact.info.hours.title')}</h3>
+                        <p className="text-sm text-muted-foreground" style={{whiteSpace: 'pre-line'}}>
+                          {t('contact.info.hours.description')}
                         </p>
                       </div>
                     </div>
@@ -291,10 +289,10 @@ const Contact = () => {
         <div className="container mx-auto px-4">
           <div className="text-center mb-8">
             <h2 className="text-3xl font-playfair font-bold text-primary mb-4">
-              Find Us at Sacred Gokarna
+              {t('contact.map.title')}
             </h2>
             <p className="text-muted-foreground">
-              Located in the heart of Gokarna's spiritual district
+              {t('contact.map.subtitle')}
             </p>
           </div>
           
@@ -318,30 +316,30 @@ const Contact = () => {
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-playfair font-bold text-primary mb-4">
-              Frequently Asked Questions
+              {t('contact.faq.title')}
             </h2>
             <p className="text-muted-foreground">
-              Quick answers to common questions about our services
+              {t('contact.faq.subtitle')}
             </p>
           </div>
           
           <div className="max-w-3xl mx-auto space-y-6">
             {[
               {
-                question: "How far in advance should I book a ritual?",
-                answer: "We recommend booking at least 7-10 days in advance to ensure availability and proper preparation. For major festivals or auspicious days, book 2-3 weeks ahead."
+                question: t('contact.faq.q1.question'),
+                answer: t('contact.faq.q1.answer')
               },
               {
-                question: "Can I participate in the ritual remotely?",
-                answer: "Yes! We offer live streaming for devotees who cannot be physically present. You'll receive photos, videos, and blessed prasadam delivered to your home."
+                question: t('contact.faq.q2.question'),
+                answer: t('contact.faq.q2.answer')
               },
               {
-                question: "What should I bring for the ritual?",
-                answer: "We provide all necessary materials. You only need to bring your devotion and any specific offerings you wish to make. We'll guide you on any special requirements."
+                question: t('contact.faq.q3.question'),
+                answer: t('contact.faq.q3.answer')
               },
               {
-                question: "Are there any restrictions on who can participate?",
-                answer: "Our rituals are open to all devotees regardless of background. Some specific rituals may have traditional requirements, which we'll explain during booking."
+                question: t('contact.faq.q4.question'),
+                answer: t('contact.faq.q4.answer')
               }
             ].map((faq, index) => (
               <Card key={index} className="sacred-card">

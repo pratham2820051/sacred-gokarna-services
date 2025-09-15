@@ -1,11 +1,13 @@
 import { Link } from "react-router-dom";
 import { Card, CardContent } from "@/components/ui/card";
 import { Calendar, User, ArrowRight } from "lucide-react";
+import { useTranslation } from "react-i18next";
 import templeComplex from "@/assets/temple-complex.jpg";
 import rudrabhisheka from "@/assets/rudrabhisheka.jpg";
 import spiritualOm from "@/assets/spiritual-om.jpg";
 
 const Blogs = () => {
+  const { t } = useTranslation();
   const blogPosts = [
     {
       id: 1,
@@ -75,7 +77,14 @@ const Blogs = () => {
     }
   ];
 
-  const categories = ["All", "Rituals", "Timing", "History", "Mantras", "Travel"];
+  const categories = [
+    t('blogs.categories.all'),
+    t('blogs.categories.rituals'),
+    t('blogs.categories.timing'),
+    t('blogs.categories.history'),
+    t('blogs.categories.mantras'),
+    t('blogs.categories.travel')
+  ];
 
   return (
     <div className="min-h-screen">
@@ -84,10 +93,10 @@ const Blogs = () => {
         <div className="container mx-auto px-4">
           <div className="text-center max-w-4xl mx-auto">
             <h1 className="text-5xl font-playfair font-bold text-primary mb-6">
-              Spiritual Wisdom & Insights
+              {t('blogs.hero.title')}
             </h1>
             <p className="text-xl text-muted-foreground mb-8">
-              Discover ancient wisdom, ritual significance, and spiritual guidance through our comprehensive blog articles
+              {t('blogs.hero.subtitle')}
             </p>
           </div>
         </div>
@@ -101,7 +110,7 @@ const Blogs = () => {
               <button
                 key={category}
                 className={`px-6 py-2 rounded-full text-sm font-medium transition-colors ${
-                  category === "All" 
+                  category === t('blogs.categories.all') 
                     ? "bg-primary text-white" 
                     : "bg-muted text-muted-foreground hover:bg-primary/10 hover:text-primary"
                 }`}
@@ -164,7 +173,7 @@ const Blogs = () => {
                       to={`/blog/${post.slug}`}
                       className="inline-flex items-center text-primary text-sm font-medium hover:text-primary/80 transition-colors group-hover:translate-x-1 transition-transform"
                     >
-                      Read More 
+{t('blogs.readMore')}
                       <ArrowRight className="w-4 h-4 ml-1" />
                     </Link>
                   </div>
@@ -180,19 +189,19 @@ const Blogs = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-2xl mx-auto text-center">
             <h2 className="text-3xl font-playfair font-bold mb-4">
-              Stay Connected with Divine Wisdom
+              {t('blogs.newsletter.title')}
             </h2>
             <p className="text-white/90 mb-8">
-              Subscribe to receive the latest spiritual insights, ritual guides, and temple updates directly in your inbox
+              {t('blogs.newsletter.subtitle')}
             </p>
             <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
               <input
                 type="email"
-                placeholder="Enter your email"
+                placeholder={t('blogs.newsletter.placeholder')}
                 className="flex-1 px-4 py-3 rounded-full text-gray-900 placeholder-gray-500"
               />
               <button className="px-8 py-3 bg-white text-primary rounded-full font-semibold hover:bg-white/90 transition-colors">
-                Subscribe
+{t('blogs.newsletter.subscribe')}
               </button>
             </div>
           </div>

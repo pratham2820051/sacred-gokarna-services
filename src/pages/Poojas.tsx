@@ -8,71 +8,72 @@ import templeComplex from "@/assets/temple-complex.jpg";
 import spiritualOm from "@/assets/spiritual-om.jpg";
 
 const Poojas = () => {
+  const { t } = useTranslation();
   const poojaServices = [
     {
       id: 1,
-      title: "Rudrabhisheka",
-      description: "Sacred abhisheka to Lord Shiva with milk, honey, ghee, and sacred waters. Powerful ritual for removing obstacles and bringing prosperity.",
+      title: t('poojas.services.rudrabhisheka.title'),
+      description: t('poojas.services.rudrabhisheka.description'),
       price: "₹2,500",
-      duration: "1.5 Hours",
-      participants: "Up to 5 people",
+      duration: t('poojas.services.rudrabhisheka.duration'),
+      participants: t('poojas.services.rudrabhisheka.participants'),
       image: rudrabhisheka,
-      benefits: ["Removes negative karma", "Brings prosperity", "Grants peace of mind", "Fulfills desires"],
+      benefits: t('poojas.services.rudrabhisheka.benefits', { returnObjects: true }),
       rating: 4.9
     },
     {
       id: 2,
-      title: "Narayan Bali",
-      description: "Essential ritual for the liberation of departed souls and removal of ancestral curses. Performed at the sacred Gokarna beach.",
+      title: t('poojas.services.narayanBali.title'),
+      description: t('poojas.services.narayanBali.description'),
       price: "₹5,000",
-      duration: "3 Hours",
-      participants: "Family groups",
+      duration: t('poojas.services.narayanBali.duration'),
+      participants: t('poojas.services.narayanBali.participants'),
       image: templeComplex,
-      benefits: ["Liberates departed souls", "Removes ancestral blocks", "Brings family harmony", "Spiritual elevation"],
+      benefits: t('poojas.services.narayanBali.benefits', { returnObjects: true }),
       rating: 4.8
     },
     {
       id: 3,
-      title: "Tripindi Shraddha",
-      description: "Three-generation ancestral ritual for those whose shraddha hasn't been performed properly. Ensures peace for ancestors.",
+      title: t('poojas.services.tripindiShraddha.title'),
+      description: t('poojas.services.tripindiShraddha.description'),
       price: "₹7,500",
-      duration: "4 Hours",
-      participants: "Family groups",
+      duration: t('poojas.services.tripindiShraddha.duration'),
+      participants: t('poojas.services.tripindiShraddha.participants'),
       image: spiritualOm,
-      benefits: ["Peace for ancestors", "Removes pitru dosha", "Family blessings", "Spiritual protection"],
+      benefits: t('poojas.services.tripindiShraddha.benefits', { returnObjects: true }),
       rating: 4.9
     },
     {
       id: 4,
-      title: "Mahamrityunjaya Jap",
-      description: "Powerful healing mantra chanting for health, longevity, and protection from negative influences and diseases.",
+      title: t('poojas.services.mahamrityunjaya.title'),
+      description: t('poojas.services.mahamrityunjaya.description'),
       price: "₹1,500",
-      duration: "2 Hours",
-      participants: "Individual/Family",
+      duration: t('poojas.services.mahamrityunjaya.duration'),
+      participants: t('poojas.services.mahamrityunjaya.participants'),
       image: spiritualOm,
-      benefits: ["Health and healing", "Protection from diseases", "Longevity", "Mental peace"],
+      benefits: t('poojas.services.mahamrityunjaya.benefits', { returnObjects: true }),
       rating: 4.7
     },
     {
       id: 5,
-      title: "Ganapati Homam",
-      description: "Sacred fire ritual to Lord Ganesha for removing obstacles and ensuring success in new ventures and endeavors.",
+      title: t('poojas.services.ganapatiHomam.title'),
+      description: t('poojas.services.ganapatiHomam.description'),
       price: "₹3,000",
-      duration: "2 Hours",
-      participants: "Individual/Family",
+      duration: t('poojas.services.ganapatiHomam.duration'),
+      participants: t('poojas.services.ganapatiHomam.participants'),
       image: templeComplex,
-      benefits: ["Removes obstacles", "Ensures success", "New venture blessings", "Wisdom and knowledge"],
+      benefits: t('poojas.services.ganapatiHomam.benefits', { returnObjects: true }),
       rating: 4.8
     },
     {
       id: 6,
-      title: "Navagraha Shanti",
-      description: "Powerful ritual to appease all nine planets and reduce the malefic effects of planetary positions in horoscope.",
+      title: t('poojas.services.navagrahaShanti.title'),
+      description: t('poojas.services.navagrahaShanti.description'),
       price: "₹4,000",
-      duration: "2.5 Hours",
-      participants: "Individual/Family",
+      duration: t('poojas.services.navagrahaShanti.duration'),
+      participants: t('poojas.services.navagrahaShanti.participants'),
       image: rudrabhisheka,
-      benefits: ["Planetary peace", "Reduces malefic effects", "Career progress", "Life harmony"],
+      benefits: t('poojas.services.navagrahaShanti.benefits', { returnObjects: true }),
       rating: 4.6
     }
   ];
@@ -84,10 +85,10 @@ const Poojas = () => {
         <div className="container mx-auto px-4">
           <div className="text-center max-w-4xl mx-auto">
             <h1 className="text-5xl font-playfair font-bold text-primary mb-6">
-              Sacred Poojas & Sevas
+              {t('poojas.hero.title')}
             </h1>
             <p className="text-xl text-muted-foreground mb-8">
-              Experience authentic Vedic rituals performed by expert priests in the divine atmosphere of Gokarna
+              {t('poojas.hero.subtitle')}
             </p>
           </div>
         </div>
@@ -137,7 +138,7 @@ const Poojas = () => {
 
                   {/* Benefits */}
                   <div className="mb-6">
-                    <h4 className="text-sm font-semibold mb-2 text-primary">Key Benefits:</h4>
+                    <h4 className="text-sm font-semibold mb-2 text-primary">{t('poojas.services.keyBenefits')}</h4>
                     <div className="grid grid-cols-2 gap-1">
                       {service.benefits.map((benefit, index) => (
                         <div key={index} className="text-xs text-muted-foreground">
@@ -153,7 +154,7 @@ const Poojas = () => {
                       {service.price}
                     </span>
                     <Button asChild className="btn-divine">
-                      <Link to="/contact">Book Now</Link>
+                      <Link to="/contact">{t('poojas.services.bookNow')}</Link>
                     </Button>
                   </div>
                 </CardContent>
@@ -168,10 +169,10 @@ const Poojas = () => {
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-playfair font-bold text-primary mb-4">
-              How Our Sacred Process Works
+              {t('poojas.process.title')}
             </h2>
             <p className="text-muted-foreground max-w-2xl mx-auto">
-              Simple steps to connect with divine blessings through authentic Vedic rituals
+              {t('poojas.process.subtitle')}
             </p>
           </div>
           
@@ -180,9 +181,9 @@ const Poojas = () => {
               <div className="w-16 h-16 mx-auto mb-4 bg-primary rounded-full flex items-center justify-center text-white font-bold text-xl">
                 1
               </div>
-              <h3 className="text-lg font-playfair font-semibold mb-2">Choose Service</h3>
+              <h3 className="text-lg font-playfair font-semibold mb-2">{t('poojas.process.step1.title')}</h3>
               <p className="text-sm text-muted-foreground">
-                Select the ritual that aligns with your spiritual needs and intentions
+                {t('poojas.process.step1.description')}
               </p>
             </div>
             
@@ -190,9 +191,9 @@ const Poojas = () => {
               <div className="w-16 h-16 mx-auto mb-4 bg-primary rounded-full flex items-center justify-center text-white font-bold text-xl">
                 2
               </div>
-              <h3 className="text-lg font-playfair font-semibold mb-2">Book & Schedule</h3>
+              <h3 className="text-lg font-playfair font-semibold mb-2">{t('poojas.process.step2.title')}</h3>
               <p className="text-sm text-muted-foreground">
-                Contact us to schedule your pooja at an auspicious time
+                {t('poojas.process.step2.description')}
               </p>
             </div>
             
@@ -200,9 +201,9 @@ const Poojas = () => {
               <div className="w-16 h-16 mx-auto mb-4 bg-primary rounded-full flex items-center justify-center text-white font-bold text-xl">
                 3
               </div>
-              <h3 className="text-lg font-playfair font-semibold mb-2">Sacred Ritual</h3>
+              <h3 className="text-lg font-playfair font-semibold mb-2">{t('poojas.process.step3.title')}</h3>
               <p className="text-sm text-muted-foreground">
-                Expert priests perform the ritual with authentic materials and mantras
+                {t('poojas.process.step3.description')}
               </p>
             </div>
             
@@ -210,9 +211,9 @@ const Poojas = () => {
               <div className="w-16 h-16 mx-auto mb-4 bg-primary rounded-full flex items-center justify-center text-white font-bold text-xl">
                 4
               </div>
-              <h3 className="text-lg font-playfair font-semibold mb-2">Receive Blessings</h3>
+              <h3 className="text-lg font-playfair font-semibold mb-2">{t('poojas.process.step4.title')}</h3>
               <p className="text-sm text-muted-foreground">
-                Get photos, videos, and blessed prasadam delivered to your home
+                {t('poojas.process.step4.description')}
               </p>
             </div>
           </div>
@@ -223,20 +224,20 @@ const Poojas = () => {
       <section className="py-16 bg-gradient-divine text-white">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-4xl font-playfair font-bold mb-4">
-            Ready to Begin Your Spiritual Journey?
+            {t('poojas.cta.title')}
           </h2>
           <p className="text-xl mb-8 text-white/90 max-w-2xl mx-auto">
-            Connect with our spiritual consultants to choose the perfect ritual for your needs
+            {t('poojas.cta.subtitle')}
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button asChild size="lg" className="bg-white text-primary hover:bg-white/90">
               <Link to="/contact">
-                Book Consultation
+{t('poojas.cta.bookConsultation')}
               </Link>
             </Button>
             <Button asChild size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-primary">
               <a href="https://wa.me/919876543210" target="_blank" rel="noopener noreferrer">
-                WhatsApp: +91 98765 43210
+{t('poojas.cta.whatsapp')}
               </a>
             </Button>
           </div>

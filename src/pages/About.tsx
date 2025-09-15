@@ -7,22 +7,22 @@ const About = () => {
   const { t } = useTranslation();
   const priests = [
     {
-      name: "Pandit Raghunath Shastri",
-      experience: "25+ Years",
-      specialization: "Rudrabhisheka & Vedic Rituals",
-      description: "Expert in ancient Vedic traditions with deep knowledge of Sanskrit scriptures."
+      name: t('about.priests.priest1.name'),
+      experience: t('about.priests.priest1.experience'),
+      specialization: t('about.priests.priest1.specialization'),
+      description: t('about.priests.priest1.description')
     },
     {
-      name: "Pandit Vishnu Bhat",
-      experience: "20+ Years", 
-      specialization: "Narayan Bali & Ancestral Rituals",
-      description: "Specialized in ancestral ceremonies and liberation rituals for departed souls."
+      name: t('about.priests.priest2.name'),
+      experience: t('about.priests.priest2.experience'),
+      specialization: t('about.priests.priest2.specialization'),
+      description: t('about.priests.priest2.description')
     },
     {
-      name: "Pandit Gopal Sharma",
-      experience: "18+ Years",
-      specialization: "Mahamrityunjaya & Healing Rituals",
-      description: "Master of healing mantras and protective rituals for health and well-being."
+      name: t('about.priests.priest3.name'),
+      experience: t('about.priests.priest3.experience'),
+      specialization: t('about.priests.priest3.specialization'),
+      description: t('about.priests.priest3.description')
     }
   ];
 
@@ -33,10 +33,10 @@ const About = () => {
         <div className="container mx-auto px-4">
           <div className="text-center max-w-4xl mx-auto">
             <h1 className="text-5xl font-playfair font-bold text-primary mb-6">
-              About Gokarna Pooja Services
+              {t('about.hero.title')}
             </h1>
             <p className="text-xl text-muted-foreground mb-8">
-              Preserving ancient traditions and bringing divine blessings to devotees worldwide
+              {t('about.hero.subtitle')}
             </p>
           </div>
         </div>
@@ -48,25 +48,17 @@ const About = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
               <h2 className="text-4xl font-playfair font-bold text-primary mb-6">
-                The Sacred Legacy of Gokarna
+                {t('about.story.title')}
               </h2>
               <div className="space-y-4 text-muted-foreground">
                 <p>
-                  Gokarna, meaning "Cow's Ear" in Sanskrit, is one of the most sacred pilgrimage 
-                  destinations in India. Located on the pristine coast of Karnataka, this holy 
-                  town has been a center of spiritual learning and divine worship for over 
-                  1500 years.
+                  {t('about.story.paragraph1')}
                 </p>
                 <p>
-                  Our services bridge the gap between ancient traditions and modern accessibility. 
-                  We ensure that every ritual is performed with utmost devotion, following the 
-                  exact procedures laid down in the Vedic scriptures.
+                  {t('about.story.paragraph2')}
                 </p>
                 <p>
-                  The Mahabaleshwar Temple in Gokarna houses one of the most powerful Shiva 
-                  lingas in the country. When you book a pooja through our services, you're 
-                  not just participating in a ritual – you're connecting with centuries of 
-                  spiritual energy and divine blessings.
+                  {t('about.story.paragraph3')}
                 </p>
               </div>
             </div>
@@ -87,10 +79,10 @@ const About = () => {
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-playfair font-bold text-primary mb-4">
-              Our Sacred Priests
+              {t('about.priests.title')}
             </h2>
             <p className="text-muted-foreground max-w-2xl mx-auto">
-              Meet our learned priests who carry forward the ancient traditions with devotion and expertise
+              {t('about.priests.subtitle')}
             </p>
           </div>
           
@@ -134,7 +126,7 @@ const About = () => {
             </div>
             <div>
               <h2 className="text-4xl font-playfair font-bold text-primary mb-6">
-                Authenticity & Trust
+                {t('about.authenticity.title')}
               </h2>
               <div className="space-y-6">
                 <div className="flex items-start space-x-4">
@@ -142,10 +134,9 @@ const About = () => {
                     <div className="w-2 h-2 bg-white rounded-full"></div>
                   </div>
                   <div>
-                    <h3 className="font-semibold mb-2">Vedic Compliance</h3>
+                    <h3 className="font-semibold mb-2">{t('about.authenticity.vedicCompliance.title')}</h3>
                     <p className="text-muted-foreground text-sm">
-                      All rituals are performed strictly according to ancient Vedic scriptures 
-                      and traditional procedures passed down through generations.
+                      {t('about.authenticity.vedicCompliance.description')}
                     </p>
                   </div>
                 </div>
@@ -155,10 +146,9 @@ const About = () => {
                     <div className="w-2 h-2 bg-white rounded-full"></div>
                   </div>
                   <div>
-                    <h3 className="font-semibold mb-2">Certified Priests</h3>
+                    <h3 className="font-semibold mb-2">{t('about.authenticity.certifiedPriests.title')}</h3>
                     <p className="text-muted-foreground text-sm">
-                      Our priests are certified by traditional Vedic institutions and have 
-                      decades of experience in performing sacred ceremonies.
+                      {t('about.authenticity.certifiedPriests.description')}
                     </p>
                   </div>
                 </div>
@@ -168,10 +158,9 @@ const About = () => {
                     <div className="w-2 h-2 bg-white rounded-full"></div>
                   </div>
                   <div>
-                    <h3 className="font-semibold mb-2">Pure Materials</h3>
+                    <h3 className="font-semibold mb-2">{t('about.authenticity.pureMaterials.title')}</h3>
                     <p className="text-muted-foreground text-sm">
-                      We use only the finest organic materials - pure ghee, fresh flowers, 
-                      sacred waters, and authentic ingredients for all rituals.
+                      {t('about.authenticity.pureMaterials.description')}
                     </p>
                   </div>
                 </div>
@@ -181,10 +170,9 @@ const About = () => {
                     <div className="w-2 h-2 bg-white rounded-full"></div>
                   </div>
                   <div>
-                    <h3 className="font-semibold mb-2">Spiritual Guidance</h3>
+                    <h3 className="font-semibold mb-2">{t('about.authenticity.spiritualGuidance.title')}</h3>
                     <p className="text-muted-foreground text-sm">
-                      Beyond performing rituals, we provide spiritual guidance and explain 
-                      the significance of each ceremony to enhance your understanding.
+                      {t('about.authenticity.spiritualGuidance.description')}
                     </p>
                   </div>
                 </div>
@@ -198,13 +186,10 @@ const About = () => {
       <section className="py-16 bg-gradient-divine text-white">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-4xl font-playfair font-bold mb-6">
-            Our Sacred Mission
+            {t('about.mission.title')}
           </h2>
           <p className="text-xl max-w-4xl mx-auto leading-relaxed">
-            To make the powerful spiritual energy of Gokarna accessible to devotees worldwide, 
-            preserving ancient traditions while embracing modern convenience. We believe that 
-            every soul deserves the opportunity to experience divine blessings, regardless of 
-            physical distance from this holy land.
+            {t('about.mission.description')}
           </p>
         </div>
       </section>
