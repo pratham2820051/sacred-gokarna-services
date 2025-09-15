@@ -96,7 +96,7 @@ const Home = () => {
                 {t('home.hero.bookPooja')}
               </Link>
             </Button>
-            <Button asChild size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-primary">
+            <Button asChild size="lg" variant="outline" className="border-white text-orange-800 hover:bg-white hover:text-primary">
               <a href="https://wa.me/919876543210" target="_blank" rel="noopener noreferrer">
                 <MessageCircle className="w-5 h-5 mr-2" />
                 {t('home.hero.whatsapp')}
@@ -231,7 +231,7 @@ const Home = () => {
                 {t('home.cta.callNow')}
               </Link>
             </Button>
-            <Button asChild size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-primary">
+            <Button asChild size="lg" variant="outline" className="border-white text-orange-800 hover:bg-white hover:text-primary">
               <a href="https://wa.me/919876543210" target="_blank" rel="noopener noreferrer">
                 <MessageCircle className="w-5 h-5 mr-2" />
                 {t('home.cta.whatsappUs')}

@@ -68,7 +68,7 @@ const Footer = () => {
                 className="flex items-center space-x-3 text-white/80 hover:text-white transition-colors"
               >
                 <Phone className="w-4 h-4" />
-                <span className="text-sm">+91 98765 43210</span>
+                <span className="text-sm">+91 9999999999</span>
               </a>
               <a 
                 href="mailto:info@gokarnapoojas.com" 
