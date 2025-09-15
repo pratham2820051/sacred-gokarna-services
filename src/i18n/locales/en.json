@@ -13,40 +13,402 @@
   "home": {
     "hero": {
       "title": "Book Authentic Gokarna Poojas Online",
-      "subtitle": "Experience divine blessings through traditional Vedic rituals performed by experienced priests in the sacred atmosphere of Gokarna",
-      "bookNow": "Book Sacred Ritual"
+      "subtitle": "Experience divine blessings through sacred rituals performed by expert priests in the holy land of Gokarna",
+      "bookPooja": "Book Pooja Now",
+      "whatsapp": "WhatsApp"
     },
-    "quickLinks": {
-      "title": "Sacred Rituals & Ceremonies",
-      "subtitle": "Choose from our authentic Vedic ceremonies"
+    "services": {
+      "title": "Popular Sacred Services",
+      "subtitle": "Experience the most sought-after spiritual rituals performed with devotion and authenticity",
+      "rudrabhisheka": {
+        "title": "Rudrabhisheka",
+        "description": "Sacred ritual to Lord Shiva with milk, honey, and sacred waters",
+        "price": "₹2,500"
+      },
+      "narayanBali": {
+        "title": "Narayan Bali", 
+        "description": "Ancestral ritual for peace and liberation of departed souls",
+        "price": "₹5,000"
+      },
+      "tripindiShraddha": {
+        "title": "Tripindi Shraddha",
+        "description": "Three-generation ancestral ritual for spiritual blessings",
+        "price": "₹7,500"
+      },
+      "bookNow": "Book Now"
     },
     "whyChoose": {
-      "title": "Why Choose Our Services",
+      "title": "Why Choose Our Services?",
+      "subtitle": "Trust, authenticity, and spiritual excellence in every ritual we perform",
       "authentic": {
         "title": "Authentic Rituals",
-        "description": "Traditional Vedic ceremonies performed according to ancient scriptures"
+        "description": "Traditional ceremonies performed according to ancient scriptures"
       },
       "experienced": {
-        "title": "Experienced Priests",
-        "description": "Learned Sanskrit scholars with decades of ritual experience"
-      },
-      "sacred": {
-        "title": "Sacred Location",
-        "description": "Performed in the divine atmosphere of Gokarna temples"
+        "title": "Expert Priests", 
+        "description": "Experienced Brahmin priests with deep spiritual knowledge"
       },
       "support": {
-        "title": "Complete Support",
-        "description": "Full assistance from booking to ritual completion"
+        "title": "24/7 Support",
+        "description": "Round-the-clock assistance for all your spiritual needs"
       }
     },
     "testimonials": {
-      "title": "Devotee Experiences"
+      "title": "Devotee Experiences",
+      "subtitle": "Hear from the devotees who have experienced divine blessings through our services",
+      "testimonial1": {
+        "name": "Priya Sharma",
+        "location": "Mumbai",
+        "text": "The Rudrabhisheka performed here was truly divine. The priests were knowledgeable and the entire experience was spiritually uplifting."
+      },
+      "testimonial2": {
+        "name": "Rajesh Kumar",
+        "location": "Bangalore", 
+        "text": "Excellent service for Narayan Bali ritual. Everything was arranged perfectly and the atmosphere was very peaceful."
+      },
+      "testimonial3": {
+        "name": "Meera Devi",
+        "location": "Delhi",
+        "text": "Highly recommended for authentic temple rituals. The staff is very helpful and the ceremonies are performed with utmost devotion."
+      }
     },
     "cta": {
-      "title": "Ready to Book Your Sacred Ritual?",
-      "subtitle": "Connect with us for personalized guidance and instant booking",
-      "whatsapp": "WhatsApp Now",
-      "call": "Call Now"
+      "title": "Ready to Experience Divine Blessings?",
+      "subtitle": "Book your authentic Gokarna pooja today and connect with the sacred energy of this holy land",
+      "callNow": "Call Now: +91 98765 43210",
+      "whatsappUs": "WhatsApp Us"
+    }
+  },
+  "about": {
+    "hero": {
+      "title": "About Gokarna Pooja Services",
+      "subtitle": "Preserving ancient traditions and bringing divine blessings to devotees worldwide"
+    },
+    "story": {
+      "title": "The Sacred Legacy of Gokarna",
+      "paragraph1": "Gokarna, meaning \"Cow's Ear\" in Sanskrit, is one of the most sacred pilgrimage destinations in India. Located on the pristine coast of Karnataka, this holy town has been a center of spiritual learning and divine worship for over 1500 years.",
+      "paragraph2": "Our services bridge the gap between ancient traditions and modern accessibility. We ensure that every ritual is performed with utmost devotion, following the exact procedures laid down in the Vedic scriptures.",
+      "paragraph3": "The Mahabaleshwar Temple in Gokarna houses one of the most powerful Shiva lingas in the country. When you book a pooja through our services, you're not just participating in a ritual – you're connecting with centuries of spiritual energy and divine blessings."
+    },
+    "priests": {
+      "title": "Our Sacred Priests",
+      "subtitle": "Meet our learned priests who carry forward the ancient traditions with devotion and expertise",
+      "priest1": {
+        "name": "Pandit Raghunath Shastri",
+        "experience": "25+ Years",
+        "specialization": "Rudrabhisheka & Vedic Rituals", 
+        "description": "Expert in ancient Vedic traditions with deep knowledge of Sanskrit scriptures."
+      },
+      "priest2": {
+        "name": "Pandit Vishnu Bhat",
+        "experience": "20+ Years",
+        "specialization": "Narayan Bali & Ancestral Rituals",
+        "description": "Specialized in ancestral ceremonies and liberation rituals for departed souls."
+      },
+      "priest3": {
+        "name": "Pandit Gopal Sharma", 
+        "experience": "18+ Years",
+        "specialization": "Mahamrityunjaya & Healing Rituals",
+        "description": "Master of healing mantras and protective rituals for health and well-being."
+      }
+    },
+    "authenticity": {
+      "title": "Authenticity & Trust",
+      "vedicCompliance": {
+        "title": "Vedic Compliance",
+        "description": "All rituals are performed strictly according to ancient Vedic scriptures and traditional procedures passed down through generations."
+      },
+      "certifiedPriests": {
+        "title": "Certified Priests",
+        "description": "Our priests are certified by traditional Vedic institutions and have decades of experience in performing sacred ceremonies."
+      },
+      "pureMaterials": {
+        "title": "Pure Materials", 
+        "description": "We use only the finest organic materials - pure ghee, fresh flowers, sacred waters, and authentic ingredients for all rituals."
+      },
+      "spiritualGuidance": {
+        "title": "Spiritual Guidance",
+        "description": "Beyond performing rituals, we provide spiritual guidance and explain the significance of each ceremony to enhance your understanding."
+      }
+    },
+    "mission": {
+      "title": "Our Sacred Mission",
+      "description": "To make the powerful spiritual energy of Gokarna accessible to devotees worldwide, preserving ancient traditions while embracing modern convenience. We believe that every soul deserves the opportunity to experience divine blessings, regardless of physical distance from this holy land."
+    }
+  },
+  "poojas": {
+    "hero": {
+      "title": "Sacred Poojas & Sevas",
+      "subtitle": "Experience authentic Vedic rituals performed by expert priests in the divine atmosphere of Gokarna"
+    },
+    "services": {
+      "rudrabhisheka": {
+        "title": "Rudrabhisheka",
+        "description": "Sacred abhisheka to Lord Shiva with milk, honey, ghee, and sacred waters. Powerful ritual for removing obstacles and bringing prosperity.",
+        "duration": "1.5 Hours",
+        "participants": "Up to 5 people",
+        "benefits": ["Removes negative karma", "Brings prosperity", "Grants peace of mind", "Fulfills desires"]
+      },
+      "narayanBali": {
+        "title": "Narayan Bali", 
+        "description": "Essential ritual for the liberation of departed souls and removal of ancestral curses. Performed at the sacred Gokarna beach.",
+        "duration": "3 Hours",
+        "participants": "Family groups",
+        "benefits": ["Liberates departed souls", "Removes ancestral blocks", "Brings family harmony", "Spiritual elevation"]
+      },
+      "tripindiShraddha": {
+        "title": "Tripindi Shraddha",
+        "description": "Three-generation ancestral ritual for those whose shraddha hasn't been performed properly. Ensures peace for ancestors.",
+        "duration": "4 Hours", 
+        "participants": "Family groups",
+        "benefits": ["Peace for ancestors", "Removes pitru dosha", "Family blessings", "Spiritual protection"]
+      },
+      "mahamrityunjaya": {
+        "title": "Mahamrityunjaya Jap",
+        "description": "Powerful healing mantra chanting for health, longevity, and protection from negative influences and diseases.",
+        "duration": "2 Hours",
+        "participants": "Individual/Family",
+        "benefits": ["Health and healing", "Protection from diseases", "Longevity", "Mental peace"]
+      },
+      "ganapatiHomam": {
+        "title": "Ganapati Homam",
+        "description": "Sacred fire ritual to Lord Ganesha for removing obstacles and ensuring success in new ventures and endeavors.",
+        "duration": "2 Hours", 
+        "participants": "Individual/Family",
+        "benefits": ["Removes obstacles", "Ensures success", "New venture blessings", "Wisdom and knowledge"]
+      },
+      "navagrahaShanti": {
+        "title": "Navagraha Shanti",
+        "description": "Powerful ritual to appease all nine planets and reduce the malefic effects of planetary positions in horoscope.",
+        "duration": "2.5 Hours",
+        "participants": "Individual/Family", 
+        "benefits": ["Planetary peace", "Reduces malefic effects", "Career progress", "Life harmony"]
+      },
+      "keyBenefits": "Key Benefits:",
+      "bookNow": "Book Now"
+    },
+    "process": {
+      "title": "How Our Sacred Process Works",
+      "subtitle": "Simple steps to connect with divine blessings through authentic Vedic rituals",
+      "step1": {
+        "title": "Choose Service",
+        "description": "Select the ritual that aligns with your spiritual needs and intentions"
+      },
+      "step2": {
+        "title": "Book & Schedule",
+        "description": "Contact us to schedule your pooja at an auspicious time"
+      },
+      "step3": {
+        "title": "Sacred Ritual", 
+        "description": "Expert priests perform the ritual with authentic materials and mantras"
+      },
+      "step4": {
+        "title": "Receive Blessings",
+        "description": "Get photos, videos, and blessed prasadam delivered to your home"
+      }
+    },
+    "cta": {
+      "title": "Ready to Begin Your Spiritual Journey?",
+      "subtitle": "Connect with our spiritual consultants to choose the perfect ritual for your needs",
+      "bookConsultation": "Book Consultation",
+      "whatsapp": "WhatsApp: +91 98765 43210"
+    }
+  },
+  "howToReach": {
+    "hero": {
+      "title": "How to Reach Gokarna",
+      "subtitle": "Your journey to spiritual bliss begins here. Find the best way to reach the sacred land of Gokarna"
+    },
+    "travel": {
+      "title": "Travel Options", 
+      "subtitle": "Choose the most convenient way to reach the divine destination",
+      "byTrain": {
+        "title": "By Train",
+        "description": "Most convenient way to reach Gokarna",
+        "details": [
+          "Nearest railway station: Gokarna Road (GOK) - 10km from temple",
+          "Major trains: Matsyagandha Express, Konkan Kanya Express", 
+          "Auto-rickshaws and buses available from station to temple",
+          "Journey time from Bangalore: 10-12 hours",
+          "Journey time from Mumbai: 8-10 hours"
+        ]
+      },
+      "byBus": {
+        "title": "By Bus",
+        "description": "Regular bus services from major cities",
+        "details": [
+          "State transport buses available from Bangalore, Mumbai, Pune",
+          "Private bus operators: Airavat, VRL, SRS Travels",
+          "Overnight buses recommended for comfort",
+          "Journey time from Bangalore: 8-10 hours", 
+          "Journey time from Goa: 3-4 hours"
+        ]
+      },
+      "byCar": {
+        "title": "By Car/Taxi",
+        "description": "Drive through scenic Western Ghats",
+        "details": [
+          "Well-connected by NH-66 (coastal highway)",
+          "Parking available near temple complex",
+          "Fuel stations available en route",
+          "Scenic drive through coastal Karnataka",
+          "GPS coordinates: 14.5426° N, 74.3188° E"
+        ]
+      }
+    },
+    "location": {
+      "title": "Temple Location",
+      "address": "Mahabaleshwar Temple, Gokarna, Uttara Kannada, Karnataka"
+    },
+    "travelInfo": {
+      "title": "Important Travel Information",
+      "subtitle": "Essential details to make your spiritual journey smooth and meaningful",
+      "templeTimings": {
+        "title": "Temple Timings",
+        "description": "4:30 AM to 12:30 PM & 5:00 PM to 8:30 PM"
+      },
+      "dressCode": {
+        "title": "Dress Code", 
+        "description": "Traditional attire preferred. Remove footwear before entering"
+      },
+      "bestTime": {
+        "title": "Best Time to Visit",
+        "description": "October to March for pleasant weather"
+      }
+    },
+    "accommodation": {
+      "title": "Accommodation Options",
+      "templeGuest": {
+        "title": "Temple Guest Houses",
+        "description": "Simple, clean rooms near the temple. Advance booking recommended during festivals."
+      },
+      "beachResorts": {
+        "title": "Beach Resorts",
+        "description": "Comfortable stays with sea views. Located 2-3 km from main temple."
+      },
+      "budgetHotels": {
+        "title": "Budget Hotels",
+        "description": "Affordable options in Gokarna town with basic amenities and local food."
+      }
+    },
+    "nearbyPlaces": {
+      "title": "Nearby Sacred Places",
+      "omBeach": {
+        "title": "Om Beach",
+        "description": "Sacred beach shaped like Om symbol, perfect for meditation and spiritual reflection."
+      },
+      "kudleBeach": {
+        "title": "Kudle Beach", 
+        "description": "Peaceful beach for evening prayers and watching beautiful sunsets."
+      },
+      "mirjanFort": {
+        "title": "Mirjan Fort",
+        "description": "Historic fort located 22 km away, perfect for a day trip after temple visit."
+      }
+    },
+    "travelAssistance": {
+      "title": "Need Travel Assistance?",
+      "subtitle": "Our team can help you plan your journey and arrange local transportation",
+      "call": "Call: +91 98765 43210",
+      "whatsapp": "WhatsApp Us"
+    }
+  },
+  "contact": {
+    "hero": {
+      "title": "Contact Our Sacred Team",
+      "subtitle": "Ready to begin your spiritual journey? Connect with our expert priests for personalized guidance"
+    },
+    "form": {
+      "title": "Book Your Spiritual Consultation", 
+      "fullName": "Full Name *",
+      "phoneNumber": "Phone Number *",
+      "emailAddress": "Email Address", 
+      "poojaType": "Pooja/Service Type *",
+      "preferredDate": "Preferred Date",
+      "additionalMessage": "Additional Message",
+      "sendInquiry": "Send Inquiry",
+      "selectPooja": "Select the ritual you're interested in",
+      "messagePlaceholder": "Tell us about your specific requirements, family details, or any questions you have...",
+      "requiredFields": "Please fill in required fields",
+      "requiredDescription": "Name, phone, and pooja type are required.",
+      "thankYou": "🙏 Thank you for your inquiry!",
+      "thankYouDescription": "Our priests will contact you within 24 hours to discuss your requirements."
+    },
+    "info": {
+      "title": "Get in Touch",
+      "subtitle": "Our dedicated team is here to assist you with all your spiritual needs. Contact us through any of the following channels:",
+      "call": {
+        "title": "Call Us",
+        "phone": "+91 98765 43210", 
+        "availability": "Available 24/7 for spiritual guidance"
+      },
+      "whatsapp": {
+        "title": "WhatsApp",
+        "phone": "+91 98765 43210",
+        "description": "Instant messaging and quick responses"
+      },
+      "email": {
+        "title": "Email",
+        "email": "info@gokarnapoojas.com",
+        "description": "Detailed inquiries and documentation"
+      },
+      "address": {
+        "title": "Temple Address",
+        "address": "Mahabaleshwar Temple Complex\nGokarna, Uttara Kannada\nKarnataka - 581326, India"
+      },
+      "hours": {
+        "title": "Service Hours",
+        "description": "Temple: 4:30 AM - 12:30 PM & 5:00 PM - 8:30 PM\nSupport: 24/7 available"
+      }
+    },
+    "map": {
+      "title": "Find Us at Sacred Gokarna",
+      "subtitle": "Located in the heart of Gokarna's spiritual district"
+    },
+    "faq": {
+      "title": "Frequently Asked Questions",
+      "subtitle": "Quick answers to common questions about our services",
+      "q1": {
+        "question": "How far in advance should I book a ritual?", 
+        "answer": "We recommend booking at least 7-10 days in advance to ensure availability and proper preparation. For major festivals or auspicious days, book 2-3 weeks ahead."
+      },
+      "q2": {
+        "question": "Can I participate in the ritual remotely?",
+        "answer": "Yes! We offer live streaming for devotees who cannot be physically present. You'll receive photos, videos, and blessed prasadam delivered to your home."
+      },
+      "q3": {
+        "question": "What should I bring for the ritual?",
+        "answer": "We provide all necessary materials. You only need to bring your devotion and any specific offerings you wish to make. We'll guide you on any special requirements."
+      },
+      "q4": {
+        "question": "Are there any restrictions on who can participate?",
+        "answer": "Our rituals are open to all devotees regardless of background. Some specific rituals may have traditional requirements, which we'll explain during booking."
+      }
+    }
+  },
+  "blogs": {
+    "hero": {
+      "title": "Spiritual Wisdom & Insights",
+      "subtitle": "Discover ancient wisdom, ritual significance, and spiritual guidance through our comprehensive blog articles"
+    },
+    "categories": {
+      "all": "All",
+      "rituals": "Rituals",
+      "timing": "Timing", 
+      "history": "History",
+      "mantras": "Mantras",
+      "travel": "Travel"
+    },
+    "readMore": "Read More",
+    "newsletter": {
+      "title": "Stay Connected with Divine Wisdom",
+      "subtitle": "Subscribe to receive the latest spiritual insights, ritual guides, and temple updates directly in your inbox",
+      "placeholder": "Enter your email",
+      "subscribe": "Subscribe"
+    },
+    "popularTopics": {
+      "title": "Popular Topics",
+      "subtitle": "Explore the most sought-after spiritual knowledge and ritual guidance"
     }
   },
   "footer": {
@@ -59,5 +421,18 @@
     "narayanBali": "Narayan Bali",
     "tripindiShraddha": "Tripindi Shraddha",
     "mahamrityunjaya": "Mahamrityunjaya Jap"
+  },
+  "notFound": {
+    "title": "404",
+    "subtitle": "Sacred Page Not Found",
+    "description": "The divine path you seek does not exist. Let us guide you back to the sacred journey.",
+    "returnHome": "Return to Sacred Home"
+  },
+  "common": {
+    "loading": "Loading...",
+    "price": "Price",
+    "duration": "Duration", 
+    "participants": "Participants",
+    "rating": "Rating"
   }
 }

@@ -2,49 +2,52 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Phone, MessageCircle, Star, Users, Shield, Clock } from "lucide-react";
+import { useTranslation } from "react-i18next";
 import gokarnaHero from "@/assets/gokarna-hero.jpg";
 import rudrabhisheka from "@/assets/rudrabhisheka.jpg";
 import templeComplex from "@/assets/temple-complex.jpg";
 
 const Home = () => {
+  const { t } = useTranslation();
+
   const testimonials = [
     {
-      name: "Priya Sharma",
-      location: "Mumbai",
-      text: "The Rudrabhisheka performed here was truly divine. The priests were knowledgeable and the entire experience was spiritually uplifting.",
+      name: t('home.testimonials.testimonial1.name'),
+      location: t('home.testimonials.testimonial1.location'),
+      text: t('home.testimonials.testimonial1.text'),
       rating: 5
     },
     {
-      name: "Rajesh Kumar", 
-      location: "Bangalore",
-      text: "Excellent service for Narayan Bali ritual. Everything was arranged perfectly and the atmosphere was very peaceful.",
+      name: t('home.testimonials.testimonial2.name'), 
+      location: t('home.testimonials.testimonial2.location'),
+      text: t('home.testimonials.testimonial2.text'),
       rating: 5
     },
     {
-      name: "Meera Devi",
-      location: "Delhi",
-      text: "Highly recommended for authentic temple rituals. The staff is very helpful and the ceremonies are performed with utmost devotion.",
+      name: t('home.testimonials.testimonial3.name'),
+      location: t('home.testimonials.testimonial3.location'),
+      text: t('home.testimonials.testimonial3.text'),
       rating: 5
     }
   ];
 
   const services = [
     {
-      title: "Rudrabhisheka",
-      description: "Sacred ritual to Lord Shiva with milk, honey, and sacred waters",
-      price: "₹2,500",
+      title: t('home.services.rudrabhisheka.title'),
+      description: t('home.services.rudrabhisheka.description'),
+      price: t('home.services.rudrabhisheka.price'),
       image: rudrabhisheka
     },
     {
-      title: "Narayan Bali",
-      description: "Ancestral ritual for peace and liberation of departed souls",
-      price: "₹5,000",
+      title: t('home.services.narayanBali.title'),
+      description: t('home.services.narayanBali.description'),
+      price: t('home.services.narayanBali.price'),
       image: templeComplex
     },
     {
-      title: "Tripindi Shraddha",
-      description: "Three-generation ancestral ritual for spiritual blessings",
-      price: "₹7,500",
+      title: t('home.services.tripindiShraddha.title'),
+      description: t('home.services.tripindiShraddha.description'),
+      price: t('home.services.tripindiShraddha.price'),
       image: templeComplex
     }
   ];
@@ -52,18 +55,18 @@ const Home = () => {
   const features = [
     {
       icon: Shield,
-      title: "Authentic Rituals",
-      description: "Traditional ceremonies performed according to ancient scriptures"
+      title: t('home.whyChoose.authentic.title'),
+      description: t('home.whyChoose.authentic.description')
     },
     {
       icon: Users,
-      title: "Expert Priests",
-      description: "Experienced Brahmin priests with deep spiritual knowledge"
+      title: t('home.whyChoose.experienced.title'),
+      description: t('home.whyChoose.experienced.description')
     },
     {
       icon: Clock,
-      title: "24/7 Support",
-      description: "Round-the-clock assistance for all your spiritual needs"
+      title: t('home.whyChoose.support.title'),
+      description: t('home.whyChoose.support.description')
     }
   ];
 
@@ -79,22 +82,24 @@ const Home = () => {
         
         <div className="relative z-10 text-center text-white px-4 max-w-4xl mx-auto">
           <h1 className="text-5xl md:text-7xl font-playfair font-bold mb-6 animate-fade-in-up">
-            Book Authentic <span className="text-yellow-300">Gokarna Poojas</span> Online
+            {t('home.hero.title').split(' ').map((word, index) => 
+              word === 'Gokarna' || word === 'ಗೋಕರ್ಣ' || word === 'గోకర్ణ' ? 
+              <span key={index} className="text-yellow-300">{word} </span> : word + ' '
+            )}
           </h1>
           <p className="text-xl md:text-2xl mb-8 text-white/90 animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
-            Experience divine blessings through sacred rituals performed by expert priests 
-            in the holy land of Gokarna
+            {t('home.hero.subtitle')}
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in-up" style={{ animationDelay: '0.4s' }}>
             <Button asChild size="lg" className="btn-divine text-lg px-8 py-4">
               <Link to="/poojas">
-                Book Pooja Now
+                {t('home.hero.bookPooja')}
               </Link>
             </Button>
             <Button asChild size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-primary">
               <a href="https://wa.me/919876543210" target="_blank" rel="noopener noreferrer">
                 <MessageCircle className="w-5 h-5 mr-2" />
-                WhatsApp
+                {t('home.hero.whatsapp')}
               </a>
             </Button>
           </div>
@@ -106,10 +111,10 @@ const Home = () => {
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-playfair font-bold text-primary mb-4">
-              Popular Sacred Services
+              {t('home.services.title')}
             </h2>
             <p className="text-muted-foreground max-w-2xl mx-auto">
-              Experience the most sought-after spiritual rituals performed with devotion and authenticity
+              {t('home.services.subtitle')}
             </p>
           </div>
           
@@ -135,7 +140,7 @@ const Home = () => {
                       {service.price}
                     </span>
                     <Button asChild variant="outline" className="hover:bg-primary hover:text-white">
-                      <Link to="/poojas">Book Now</Link>
+                      <Link to="/poojas">{t('home.services.bookNow')}</Link>
                     </Button>
                   </div>
                 </CardContent>
@@ -150,10 +155,10 @@ const Home = () => {
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-playfair font-bold text-primary mb-4">
-              Why Choose Our Services?
+              {t('home.whyChoose.title')}
             </h2>
             <p className="text-muted-foreground max-w-2xl mx-auto">
-              Trust, authenticity, and spiritual excellence in every ritual we perform
+              {t('home.whyChoose.subtitle')}
             </p>
           </div>
           
@@ -180,10 +185,10 @@ const Home = () => {
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-playfair font-bold text-primary mb-4">
-              Devotee Experiences
+              {t('home.testimonials.title')}
             </h2>
             <p className="text-muted-foreground max-w-2xl mx-auto">
-              Hear from the devotees who have experienced divine blessings through our services
+              {t('home.testimonials.subtitle')}
             </p>
           </div>
           
@@ -214,22 +219,22 @@ const Home = () => {
       <section className="py-16 bg-gradient-divine text-white">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-4xl font-playfair font-bold mb-4">
-            Ready to Experience Divine Blessings?
+            {t('home.cta.title')}
           </h2>
           <p className="text-xl mb-8 text-white/90 max-w-2xl mx-auto">
-            Book your authentic Gokarna pooja today and connect with the sacred energy of this holy land
+            {t('home.cta.subtitle')}
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button asChild size="lg" className="bg-white text-primary hover:bg-white/90">
               <Link to="/contact">
                 <Phone className="w-5 h-5 mr-2" />
-                Call Now: +91 98765 43210
+                {t('home.cta.callNow')}
               </Link>
             </Button>
             <Button asChild size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-primary">
               <a href="https://wa.me/919876543210" target="_blank" rel="noopener noreferrer">
                 <MessageCircle className="w-5 h-5 mr-2" />
-                WhatsApp Us
+                {t('home.cta.whatsappUs')}
               </a>
             </Button>
           </div>

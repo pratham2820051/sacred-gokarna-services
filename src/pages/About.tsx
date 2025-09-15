@@ -1,8 +1,10 @@
 import { Card, CardContent } from "@/components/ui/card";
+import { useTranslation } from "react-i18next";
 import templeComplex from "@/assets/temple-complex.jpg";
 import spiritualOm from "@/assets/spiritual-om.jpg";
 
 const About = () => {
+  const { t } = useTranslation();
   const priests = [
     {
       name: "Pandit Raghunath Shastri",
