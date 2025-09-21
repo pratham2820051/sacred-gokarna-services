@@ -9,6 +9,7 @@ import spiritualOm from "@/assets/spiritual-om.jpg";
 
 const Poojas = () => {
   const { t } = useTranslation();
+
   const poojaServices = [
     {
       id: 1,
@@ -18,7 +19,7 @@ const Poojas = () => {
       duration: t('poojas.services.rudrabhisheka.duration'),
       participants: t('poojas.services.rudrabhisheka.participants'),
       image: rudrabhisheka,
-      benefits: t('poojas.services.rudrabhisheka.benefits', { returnObjects: true }),
+      benefits: t('poojas.services.rudrabhisheka.benefits', { returnObjects: true }) || [],
       rating: 4.9
     },
     {
@@ -29,7 +30,7 @@ const Poojas = () => {
       duration: t('poojas.services.narayanBali.duration'),
       participants: t('poojas.services.narayanBali.participants'),
       image: templeComplex,
-      benefits: t('poojas.services.narayanBali.benefits', { returnObjects: true }),
+      benefits: t('poojas.services.narayanBali.benefits', { returnObjects: true }) || [],
       rating: 4.8
     },
     {
@@ -40,7 +41,7 @@ const Poojas = () => {
       duration: t('poojas.services.tripindiShraddha.duration'),
       participants: t('poojas.services.tripindiShraddha.participants'),
       image: spiritualOm,
-      benefits: t('poojas.services.tripindiShraddha.benefits', { returnObjects: true }),
+      benefits: t('poojas.services.tripindiShraddha.benefits', { returnObjects: true }) || [],
       rating: 4.9
     },
     {
@@ -51,7 +52,7 @@ const Poojas = () => {
       duration: t('poojas.services.mahamrityunjaya.duration'),
       participants: t('poojas.services.mahamrityunjaya.participants'),
       image: spiritualOm,
-      benefits: t('poojas.services.mahamrityunjaya.benefits', { returnObjects: true }),
+      benefits: t('poojas.services.mahamrityunjaya.benefits', { returnObjects: true }) || [],
       rating: 4.7
     },
     {
@@ -62,7 +63,7 @@ const Poojas = () => {
       duration: t('poojas.services.ganapatiHomam.duration'),
       participants: t('poojas.services.ganapatiHomam.participants'),
       image: templeComplex,
-      benefits: t('poojas.services.ganapatiHomam.benefits', { returnObjects: true }),
+      benefits: t('poojas.services.ganapatiHomam.benefits', { returnObjects: true }) || [],
       rating: 4.8
     },
     {
@@ -73,7 +74,7 @@ const Poojas = () => {
       duration: t('poojas.services.navagrahaShanti.duration'),
       participants: t('poojas.services.navagrahaShanti.participants'),
       image: rudrabhisheka,
-      benefits: t('poojas.services.navagrahaShanti.benefits', { returnObjects: true }),
+      benefits: t('poojas.services.navagrahaShanti.benefits', { returnObjects: true }) || [],
       rating: 4.6
     }
   ];
@@ -115,7 +116,8 @@ const Poojas = () => {
                     </h3>
                     <div className="flex items-center space-x-1">
                       <Star className="w-4 h-4 fill-yellow-400 text-yellow-400" />
-                      <span className="text-sm font-medium">{service.rating}</span>
+                       {/* <span className="text-sm font-medium">{service.rating}</span> */}
+                      
                     </div>
                   </div>
 
@@ -126,10 +128,11 @@ const Poojas = () => {
 
                   {/* Details */}
                   <div className="space-y-2 mb-4">
-                    <div className="flex items-center text-sm text-muted-foreground">
+                     {/*  <div className="flex items-center text-sm text-muted-foreground">
                       <Clock className="w-4 h-4 mr-2" />
                       {service.duration}
-                    </div>
+                    </div> */}
+                   
                     <div className="flex items-center text-sm text-muted-foreground">
                       <Users className="w-4 h-4 mr-2" />
                       {service.participants}
@@ -137,22 +140,25 @@ const Poojas = () => {
                   </div>
 
                   {/* Benefits */}
-                  <div className="mb-6">
-                    <h4 className="text-sm font-semibold mb-2 text-primary">{t('poojas.services.keyBenefits')}</h4>
-                    <div className="grid grid-cols-2 gap-1">
-                      {service.benefits.map((benefit, index) => (
-                        <div key={index} className="text-xs text-muted-foreground">
-                          • {benefit}
-                        </div>
-                      ))}
+                  {Array.isArray(service.benefits) && service.benefits.length > 0 && (
+                    <div className="mb-6">
+                      <h4 className="text-sm font-semibold mb-2 text-primary">{t('poojas.services.keyBenefits')}</h4>
+                      <div className="grid grid-cols-2 gap-1">
+                        {service.benefits.map((benefit, index) => (
+                          <div key={index} className="text-xs text-muted-foreground">
+                            • {benefit}
+                          </div>
+                        ))}
+                      </div>
                     </div>
-                  </div>
+                  )}
 
                   {/* Price & CTA */}
                   <div className="flex items-center justify-between">
-                    <span className="text-2xl font-bold text-primary">
+                    {/* <span className="text-2xl font-bold text-primary">
                       {service.price}
-                    </span>
+                    </span> */}
+                    
                     <Button asChild className="btn-divine">
                       <Link to="/contact">{t('poojas.services.bookNow')}</Link>
                     </Button>
@@ -177,72 +183,62 @@ const Poojas = () => {
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-            <div className="text-center">
-              <div className="w-16 h-16 mx-auto mb-4 bg-primary rounded-full flex items-center justify-center text-white font-bold text-xl">
-                1
+            {[1, 2, 3, 4].map((step) => (
+              <div key={step} className="text-center">
+                <div className="w-16 h-16 mx-auto mb-4 bg-primary rounded-full flex items-center justify-center text-white font-bold text-xl">
+                  {step}
+                </div>
+                <h3 className="text-lg font-playfair font-semibold mb-2">
+                  {t(`poojas.process.step${step}.title`)}
+                </h3>
+                <p className="text-sm text-muted-foreground">
+                  {t(`poojas.process.step${step}.description`)}
+                </p>
               </div>
-              <h3 className="text-lg font-playfair font-semibold mb-2">{t('poojas.process.step1.title')}</h3>
-              <p className="text-sm text-muted-foreground">
-                {t('poojas.process.step1.description')}
-              </p>
-            </div>
-            
-            <div className="text-center">
-              <div className="w-16 h-16 mx-auto mb-4 bg-primary rounded-full flex items-center justify-center text-white font-bold text-xl">
-                2
-              </div>
-              <h3 className="text-lg font-playfair font-semibold mb-2">{t('poojas.process.step2.title')}</h3>
-              <p className="text-sm text-muted-foreground">
-                {t('poojas.process.step2.description')}
-              </p>
-            </div>
-            
-            <div className="text-center">
-              <div className="w-16 h-16 mx-auto mb-4 bg-primary rounded-full flex items-center justify-center text-white font-bold text-xl">
-                3
-              </div>
-              <h3 className="text-lg font-playfair font-semibold mb-2">{t('poojas.process.step3.title')}</h3>
-              <p className="text-sm text-muted-foreground">
-                {t('poojas.process.step3.description')}
-              </p>
-            </div>
-            
-            <div className="text-center">
-              <div className="w-16 h-16 mx-auto mb-4 bg-primary rounded-full flex items-center justify-center text-white font-bold text-xl">
-                4
-              </div>
-              <h3 className="text-lg font-playfair font-semibold mb-2">{t('poojas.process.step4.title')}</h3>
-              <p className="text-sm text-muted-foreground">
-                {t('poojas.process.step4.description')}
-              </p>
-            </div>
+            ))}
           </div>
         </div>
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 bg-gradient-divine text-white">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-4xl font-playfair font-bold mb-4">
-            {t('poojas.cta.title')}
-          </h2>
-          <p className="text-xl mb-8 text-white/90 max-w-2xl mx-auto">
-            {t('poojas.cta.subtitle')}
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button asChild size="lg" className="bg-white text-primary hover:bg-white/90">
-              <Link to="/contact">
-{t('poojas.cta.bookConsultation')}
-              </Link>
-            </Button>
-            <Button asChild size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-primary">
-              <a href="https://wa.me/919876543210" target="_blank" rel="noopener noreferrer">
-{t('poojas.cta.whatsapp')}
-              </a>
-            </Button>
-          </div>
-        </div>
-      </section>
+   <section className="py-16 bg-gradient-divine text-white">
+  <div className="container mx-auto px-4 text-center">
+    <h2 className="text-4xl font-playfair font-bold mb-4">
+      {t('poojas.cta.title')}
+    </h2>
+    <p className="text-xl mb-8 text-white/90 max-w-2xl mx-auto">
+      {t('poojas.cta.subtitle')}
+    </p>
+    <div className="flex flex-col sm:flex-row gap-4 justify-center">
+      {/* Primary Button */}
+      <Button
+        asChild
+        size="lg"
+        className="bg-white text-orange-500 font-semibold hover:bg-gradient-to-r hover:from-orange-400 hover:to-orange-600 hover:text-white transition-all duration-300"
+      >
+        <Link to="/contact">{t('poojas.cta.bookConsultation')}</Link>
+      </Button>
+
+      {/* Secondary Button */}
+     <Button
+  asChild
+  size="lg"
+  variant="outline"
+  className="border-white text-orange-500 font-semibold hover:bg-gradient-to-r hover:from-orange-400 hover:to-orange-600 hover:text-white transition-all duration-300"
+>
+  <a
+    href="https://wa.me/919876543210"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    {t('poojas.cta.whatsapp')}
+  </a>
+</Button>
+
+    </div>
+  </div>
+</section>
+
     </div>
   );
 };
