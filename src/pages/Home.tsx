@@ -3,9 +3,11 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Phone, MessageCircle, Star, Users, Shield, Clock } from "lucide-react";
 import { useTranslation } from "react-i18next";
-import gokarnaHero from "@/assets/gokarna-hero.jpg";
+
 import rudrabhisheka from "@/assets/rudrabhisheka.jpg";
 import templeComplex from "@/assets/temple-complex.jpg";
+import heroVideo from "@/assets/heroVideo.mp4";
+import myIcon from "@/assets/icon.png"; 
 
 const Home = () => {
   const { t } = useTranslation();
@@ -35,19 +37,19 @@ const Home = () => {
     {
       title: t('home.services.rudrabhisheka.title'),
       description: t('home.services.rudrabhisheka.description'),
-      price: t('home.services.rudrabhisheka.price'),
+      //price: t('home.services.rudrabhisheka.price'),
       image: rudrabhisheka
     },
     {
       title: t('home.services.narayanBali.title'),
       description: t('home.services.narayanBali.description'),
-      price: t('home.services.narayanBali.price'),
+      //price: t('home.services.narayanBali.price'),
       image: templeComplex
     },
     {
       title: t('home.services.tripindiShraddha.title'),
       description: t('home.services.tripindiShraddha.description'),
-      price: t('home.services.tripindiShraddha.price'),
+      //price: t('home.services.tripindiShraddha.price'),
       image: templeComplex
     }
   ];
@@ -74,10 +76,16 @@ const Home = () => {
     <div className="min-h-screen">
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-        <div 
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-          style={{ backgroundImage: `url(${gokarnaHero})` }}
-        />
+        <div className="absolute inset-0">
+      <video
+        className="w-full h-full object-cover"
+        src={heroVideo}
+        autoPlay
+        loop
+        muted
+        playsInline
+      />
+    </div>
         <div className="absolute inset-0 bg-gradient-temple opacity-80" />
         
         <div className="relative z-10 text-center text-white px-4 max-w-4xl mx-auto">
@@ -136,9 +144,7 @@ const Home = () => {
                     {service.description}
                   </p>
                   <div className="flex items-center justify-between">
-                    <span className="text-2xl font-bold text-primary">
-                      {service.price}
-                    </span>
+                    
                     <Button asChild variant="outline" className="hover:bg-primary hover:text-white">
                       <Link to="/poojas">{t('home.services.bookNow')}</Link>
                     </Button>
@@ -216,30 +222,58 @@ const Home = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 bg-gradient-divine text-white">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-4xl font-playfair font-bold mb-4">
-            {t('home.cta.title')}
-          </h2>
-          <p className="text-xl mb-8 text-white/90 max-w-2xl mx-auto">
-            {t('home.cta.subtitle')}
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button asChild size="lg" className="bg-white text-primary hover:bg-white/90">
-              <Link to="/contact">
-                <Phone className="w-5 h-5 mr-2" />
-                {t('home.cta.callNow')}
-              </Link>
-            </Button>
-            <Button asChild size="lg" variant="outline" className="border-white text-orange-800 hover:bg-white hover:text-primary">
-              <a href="https://wa.me/919876543210" target="_blank" rel="noopener noreferrer">
-                <MessageCircle className="w-5 h-5 mr-2" />
-                {t('home.cta.whatsappUs')}
-              </a>
-            </Button>
-          </div>
-        </div>
-      </section>
+     <section className="py-16 bg-gradient-divine text-white">
+  <div className="container mx-auto px-4 text-center">
+    <h2 className="text-4xl font-playfair font-bold mb-4">
+      {t("home.cta.title")}
+    </h2>
+    <p className="text-xl mb-8 text-white/90 max-w-2xl mx-auto">
+      {t("home.cta.subtitle")}
+    </p>
+    <div className="flex flex-col sm:flex-row gap-4 justify-center">
+      {/* Call Now button */}
+      <Button
+        asChild
+        size="lg"
+        className="bg-white text-[#FF6600] border border-[#FF6600] hover:bg-[#FF6600] hover:text-white transition"
+      >
+        <Link to="/contact">
+          <Phone className="w-5 h-5 mr-2" />
+          {t("home.cta.callNow")}
+        </Link>
+      </Button>
+
+      {/* WhatsApp Us button */}
+      <Button
+        asChild
+        size="lg"
+        className="bg-white text-[#FF6600] border border-[#FF6600] hover:bg-[#FF6600] hover:text-white transition"
+      >
+        <a
+          href="https://wa.me/919876543210"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <MessageCircle className="w-5 h-5 mr-2" />
+          {t("home.cta.whatsappUs")}
+        </a>
+      </Button>
+    </div>
+  </div>
+</section>
+
+      {/* Floating Icon Bottom-Left */}
+<Link 
+  to="/special-page" 
+  className="fixed bottom-4 right-4 z-50"
+>
+  <img 
+    src={myIcon} 
+    alt="Special Page" 
+    className="w-12 h-12 cursor-pointer hover:scale-110 transition-transform"
+  />
+</Link>
+
     </div>
   );
 };

@@ -17,6 +17,7 @@ import Blogs from "./pages/Blogs";
 import BlogPost from "./pages/BlogPost";
 import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
+import SpecialPage from "@/pages/SpecialPage";
 
 const queryClient = new QueryClient();
 
@@ -56,6 +57,7 @@ const App = () => {
             <main className="flex-1">
               <Routes>
                 <Route path="/" element={<Home />} />
+                <Route path="/special-page" element={<SpecialPage />} />
                 <Route path="/about" element={<About />} />
                 <Route path="/poojas" element={<Poojas />} />
                 <Route path="/how-to-reach" element={<HowToReach />} />
