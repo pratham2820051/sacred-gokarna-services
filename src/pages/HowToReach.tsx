@@ -225,32 +225,38 @@ const HowToReach = () => {
       </section>
 
       {/* Contact for Travel Help */}
-      <section className="py-16 bg-gradient-divine text-white">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-4xl font-playfair font-bold mb-4">
-            {t('howToReach.travelAssistance.title')}
-          </h2>
-          <p className="text-xl mb-8 text-white/90 max-w-2xl mx-auto">
-            {t('howToReach.travelAssistance.subtitle')}
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a 
-              href="tel:+919876543210"
-              className="inline-flex items-center justify-center px-8 py-4 bg-white text-primary rounded-full font-semibold hover:bg-white/90 transition-colors"
-            >
-{t('howToReach.travelAssistance.call')}
-            </a>
-            <a 
-              href="https://wa.me/919876543210"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center justify-center px-8 py-4 border-2 border-white text-white rounded-full font-semibold hover:bg-white hover:text-primary transition-colors"
-            >
-{t('howToReach.travelAssistance.whatsapp')}
-            </a>
-          </div>
-        </div>
-      </section>
+   <section className="py-16 bg-gradient-divine text-white">
+  <div className="container mx-auto px-4 text-center">
+    <h2 className="text-4xl font-playfair font-bold mb-4">
+      {t('howToReach.travelAssistance.title')}
+    </h2>
+    <p className="text-xl mb-8 text-white/90 max-w-2xl mx-auto">
+      {t('howToReach.travelAssistance.subtitle')}
+    </p>
+    <div className="flex flex-col sm:flex-row gap-4 justify-center">
+      {/* Call Button */}
+      <a 
+        href="tel:+919876543210"
+        className="inline-flex items-center justify-center px-8 py-4 bg-white text-orange-500 rounded-full font-semibold hover:bg-gradient-to-r hover:from-orange-400 hover:to-orange-600 hover:text-white transition-all duration-300"
+      >
+        {t('howToReach.travelAssistance.call')}
+      </a>
+
+      {/* WhatsApp Button */}
+    <a 
+  href="https://wa.me/919876543210"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="inline-flex items-center justify-center px-8 py-4 bg-white text-orange-500 rounded-full font-semibold hover:bg-gradient-to-r hover:from-orange-400 hover:to-orange-600 hover:text-white transition-all duration-300"
+>
+  {t('howToReach.travelAssistance.whatsapp')}
+</a>
+
+    </div>
+  </div>
+</section>
+
+
     </div>
   );
 };
