@@ -195,14 +195,8 @@ const Blogs = () => {
               {t('blogs.newsletter.subtitle')}
             </p>
             <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
-              <input
-                type="email"
-                placeholder={t('blogs.newsletter.placeholder')}
-                className="flex-1 px-4 py-3 rounded-full text-gray-900 placeholder-gray-500"
-              />
-              <button className="px-8 py-3 bg-white text-primary rounded-full font-semibold hover:bg-white/90 transition-colors">
-{t('blogs.newsletter.subscribe')}
-              </button>
+              
+              
             </div>
           </div>
         </div>
