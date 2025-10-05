@@ -267,7 +267,7 @@ const Home = () => {
 </section>
 
       {/* Floating Icon Bottom-Left */}
-<Link 
+{/* <Link 
   to="/special-page" 
   className="fixed bottom-4 right-4 z-50"
 >
@@ -276,7 +276,7 @@ const Home = () => {
     alt="Special Page" 
     className="w-12 h-12 cursor-pointer hover:scale-110 transition-transform"
   />
-</Link>
+</Link> */}
 
     </div>
   );
