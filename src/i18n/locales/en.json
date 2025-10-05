@@ -184,6 +184,28 @@
         "participants": "Individual/Family", 
         "benefits": ["Planetary peace", "Reduces malefic effects", "Career progress", "Life harmony"]
       },
+       "nagaShanti": {
+    "title": "Naga Shanti",
+    "description": "A sacred ritual to pacify Naga Dosha and seek blessings of serpent deities for prosperity, fertility, and protection from misfortune.",
+    "duration": "2 Hours",
+    "participants": "Individual/Family",
+    "benefits": ["Removes Naga Dosha", "Improves fertility", "Brings harmony", "Ensures protection from serpent afflictions"]
+  },
+   "chandiHavana": {
+    "title": "Chandi Havana",
+    "description": "A powerful Devi ritual invoking Goddess Chandi for protection, courage, and victory over negativity and obstacles.",
+    "duration": "5 Hours",
+    "participants": "Family groups",
+    "benefits": ["Divine protection", "Victory over negativity", "Health and strength", "Spiritual empowerment"]
+  },
+   "brahmanaDhana": {
+    "title": "Brahmana Dāna",
+    "description": "A sacred ritual of offering food, clothes, and dakshina to Brahmins. This act of charity is believed to purify sins, attract blessings, and enhance spiritual merit.",
+    "duration": "1 Hour",
+    "participants": "Individual/Family",
+    "benefits": ["Purifies past karma", "Brings divine blessings", "Enhances prosperity", "Promotes spiritual growth"]
+  },
+
       "keyBenefits": "Key Benefits:",
       "bookNow": "Book Now"
     },

@@ -76,7 +76,42 @@ const Poojas = () => {
       image: rudrabhisheka,
       benefits: t('poojas.services.navagrahaShanti.benefits', { returnObjects: true }) || [],
       rating: 4.6
+    },
+     {
+      id: 7,
+      title: t('poojas.services.brahmanaDhana.title'),
+      description: t('poojas.services.brahmanaDhana.description'),
+      price: "₹2,000",
+      duration: t('poojas.services.brahmanaDhana.duration'),
+      participants: t('poojas.services.brahmanaDhana.participants'),
+      image: templeComplex,
+      benefits: t('poojas.services.brahmanaDhana.benefits', { returnObjects: true }) || [],
+      rating: 4.8
+    },
+     {
+      id: 8,
+      title: t('poojas.services.nagaShanti.title'),
+      description: t('poojas.services.nagaShanti.description'),
+      price: "₹3,500",
+      duration: t('poojas.services.nagaShanti.duration'),
+      participants: t('poojas.services.nagaShanti.participants'),
+      image: spiritualOm,
+      benefits: t('poojas.services.nagaShanti.benefits', { returnObjects: true }) || [],
+      rating: 4.9
+    },
+     {
+      id: 9,
+      title: t('poojas.services.chandiHavana.title'),
+      description: t('poojas.services.chandiHavana.description'),
+      price: "₹6,000",
+      duration: t('poojas.services.chandiHavana.duration'),
+      participants: t('poojas.services.chandiHavana.participants'),
+      image: rudrabhisheka,
+      benefits: t('poojas.services.chandiHavana.benefits', { returnObjects: true }) || [],
+      rating: 4.9
     }
+    
+
   ];
 
   return (
