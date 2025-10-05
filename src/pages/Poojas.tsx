@@ -226,12 +226,12 @@ const Poojas = () => {
   variant="outline"
   className="border-white text-orange-500 font-semibold hover:bg-gradient-to-r hover:from-orange-400 hover:to-orange-600 hover:text-white transition-all duration-300"
 >
-  <a
-    href="https://wa.me/919876543210"
+  <a 
+    href="https://wa.me/919901801625"
     target="_blank"
     rel="noopener noreferrer"
   >
-    {t('poojas.cta.whatsapp')}
+    Whatsapp : 9901801625
   </a>
 </Button>
 

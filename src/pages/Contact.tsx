@@ -188,10 +188,10 @@ const Contact = () => {
                       <div>
                         <h3 className="font-semibold mb-1">{t('contact.info.call.title')}</h3>
                         <a 
-                          href="tel:+919876543210" 
+                          href="tel:+919901801625" 
                           className="text-primary hover:underline"
                         >
-                          {t('contact.info.call.phone')}
+                          +91 9901801625
                         </a>
                         <p className="text-sm text-muted-foreground">
                           {t('contact.info.call.availability')}
@@ -210,12 +210,12 @@ const Contact = () => {
                       <div>
                         <h3 className="font-semibold mb-1">{t('contact.info.whatsapp.title')}</h3>
                         <a 
-                          href="https://wa.me/919876543210" 
+                          href="https://wa.me/919901801625" 
                           target="_blank" 
                           rel="noopener noreferrer"
                           className="text-primary hover:underline"
                         >
-                          {t('contact.info.whatsapp.phone')}
+                          +91 9901801625
                         </a>
                         <p className="text-sm text-muted-foreground">
                           {t('contact.info.whatsapp.description')}
@@ -234,13 +234,13 @@ const Contact = () => {
                       <div>
                         <h3 className="font-semibold mb-1">{t('contact.info.email.title')}</h3>
                         <a 
-                          href="mailto:info@gokarnapoojas.com" 
+                          href="mailto:gokarnapooja9@gmail.com" 
                           className="text-primary hover:underline"
                         >
-                          {t('contact.info.email.email')}
+                          gokarnapooja9@gmail.com
                         </a>
                         <p className="text-sm text-muted-foreground">
-                          {t('contact.info.email.description')}
+                          gokarnapooja9@gmail.com
                         </p>
                       </div>
                     </div>

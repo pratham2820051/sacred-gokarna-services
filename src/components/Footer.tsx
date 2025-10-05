@@ -68,14 +68,14 @@ const Footer = () => {
                 className="flex items-center space-x-3 text-white/80 hover:text-white transition-colors"
               >
                 <Phone className="w-4 h-4" />
-                <span className="text-sm">+91 9999999999</span>
+                <span className="text-sm">+91 9901801625</span>
               </a>
               <a 
-                href="mailto:info@gokarnapoojas.com" 
+                href="mailto:gokarnapooja9@gmail.com.com" 
                 className="flex items-center space-x-3 text-white/80 hover:text-white transition-colors"
               >
                 <Mail className="w-4 h-4" />
-                <span className="text-sm">info@gokarnapoojas.com</span>
+                <span className="text-sm">gokarnapooja9@gmail.com</span>
               </a>
               <div className="flex items-start space-x-3 text-white/80">
                 <MapPin className="w-4 h-4 mt-0.5" />

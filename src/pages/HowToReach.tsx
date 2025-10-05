@@ -236,15 +236,15 @@ const HowToReach = () => {
     <div className="flex flex-col sm:flex-row gap-4 justify-center">
       {/* Call Button */}
       <a 
-        href="tel:+919876543210"
+        href="tel:+919901801625"
         className="inline-flex items-center justify-center px-8 py-4 bg-white text-orange-500 rounded-full font-semibold hover:bg-gradient-to-r hover:from-orange-400 hover:to-orange-600 hover:text-white transition-all duration-300"
       >
-        {t('howToReach.travelAssistance.call')}
+        Call : +91 9901801625
       </a>
 
       {/* WhatsApp Button */}
     <a 
-  href="https://wa.me/919876543210"
+  href="https://wa.me/919901801625"
   target="_blank"
   rel="noopener noreferrer"
   className="inline-flex items-center justify-center px-8 py-4 bg-white text-orange-500 rounded-full font-semibold hover:bg-gradient-to-r hover:from-orange-400 hover:to-orange-600 hover:text-white transition-all duration-300"
