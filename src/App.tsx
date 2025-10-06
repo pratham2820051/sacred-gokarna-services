@@ -5,6 +5,7 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { useTranslation } from "react-i18next";
+import { Analytics } from "@vercel/analytics/next";
 import "./i18n";
 import ScrollToTop from "./components/ScrollToTop";
 import LoadingScreen from "./components/LoadingScreen";
@@ -19,8 +20,6 @@ import BlogPost from "./pages/BlogPost";
 import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
 import SpecialPage from "@/pages/SpecialPage";
-import { Analytics } from "@vercel/analytics/next";
-
 
 const queryClient = new QueryClient();
 
@@ -28,26 +27,25 @@ const App = () => {
   const [loading, setLoading] = useState(true);
   const { i18n } = useTranslation();
 
+  // Loading screen for 2.5s
   useEffect(() => {
-    const timer = setTimeout(() => {
-      setLoading(false);
-    }, 2500);
-
+    const timer = setTimeout(() => setLoading(false), 2500);
     return () => clearTimeout(timer);
   }, []);
 
-  // Set document language attribute for proper font rendering
+  // Set document language and font dynamically
   useEffect(() => {
     document.documentElement.lang = i18n.language;
-    const fontFamily = i18n.language === 'kn' ? "'Noto Sans Kannada', sans-serif" :
-                      i18n.language === 'te' ? "'Noto Sans Telugu', sans-serif" :
-                      "'Inter', sans-serif";
-    document.documentElement.style.setProperty('--font-family-current', fontFamily);
+    const fontFamily =
+      i18n.language === "kn"
+        ? "'Noto Sans Kannada', sans-serif"
+        : i18n.language === "te"
+        ? "'Noto Sans Telugu', sans-serif"
+        : "'Inter', sans-serif";
+    document.documentElement.style.setProperty("--font-family-current", fontFamily);
   }, [i18n.language]);
 
-  if (loading) {
-    return <LoadingScreen />;
-  }
+  if (loading) return <LoadingScreen />;
 
   return (
     <QueryClientProvider client={queryClient}>
@@ -74,6 +72,7 @@ const App = () => {
             <Footer />
           </div>
         </BrowserRouter>
+        <Analytics /> {/* ← Vercel Analytics */}
       </TooltipProvider>
     </QueryClientProvider>
   );
