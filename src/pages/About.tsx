@@ -7,22 +7,22 @@ const About = () => {
   const { t } = useTranslation();
   const priests = [
     {
-      name: t('about.priests.priest1.name'),
-      experience: t('about.priests.priest1.experience'),
-      specialization: t('about.priests.priest1.specialization'),
-      description: t('about.priests.priest1.description')
+      name: "Ganapati Bhat",
+  experience: "15+ Year",
+  specialization: "Narayana Bali, Tripindi Shraddha",
+  description: "Expert priest with traditional Vedic knowledge."
     },
     {
-      name: t('about.priests.priest2.name'),
-      experience: t('about.priests.priest2.experience'),
-      specialization: t('about.priests.priest2.specialization'),
-      description: t('about.priests.priest2.description')
+      name: "Pandit Suresh Joshi",
+  experience: "15 years of experience",
+  specialization: "Narayana Bali, Tripindi Shraddha",
+  description: "Expert priest with traditional Vedic knowledge."
     },
     {
-      name: t('about.priests.priest3.name'),
-      experience: t('about.priests.priest3.experience'),
-      specialization: t('about.priests.priest3.specialization'),
-      description: t('about.priests.priest3.description')
+       name: "Pandit Suresh Joshi",
+  experience: "15 years of experience",
+  specialization: "Narayana Bali, Tripindi Shraddha",
+  description: "Expert priest with traditional Vedic knowledge."
     }
   ];
 
