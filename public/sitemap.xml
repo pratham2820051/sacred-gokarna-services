@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="https://www.sitemaps.org/schemas/sitemap/0.9">
-  
+
+  <!-- Homepage -->
   <url>
     <loc>https://narayanabalitripindi.com/</loc>
     <lastmod>2025-10-06</lastmod>
@@ -8,6 +9,7 @@
     <priority>1.0</priority>
   </url>
 
+  <!-- Main Pages -->
   <url>
     <loc>https://narayanabalitripindi.com/special-page</loc>
     <lastmod>2025-10-06</lastmod>
@@ -43,7 +45,7 @@
     <priority>0.7</priority>
   </url>
 
-  <!-- Blog posts (dynamic) -->
+  <!-- Example blog posts -->
   <url>
     <loc>https://narayanabalitripindi.com/blog/sample-blog-post</loc>
     <lastmod>2025-10-06</lastmod>
