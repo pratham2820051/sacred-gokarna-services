@@ -9,21 +9,9 @@ const About = () => {
     {
       name: "Ganapati Bhat",
   experience: "15+ Year",
-  specialization: "Narayana Bali, Tripindi Shraddha",
   description: "Expert priest with traditional Vedic knowledge."
     },
-    {
-      name: "Pandit Suresh Joshi",
-  experience: "15 years of experience",
-  specialization: "Narayana Bali, Tripindi Shraddha",
-  description: "Expert priest with traditional Vedic knowledge."
-    },
-    {
-       name: "Pandit Suresh Joshi",
-  experience: "15 years of experience",
-  specialization: "Narayana Bali, Tripindi Shraddha",
-  description: "Expert priest with traditional Vedic knowledge."
-    }
+    
   ];
 
   return (
@@ -86,27 +74,26 @@ const About = () => {
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {priests.map((priest, index) => (
-              <Card key={priest.name} className="sacred-card divine-hover">
-                <CardContent className="p-6 text-center">
-                  <div className="w-20 h-20 mx-auto mb-4 bg-primary/10 rounded-full flex items-center justify-center">
-                    <div className="text-3xl">🧘‍♂️</div>
-                  </div>
-                  <h3 className="text-xl font-playfair font-semibold mb-2">
-                    {priest.name}
-                  </h3>
-                  <p className="text-primary font-medium mb-2">
-                    {priest.experience}
-                  </p>
-                  <p className="text-sm font-medium text-accent mb-3">
-                    {priest.specialization}
-                  </p>
-                  <p className="text-sm text-muted-foreground">
-                    {priest.description}
-                  </p>
-                </CardContent>
-              </Card>
+          <div className="flex justify-center">
+  {priests.map((priest) => (
+    <Card key={priest.name} className="sacred-card divine-hover max-w-sm">
+      <CardContent className="p-6 text-center">
+        <div className="w-20 h-20 mx-auto mb-4 bg-primary/10 rounded-full flex items-center justify-center">
+          <div className="text-3xl">🧘‍♂️</div>
+        </div>
+        <h3 className="text-xl font-playfair font-semibold mb-2">
+          {priest.name}
+        </h3>
+        <p className="text-primary font-medium mb-2">
+          {priest.experience}
+        </p>
+        <p className="text-sm text-muted-foreground">
+          {priest.description}
+        </p>
+      </CardContent>
+    </Card>
+ 
+
             ))}
           </div>
         </div>
