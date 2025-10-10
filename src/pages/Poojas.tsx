@@ -79,13 +79,13 @@ const Poojas = () => {
     },
      {
       id: 7,
-      title: t('poojas.services.brahmanaDhana.title'),
-      description: t('poojas.services.brahmanaDhana.description'),
+      title: t('poojas.services.astrologyService.title'),
+      description: t('poojas.services.astrologyService.description'),
       price: "₹2,000",
-      duration: t('poojas.services.brahmanaDhana.duration'),
-      participants: t('poojas.services.brahmanaDhana.participants'),
+      duration: t('poojas.services.astrologyService.duration'),
+      participants: t('poojas.services.astrologyService.participants'),
       image: templeComplex,
-      benefits: t('poojas.services.brahmanaDhana.benefits', { returnObjects: true }) || [],
+      benefits: t('poojas.services.astrologyService.benefits', { returnObjects: true }) || [],
       rating: 4.8
     },
      {
