@@ -6,7 +6,7 @@ import { useTranslation } from "react-i18next";
 import rudrabhisheka from "@/assets/rudrabhisheka.jpg";
 import templeComplex from "@/assets/temple-complex.jpg";
 import spiritualOm from "@/assets/spiritual-om.jpg";
-
+import Astrology from "@/assets/Astrology.jpg"
 const Poojas = () => {
   const { t } = useTranslation();
 
@@ -84,7 +84,7 @@ const Poojas = () => {
       price: "₹2,000",
       duration: t('poojas.services.astrologyService.duration'),
       participants: t('poojas.services.astrologyService.participants'),
-      image: templeComplex,
+      image: Astrology,
       benefits: t('poojas.services.astrologyService.benefits', { returnObjects: true }) || [],
       rating: 4.8
     },
