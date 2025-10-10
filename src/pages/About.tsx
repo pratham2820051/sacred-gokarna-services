@@ -8,10 +8,9 @@ const About = () => {
   const priests = [
     {
       name: "Ganapati Bhat",
-  experience: "15+ Year",
-  description: "Expert priest with traditional Vedic knowledge."
+      experience: "15+ Year",
+      description: "Expert priest with traditional Vedic knowledge."
     },
-    
   ];
 
   return (
@@ -39,15 +38,9 @@ const About = () => {
                 {t('about.story.title')}
               </h2>
               <div className="space-y-4 text-muted-foreground">
-                <p>
-                  {t('about.story.paragraph1')}
-                </p>
-                <p>
-                  {t('about.story.paragraph2')}
-                </p>
-                <p>
-                  {t('about.story.paragraph3')}
-                </p>
+                <p>{t('about.story.paragraph1')}</p>
+                <p>{t('about.story.paragraph2')}</p>
+                <p>{t('about.story.paragraph3')}</p>
               </div>
             </div>
             <div className="relative">
@@ -58,6 +51,24 @@ const About = () => {
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent rounded-2xl"></div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Why Choose Us Section */}
+      <section className="py-16 bg-gradient-sacred">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl font-playfair font-bold text-primary mb-4">
+              Why Choose Us?
+            </h2>
+          </div>
+          <div className="max-w-4xl mx-auto text-muted-foreground space-y-4 text-center">
+            <p>Wide range of Pujas, Havans, Homas and Yagyas performed by experienced Vedjis.</p>
+            <p>Deep knowledge and understanding of all religious Hindu scriptures.</p>
+            <p>Years of experience in performing complicated and complex religious Hindu rituals.</p>
+            <p>Devotees can perform the rituals at a place convenient to them.</p>
+            <p>Specialized in Shraadha Karma, Pitra Dosh, Gana Havana, Narayan Bali Pujas.</p>
           </div>
         </div>
       </section>
@@ -75,25 +86,23 @@ const About = () => {
           </div>
           
           <div className="flex justify-center">
-  {priests.map((priest) => (
-    <Card key={priest.name} className="sacred-card divine-hover max-w-sm">
-      <CardContent className="p-6 text-center">
-        <div className="w-20 h-20 mx-auto mb-4 bg-primary/10 rounded-full flex items-center justify-center">
-          <div className="text-3xl">🧘‍♂️</div>
-        </div>
-        <h3 className="text-xl font-playfair font-semibold mb-2">
-          {priest.name}
-        </h3>
-        <p className="text-primary font-medium mb-2">
-          {priest.experience}
-        </p>
-        <p className="text-sm text-muted-foreground">
-          {priest.description}
-        </p>
-      </CardContent>
-    </Card>
- 
-
+            {priests.map((priest) => (
+              <Card key={priest.name} className="sacred-card divine-hover max-w-sm">
+                <CardContent className="p-6 text-center">
+                  <div className="w-20 h-20 mx-auto mb-4 bg-primary/10 rounded-full flex items-center justify-center">
+                    <div className="text-3xl">🧘‍♂️</div>
+                  </div>
+                  <h3 className="text-xl font-playfair font-semibold mb-2">
+                    {priest.name}
+                  </h3>
+                  <p className="text-primary font-medium mb-2">
+                    {priest.experience}
+                  </p>
+                  <p className="text-sm text-muted-foreground">
+                    {priest.description}
+                  </p>
+                </CardContent>
+              </Card>
             ))}
           </div>
         </div>
