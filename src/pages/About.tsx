@@ -107,6 +107,7 @@ const About = () => {
           </div>
         </div>
       </section>
+      
 
       {/* Authenticity & Trust */}
       <section className="py-16">
