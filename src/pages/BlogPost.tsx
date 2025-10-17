@@ -87,7 +87,95 @@ const BlogPost = () => {
 
         <p>For bookings and more information, contact us at +91 98765 43210 or WhatsApp us for instant assistance.</p>
       `
-    }
+    },
+    "tripindi-shraddha-meaning-procedure-benefits": {
+  title: "Tripindi Shraddha – Meaning, Procedure, Importance & Benefits",
+  author: "Pandit Vishnu Bhat",
+  date: "March 20, 2024",
+  readTime: "9 min read",
+  image: templeComplex, // or use rudrabhisheka if imported at the top
+  content: `
+    <p><strong>Tripindi Shraddha</strong> (also called Tripindi Vidhi or Tripindi Pooja) is a sacred Vedic ritual performed for departed souls (Preta or Pishacha) who have not attained peace due to incomplete post-death rituals. It is closely linked with Narayan Bali, Tripindi Narayan Bali, and Preta Mukti Vidhi.</p>
+
+    <p>According to <em>Smriti Sara Samuccaya</em>, if proper post-death rituals (Sanskara) are not performed, a soul may become unsettled (Preta Avastha). Performing Tripindi Shraddha helps release such souls, ensuring peace, prosperity, and relief from ancestral issues (Pitru Dosha).</p>
+
+    <h2>Meaning of Tripindi Shraddha</h2>
+    <p>The term <strong>Tripindi</strong> comes from “Tri” meaning three and “Pinda” meaning rice balls offered to ancestors. During the ritual, three Pindas — Sattvik, Rajasic, and Tamasic — are offered to help the ancestors attain liberation (Moksha). It is also known as <em>Pishachoddhara Vidhi</em>, meaning “liberation from ghostly state,” and helps remove the Pishacha Dosha to bring peace to the family.</p>
+
+    <h2>Why Perform Tripindi Shraddha?</h2>
+    <ul>
+      <li>When post-death rituals are incomplete or neglected.</li>
+      <li>If death occurred in a foreign land or due to unnatural causes.</li>
+      <li>When families face repeated misfortunes or obstacles.</li>
+      <li>If there is <strong>Pitru Dosha</strong> (ancestral curse).</li>
+      <li>When the soul is believed to be wandering as a Preta or Pishacha.</li>
+    </ul>
+    <p>Performing Tripindi Shraddha removes Preta Dosha, Pishacha Dosha, and Pitru Dosha, restoring harmony, prosperity, and ancestral blessings.</p>
+
+    <h2>Sacred Places for Tripindi Shraddha</h2>
+    <p>According to <em>Katyayana Smriti</em> and <em>Gobhila Smriti</em>, this ritual should be performed near holy rivers and sacred sites:</p>
+    <ul>
+      <li>Kashi (Varanasi)</li>
+      <li>Godavari</li>
+      <li>Kanchi</li>
+      <li>Gokarna (Karnataka)</li>
+      <li>Satyamangala</li>
+      <li>Madhyarjuna</li>
+      <li>Rameshwaram (Tamil Nadu)</li>
+    </ul>
+    <p><strong>Gokarna</strong> is especially renowned for Narayan Bali and Tripindi Shraddha performed by expert Vedic priests.</p>
+
+    <h2>Tripindi Shraddha Procedure</h2>
+    <ol>
+      <li><strong>Mundan (Head Shaving) and Ritual Bath:</strong> The performer should shave the head and take a ritual bath (Kurcha Snana or Sahasra Mruttika Snana).</li>
+      <li><strong>Pinda Daan:</strong> Offer three Pindas — Sattvik, Rajasic, and Tamasic — while reciting the names and Gotra of the departed.</li>
+      <li><strong>Rudra Homa and Havan:</strong> Offer Til (sesame), Ajya (ghee), and Charu (gruel) with Rudra Mantras, Tryambaka Mantra, and Rudra Gayatri — chanting each 1000 times.</li>
+      <li><strong>Go Daan (Cow Donation):</strong> Donate three cows as prescribed for complete Pishachoddhara.</li>
+      <li><strong>Brahmana Bhojan and Dakshina:</strong> Feed Brahmins, offer clothes and Dakshina — all steps must be done with devotion and precision.</li>
+    </ol>
+
+    <h2>Benefits of Tripindi Shraddha</h2>
+    <ul>
+      <li>Grants peace to unsettled souls (Preta Mukti).</li>
+      <li>Removes Pitru Dosha, Preta Dosha, and Pishacha Dosha.</li>
+      <li>Brings peace, prosperity, and good health to the family.</li>
+      <li>Resolves marriage, career, and childbirth obstacles.</li>
+      <li>Ensures blessings of ancestors for future generations.</li>
+    </ul>
+
+    <h2>Tripindi Shraddha vs Narayan Bali</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Ritual</th>
+          <th>Purpose</th>
+          <th>When to Perform</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Tripindi Shraddha</td>
+          <td>Liberation of unsettled ancestors (Preta/Pishacha)</td>
+          <td>When post-death rituals are incomplete or death occurs unnaturally</td>
+        </tr>
+        <tr>
+          <td>Narayan Bali</td>
+          <td>Removes Pitru Dosha and family misfortunes</td>
+          <td>When families face repeated problems</td>
+        </tr>
+      </tbody>
+    </table>
+    <p>Both rituals are often performed together as <strong>Narayan Bali Tripindi Shraddha</strong> for complete ancestral liberation.</p>
+
+    <h2>Frequently Asked Questions (FAQ)</h2>
+    <p><strong>Q1.</strong> What is the meaning of Tripindi Shraddha?<br/>It is a sacred Vedic ritual performed to liberate unsettled souls (Preta or Pishacha).</p>
+    <p><strong>Q2.</strong> Where should it be performed?<br/>At holy places like Gokarna, Trimbakeshwar, Kashi, or Rameshwaram.</p>
+    <p><strong>Q3.</strong> Who can perform Tripindi Shraddha?<br/>Typically, the son, relative, or authorized family member under the guidance of a Vedic priest.</p>
+    <p><strong>Q4.</strong> What happens if not performed?<br/>Ancestors may remain unsatisfied, causing Pitru Dosha and obstacles in family life.</p>
+    <p><strong>Q5.</strong> Can Tripindi Shraddha and Narayan Bali be done together?<br/>Yes, both are often performed together for complete ancestral liberation.</p>
+  `
+}
+
   };
 
   const currentBlog = blogData[slug as keyof typeof blogData];

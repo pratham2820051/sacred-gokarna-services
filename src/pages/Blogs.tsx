@@ -21,16 +21,16 @@ const Blogs = () => {
       category: "Rituals"
     },
     {
-      id: 2,
-      slug: "best-time-rudrabhisheka-gokarna",
-      title: "Best Time for Rudrabhisheka in Gokarna: Auspicious Days & Benefits",
-      excerpt: "Learn about the most auspicious times, days, and lunar phases for performing Rudrabhisheka at Mahabaleshwar Temple.",
-      image: rudrabhisheka,
-      author: "Pandit Vishnu Bhat",
-      date: "March 10, 2024",
-      readTime: "7 min read",
-      category: "Timing"
-    },
+  id: 2,
+  slug: "tripindi-shraddha-meaning-procedure-benefits",
+  title: "Tripindi Shraddha – Meaning, Procedure, Importance & Benefits",
+  excerpt: "Understand the sacred Vedic ritual Tripindi Shraddha, its significance in releasing unsettled souls, and the benefits of performing it at holy places like Gokarna and Kashi.",
+  image: rudrabhisheka, 
+  author: "Pandit Vishnu Bhat",
+  date: "March 20, 2024",
+  readTime: "9 min read",
+  category: "Rituals"
+},
     {
       id: 3,
       slug: "gokarna-temple-history-significance",
