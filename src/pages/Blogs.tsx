@@ -20,6 +20,7 @@ const Blogs = () => {
       readTime: "5 min read",
       category: "Rituals"
     },
+    
     {
   id: 2,
   slug: "tripindi-shraddha-meaning-procedure-benefits",
