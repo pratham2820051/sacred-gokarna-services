@@ -179,8 +179,8 @@ const BlogPost = () => {
   };
 
   const currentBlog = blogData[slug as keyof typeof blogData];
-
-  if (!currentBlog) {
+ const showPosts = false; // should be true to show blog on read more
+  if (!showPosts || !currentBlog) { 
     return (
       <div className="min-h-screen flex items-center justify-center">
         <div className="text-center">
