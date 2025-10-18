@@ -273,6 +273,7 @@ const BlogPost = () => {
                   <a href="https://wa.me/919901801625" target="_blank" rel="noopener noreferrer">
                     WhatsApp: +91 99018 01625
                   </a>
+                  
                 </Button>
               </div>
             </div>
