@@ -90,7 +90,7 @@ const BlogPost = () => {
     },
     "tripindi-shraddha-meaning-procedure-benefits": {
   title: "Tripindi Shraddha – Meaning, Procedure, Importance & Benefits",
-  author: "Pandit Vishnu Bhat",
+  author: "Pandit Ghanapati Bhat",
   date: "March 20, 2024",
   readTime: "9 min read",
   image: templeComplex, // or use rudrabhisheka if imported at the top
@@ -270,8 +270,8 @@ const BlogPost = () => {
                   <Link to="/contact">Book Consultation</Link>
                 </Button>
                 <Button asChild variant="outline">
-                  <a href="https://wa.me/919876543210" target="_blank" rel="noopener noreferrer">
-                    WhatsApp: +91 98765 43210
+                  <a href="https://wa.me/919901801625" target="_blank" rel="noopener noreferrer">
+                    WhatsApp: +91 99018 01625
                   </a>
                 </Button>
               </div>
