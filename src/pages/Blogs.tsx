@@ -26,7 +26,9 @@ const imageMap: Record<string, string> = {
     t('blogs.categories.history'),
     t('blogs.categories.mantras'),
     t('blogs.categories.travel')
-  ];
+  ] ;
+
+  
 
   return (
     <div className="min-h-screen">
