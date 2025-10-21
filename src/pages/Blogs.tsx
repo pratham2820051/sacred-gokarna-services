@@ -5,7 +5,7 @@ import { useTranslation } from "react-i18next";
 import templeComplex from "@/assets/temple-complex.jpg";
 import rudrabhisheka from "@/assets/rudrabhisheka.jpg";
 import spiritualOm from "@/assets/spiritual-om.jpg";
-
+import Astrology from "@/assets/Astrology.jpg"
 const Blogs = () => {
   const { t } = useTranslation();
   const blogPosts = [
@@ -34,14 +34,14 @@ const Blogs = () => {
 },
     {
       id: 3,
-      slug: "gokarna-temple-history-significance",
-      title: "Gokarna Temple: Ancient History and Spiritual Significance",
-      excerpt: "Explore the rich 1500-year history of Mahabaleshwar Temple and understand why Gokarna is considered one of India's holiest places.",
-      image: spiritualOm,
-      author: "Dr. Gopal Sharma",
+      slug: "astrology-zodiac-signs-significance",
+      title: "Astrology and Zodiac Signs: Understanding the Cosmic Influence",
+      excerpt: "Dive into the ancient science of astrology and discover how planetary movements shape personality, destiny, and daily life across the twelve zodiac signs.",
+      image: Astrology,
+      author: "Pandit Narayana",
       date: "March 5, 2024",
       readTime: "10 min read",
-      category: "History"
+      category: "Astrology"
     },
     {
       id: 4,
@@ -170,13 +170,10 @@ const Blogs = () => {
                     <span className="text-xs text-muted-foreground">
                       {post.readTime}
                     </span>
-                    <Link 
-                      to={`/blog/${post.slug}`}
-                      className="inline-flex items-center text-primary text-sm font-medium hover:text-primary/80 transition-colors group-hover:translate-x-1 transition-transform"
-                    >
-{t('blogs.readMore')}
-                      <ArrowRight className="w-4 h-4 ml-1" />
-                    </Link>
+                    <Link to={`/blog/${post.slug}`} className="inline-flex items-center text-primary text-sm font-medium hover:text-primary/80 transition-colors group-hover:translate-x-1 transition-transform">
+  {t('blogs.readMore')} <ArrowRight className="w-4 h-4 ml-1" />
+</Link>
+
                   </div>
                 </CardContent>
               </Card>

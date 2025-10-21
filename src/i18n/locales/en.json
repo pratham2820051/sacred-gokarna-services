@@ -422,6 +422,82 @@
       "travel": "Travel"
     },
     "readMore": "Read More",
+    "articles": [
+        {
+        "id": 1,
+        "slug": "narayan-bali-pooja-cost-gokarna",
+        "title": "Narayan Bali Pooja Cost in Gokarna: Complete Guide 2024",
+        "excerpt": "Discover the complete cost breakdown, significance, and benefits of Narayan Bali ritual performed at the sacred Gokarna temple.",
+        "image": "temple-complex.jpg",
+        "author": "Pandit Raghunath Shastri",
+        "date": "March 15, 2024",
+        "readTime": "5 min read",
+        "category": "Rituals",
+        "content": {
+          "intro": "Narayan Bali is a sacred Vedic ritual performed in Gokarna for the liberation of departed souls.",
+          "main": "This guide explains the cost, significance, and procedure of the Narayan Bali Pooja.",
+          "sections": [
+            "Basic Package: ₹5,000 — includes priest guidance and basic ritual materials",
+            "Premium Package: ₹8,000 — includes photography and enhanced offerings",
+            "Comprehensive Package: ₹12,000 — extended ritual with blessings shipped home"
+          ],
+          "wisdom": "Performing Narayan Bali helps remove pitru dosha and brings peace to the family.",
+          "invitation": "Contact us to book your Narayan Bali ritual in Gokarna.",
+          "closing": "Blessings and prosperity await those who perform this sacred ritual."
+        }
+      },
+      {
+        "id": 2,
+        "slug": "tripindi-shraddha-meaning-procedure-benefits",
+        "title": "Tripindi Shraddha – Meaning, Procedure, Importance & Benefits",
+        "excerpt": "Understand the sacred Vedic ritual Tripindi Shraddha and its significance in releasing unsettled souls.",
+        "image": "rudrabhisheka.jpg",
+        "author": "Pandit Vishnu Bhat",
+        "date": "March 20, 2024",
+        "readTime": "9 min read",
+        "category": "Rituals",
+        "content": {
+          "intro": "Tripindi Shraddha is performed for unsettled ancestors who didn’t attain peace.",
+          "main": "It involves offering three Pindas and performing Vedic rituals guided by a priest.",
+          "sections": [
+            "Mundan and Ritual Bath",
+            "Pinda Daan",
+            "Rudra Homa and Havan",
+            "Go Daan (Cow Donation)",
+            "Brahmana Bhojan and Dakshina"
+          ],
+          "wisdom": "Regular Tripindi Shraddha removes Pitru Dosha and ensures family harmony.",
+          "invitation": "Book a Tripindi Shraddha ritual with our expert priests today.",
+          "closing": "Ancestral blessings bring peace and prosperity to the family."
+        }
+      },
+     {
+  "id": 3,
+  "slug": "astrology-zodiac-signs-significance",
+  "title": "Astrology and Zodiac Signs: Understanding the Cosmic Influence",
+  "excerpt": "Dive into astrology and discover how planetary movements shape personality and daily life.",
+  "image": "Astrology.jpg",
+  "author": "Pandit Narayana",
+  "date": "March 5, 2024",
+  "readTime": "10 min read",
+  "category": "Rituals",
+  "content": {
+    "intro": "Guidance through Vedic Astrology",
+    "main": "Dedicated to sharing insightful astrological analyses rooted in the timeless knowledge of Vedic tradition, this article aims not merely to predict events, but to help practitioners understand the nature of karma, become aware of planetary influences, and identify practical remedies when necessary.",
+    "sections": [
+      "Understanding your dashabhukti (planetary periods) and the influence of planets",
+      "The significance of doshas such as Pitru Dosha, Sarpa Dosha, and Kala Sarpa Dosha",
+      "The role of Vedic rituals such as Narayan Bali, Preta Uddhara, Shanti Homas, and other sacred ceremonies",
+      "Spiritual growth, ancestral peace, and karmic resolution through religious practices",
+      "Practical insights on planetary transits (gochar), remedies, and strengthening the energy of planets"
+    ],
+    "wisdom": "When approached with devotion and respect, Vedic astrology functions both as a mirror and a guide—bringing clarity to the mind, strength to the heart, and direction to one’s life journey.",
+    "invitation": "This section is also open to those seeking clear Vedic guidance or remedies in life. It aims to bring awareness, devotion, and positive transformation—supporting you like a gentle light on your path.",
+    "closing": "For personalized astrological insights or dosha-related remedies (including Narayan Bali, Preta Uddhara, or other appropriate Shanti rituals), please contact us through the 'Contact' section on the main site. All requests are handled with sincerity, confidentiality, and respect."
+  }
+}
+
+    ],
     "newsletter": {
       "title": "Stay Connected with Divine Wisdom",
       "subtitle": "Subscribe to receive the latest spiritual insights, ritual guides, and temple updates directly in your inbox",
