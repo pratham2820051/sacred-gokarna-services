@@ -495,7 +495,41 @@
     "invitation": "This section is also open to those seeking clear Vedic guidance or remedies in life. It aims to bring awareness, devotion, and positive transformation—supporting you like a gentle light on your path.",
     "closing": "For personalized astrological insights or dosha-related remedies (including Narayan Bali, Preta Uddhara, or other appropriate Shanti rituals), please contact us through the 'Contact' section on the main site. All requests are handled with sincerity, confidentiality, and respect."
   }
+},
+{
+  "id": 4, 
+  "slug": "tripindi-shraddha-procedure-benefits", 
+  "title": "Tripindi Shraddha: Complete Procedure and Spiritual Benefits", 
+  "excerpt": "Understanding the significance of this powerful ancestral ritual and its role in removing pitru dosha and bringing family harmony.", 
+  "image": "temple-complex.jpg",
+  "author": "Pandit Raghunath Shastri", 
+  "date": "February 28, 2024", 
+  "readTime": "8 min read", 
+  "category": "Rituals"
+},
+{
+  "id": 5,
+  "slug": "mahamrityunjaya-mantra-healing-power",
+  "title": "Mahamrityunjaya Mantra: The Healing Power of Ancient Chants",
+  "excerpt": "Discover how this powerful Vedic mantra brings healing, protection, and spiritual transformation in daily life.",
+  "image": "spiritual-om.jpg",
+  "author": "Pandit Vishnu Bhat",
+  "date": "February 20, 2024",
+  "readTime": "6 min read",
+  "category": "Mantras"
+},
+{
+  "id": 6,
+  "slug": "gokarna-travel-guide-devotees",
+  "title": "Gokarna Travel Guide for Devotees: Sacred Sites and Rituals",
+  "excerpt": "Complete travel guide covering temple visits, sacred beaches, local customs, and spiritual experiences in Gokarna.",
+  "image": "temple-complex.jpg",
+  "author": "Travel Team",
+  "date": "February 15, 2024",
+  "readTime": "12 min read",
+  "category": "Travel"
 }
+
 
     ],
     "newsletter": {

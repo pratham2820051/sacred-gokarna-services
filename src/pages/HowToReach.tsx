@@ -23,7 +23,7 @@ const HowToReach = () => {
       description: t('howToReach.travel.byCar.description'),
       details: t('howToReach.travel.byCar.details', { returnObjects: true })
     }
-  ];
+  ] as any[];
 
   const travelTips = [
     {
