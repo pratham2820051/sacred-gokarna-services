@@ -2,7 +2,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { useTranslation } from "react-i18next";
 import templeComplex from "@/assets/temple-complex.jpg";
 import spiritualOm from "@/assets/spiritual-om.jpg";
-
+import panditPhoto from "@/assets/panditPhoto.jpeg"
 const About = () => {
   const { t } = useTranslation();
   const priests = [
@@ -89,9 +89,14 @@ const About = () => {
             {priests.map((priest) => (
               <Card key={priest.name} className="sacred-card divine-hover max-w-sm">
                 <CardContent className="p-6 text-center">
-                  <div className="w-20 h-20 mx-auto mb-4 bg-primary/10 rounded-full flex items-center justify-center">
-                    <div className="text-3xl">🧘‍♂️</div>
-                  </div>
+                <div className="w-20 h-20 mx-auto mb-4 bg-primary/10 rounded-full flex items-center justify-center overflow-hidden">
+  <img
+    src={panditPhoto}
+    alt="Pandit"
+    className="w-full h-full object-cover"
+  />
+</div>
+
                   <h3 className="text-xl font-playfair font-semibold mb-2">
                     {priest.name}
                   </h3>
