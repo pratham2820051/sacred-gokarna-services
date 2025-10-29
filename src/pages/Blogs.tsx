@@ -104,14 +104,14 @@ const imageMap: Record<string, string> = {
                       <span>{post.author}</span>
                     </div>
                     <div className="flex items-center space-x-1">
-                      <Calendar className="w-3 h-3" />
-                      <span>{post.date}</span>
+                      {/* <Calendar className="w-3 h-3" /> */}
+                      {/* <span>{post.date}</span> */}
                     </div>
                   </div>
 
                   <div className="flex items-center justify-between">
                     <span className="text-xs text-muted-foreground">
-                      {post.readTime}
+                      {/* {post.readTime} */}
                     </span>
                     <Link 
                       to={`/blog/${post.slug}`} 
