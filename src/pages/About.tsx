@@ -44,8 +44,8 @@ const About = () => {
               </div>
             </div>
             <div className="relative">
-              <img 
-                src={templeComplex} 
+              <img
+                src={templeComplex}
                 alt="Ancient Gokarna Temple Complex"
                 className="rounded-2xl shadow-lg w-full"
               />
@@ -84,18 +84,18 @@ const About = () => {
               {t('about.priests.subtitle')}
             </p>
           </div>
-          
+
           <div className="flex justify-center">
             {priests.map((priest) => (
               <Card key={priest.name} className="sacred-card divine-hover max-w-sm">
                 <CardContent className="p-6 text-center">
-                <div className="w-20 h-20 mx-auto mb-4 bg-primary/10 rounded-full flex items-center justify-center overflow-hidden">
-  <img
-    src={panditPhoto}
-    alt="Pandit"
-    className="w-full h-full object-cover"
-  />
-</div>
+                  <div className="w-20 h-20 mx-auto mb-4 bg-primary/10 rounded-full flex items-center justify-center overflow-hidden">
+                    <img
+                      src={panditPhoto}
+                      alt="Pandit"
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
 
                   <h3 className="text-xl font-playfair font-semibold mb-2">
                     {priest.name}
@@ -112,15 +112,15 @@ const About = () => {
           </div>
         </div>
       </section>
-      
+
 
       {/* Authenticity & Trust */}
       <section className="py-16">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="relative">
-              <img 
-                src={spiritualOm} 
+              <img
+                src={spiritualOm}
                 alt="Sacred Om symbol with divine lighting"
                 className="rounded-2xl shadow-lg w-full"
               />
@@ -142,7 +142,7 @@ const About = () => {
                     </p>
                   </div>
                 </div>
-                
+
                 <div className="flex items-start space-x-4">
                   <div className="w-6 h-6 bg-primary rounded-full flex items-center justify-center mt-1">
                     <div className="w-2 h-2 bg-white rounded-full"></div>
@@ -154,7 +154,7 @@ const About = () => {
                     </p>
                   </div>
                 </div>
-                
+
                 <div className="flex items-start space-x-4">
                   <div className="w-6 h-6 bg-primary rounded-full flex items-center justify-center mt-1">
                     <div className="w-2 h-2 bg-white rounded-full"></div>
@@ -166,7 +166,7 @@ const About = () => {
                     </p>
                   </div>
                 </div>
-                
+
                 <div className="flex items-start space-x-4">
                   <div className="w-6 h-6 bg-primary rounded-full flex items-center justify-center mt-1">
                     <div className="w-2 h-2 bg-white rounded-full"></div>
