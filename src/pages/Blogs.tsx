@@ -113,10 +113,11 @@ const imageMap: Record<string, string> = {
                     <span className="text-xs text-muted-foreground">
                       {/* {post.readTime} */}
                     </span>
-                    <Link 
-                      to={`/blog/${post.slug}`} 
-                      className="inline-flex items-center text-primary text-sm font-medium hover:text-primary/80 transition-colors group-hover:translate-x-1 transition-transform"
-                    >
+                    <Link
+  to={`/blog/${post.slug}`}
+  className="inline-flex items-center text-primary text-sm font-medium hover:text-primary/80 group-hover:translate-x-1 transition-all duration-200"
+>
+
                       {t('blogs.readMore')} <ArrowRight className="w-4 h-4 ml-1" />
                     </Link>
                   </div>
