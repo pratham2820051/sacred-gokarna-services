@@ -3,11 +3,10 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Phone, MessageCircle, Star, Users, Shield, Clock } from "lucide-react";
 import { useTranslation } from "react-i18next";
-
 import rudrabhisheka from "@/assets/rudrabhisheka.jpg";
 import templeComplex from "@/assets/temple-complex.jpg";
 import heroVideo from "@/assets/heroVideo.mp4";
-import myIcon from "@/assets/icon.png"; 
+
 
 const Home = () => {
   const { t } = useTranslation();
@@ -221,6 +220,55 @@ const Home = () => {
         </div>
       </section>
 
+      {/* video section*/}
+      
+{/* Devotee Experience Video Section */}
+<section className="py-16 bg-gradient-sacred">
+  <div className="container mx-auto px-4 text-center">
+    <h2 className="text-4xl font-playfair font-bold text-primary mb-4">
+      {t("home.video.title")}
+    </h2>
+    <p className="text-muted-foreground max-w-2xl mx-auto mb-8">
+      {t("home.video.subtitle")}
+    </p>
+
+    <div className="relative max-w-4xl mx-auto rounded-2xl overflow-hidden group shadow-2xl">
+      {/* YouTube Embed */}
+      <iframe
+        id="ytplayer"
+        className="w-full h-[480px] rounded-2xl transition-all duration-500 group-hover:blur-sm"
+        src="https://www.youtube.com/embed/inySpZ5Aq2w?enablejsapi=1&autoplay=1&mute=1&loop=1&playlist=inySpZ5Aq2w"
+        frameBorder="0"
+        allow="autoplay; encrypted-media"
+        allowFullScreen
+      ></iframe>
+
+      {/* Overlay on hover */}
+      <div className="absolute inset-0 flex flex-col items-center justify-center bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+        <a
+          href="https://youtu.be/inySpZ5Aq2w"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="bg-white text-[#FF6600] font-semibold px-6 py-3 rounded-full shadow-lg hover:bg-gradient-to-r hover:from-[#FF6600] hover:to-[#FFA500] hover:text-white transition-colors flex items-center gap-2"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="currentColor"
+            viewBox="0 0 16 16"
+            className="w-5 h-5"
+          >
+            <path d="M6.79 5.093A.5.5 0 0 0 6 5.5v5a.5.5 0 0 0 .79.407l4.5-2.5a.5.5 0 0 0 0-.814l-4.5-2.5z" />
+            <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4z" />
+          </svg>
+          {t("home.video.watchOnYoutube")}
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
       {/* CTA Section */}
      <section className="py-16 bg-gradient-divine text-white">
   <div className="container mx-auto px-4 text-center">
@@ -246,6 +294,8 @@ const Home = () => {
       </Button>
 
       {/* WhatsApp Us button */}
+      
+
       <Button
         asChild
         size="lg"
