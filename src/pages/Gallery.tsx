@@ -12,7 +12,6 @@ const Gallery = () => {
   "https://res.cloudinary.com/dkc3ztbuo/image/upload/v1763314059/DSC_0084_dmuhb2.jpg",
   "https://res.cloudinary.com/dkc3ztbuo/image/upload/v1763314383/DSC_0075_cthnrr.jpg",
   "https://res.cloudinary.com/dkc3ztbuo/image/upload/v1763314460/DSC_0095_swhffc.jpg"
-
 ];
 
   const acRoomImages = [
