@@ -1,25 +1,27 @@
 import React from "react";
 import { Card, CardContent } from "@/components/ui/card";
 // import { ArrowRight } from "lucide-react";
-import templeComplex from "@/assets/temple-complex.jpg";
-import rudrabhisheka from "@/assets/rudrabhisheka.jpg";
-import spiritualOm from "@/assets/spiritual-om.jpg";
-import Astrology from "@/assets/Astrology.jpg";
+
 
 const Gallery = () => {
   // Add your Google Drive 
-  const poojaImages = [
-    templeComplex
-    ];
+ const poojaImages = [
+  "https://res.cloudinary.com/dkc3ztbuo/image/upload/v1763313486/DSC_0001_skor9p.jpg",
+  "https://res.cloudinary.com/dkc3ztbuo/image/upload/v1763313997/GOPR2088_rhxdel.jpg",
+  "https://res.cloudinary.com/dkc3ztbuo/image/upload/v1763314017/DSC_0020_zoir2o.jpg",
+  "https://res.cloudinary.com/dkc3ztbuo/image/upload/v1763314059/DSC_0084_dmuhb2.jpg",
+  "https://res.cloudinary.com/dkc3ztbuo/image/upload/v1763314383/DSC_0075_cthnrr.jpg",
+  "https://res.cloudinary.com/dkc3ztbuo/image/upload/v1763314460/DSC_0095_swhffc.jpg"
+
+];
 
   const acRoomImages = [
     
-   rudrabhisheka
+  
   ];
 
   const nonAcRoomImages = [
-    spiritualOm,
-    Astrology
+    
   ];
 
   
