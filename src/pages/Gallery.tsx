@@ -26,17 +26,15 @@ const Gallery = () => {
     "https://res.cloudinary.com/dkc3ztbuo/image/upload/v1763314756/GOPR2008_pzo45e.jpg",
     "https://res.cloudinary.com/dkc3ztbuo/image/upload/v1763314748/GOPR2045_kgljz6.jpg",
     // "https://res.cloudinary.com/dkc3ztbuo/image/upload/v1763314746/DSC_0286_dpgr79.jpg"
-
-
-
-
-  
-  ];
+];
 
   const nonAcRoomImages = [
     "https://res.cloudinary.com/dkc3ztbuo/image/upload/v1763315086/DSC_0037_rozawt.jpg",
-    
-  ];
+    "https://res.cloudinary.com/dkc3ztbuo/image/upload/v1763315085/DSC_0041_gsn0c6.jpg",
+    "https://res.cloudinary.com/dkc3ztbuo/image/upload/v1763315084/DSC_0013_vmicvc.jpg",
+    "https://res.cloudinary.com/dkc3ztbuo/image/upload/v1763315080/DSC_0032_bt1am1.jpg",
+    "https://res.cloudinary.com/dkc3ztbuo/image/upload/v1763315074/DSC_0062_xf1wqi.jpg"
+ ];
 
   
   const renderSection = (title: string, images: string[]) => (
