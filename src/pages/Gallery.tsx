@@ -16,11 +16,25 @@ const Gallery = () => {
 ];
 
   const acRoomImages = [
-    
+    "https://res.cloudinary.com/dkc3ztbuo/image/upload/v1763314807/DSC_0113_aoyfnj.jpg",
+    "https://res.cloudinary.com/dkc3ztbuo/image/upload/v1763314804/DSC_0288_jlxvvn.jpg",
+    "https://res.cloudinary.com/dkc3ztbuo/image/upload/v1763314800/GOPR2009_n704ci.jpg",
+    "https://res.cloudinary.com/dkc3ztbuo/image/upload/v1763314798/DSC_0193_jgjnzn.jpg",
+    "https://res.cloudinary.com/dkc3ztbuo/image/upload/v1763314796/DSC_0148_ntf3c5.jpg",
+    "https://res.cloudinary.com/dkc3ztbuo/image/upload/v1763314773/DSC_0233_ns1eyl.jpg",
+    "https://res.cloudinary.com/dkc3ztbuo/image/upload/v1763314771/DSC_0228_ufk72x.jpg",
+    "https://res.cloudinary.com/dkc3ztbuo/image/upload/v1763314756/GOPR2008_pzo45e.jpg",
+    "https://res.cloudinary.com/dkc3ztbuo/image/upload/v1763314748/GOPR2045_kgljz6.jpg",
+    // "https://res.cloudinary.com/dkc3ztbuo/image/upload/v1763314746/DSC_0286_dpgr79.jpg"
+
+
+
+
   
   ];
 
   const nonAcRoomImages = [
+    "https://res.cloudinary.com/dkc3ztbuo/image/upload/v1763315086/DSC_0037_rozawt.jpg",
     
   ];
 
