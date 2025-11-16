@@ -20,6 +20,7 @@ import BlogPost from "./pages/BlogPost";
 import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
 import SpecialPage from "@/pages/SpecialPage";
+import Gallery from "./pages/Gallery";
 
 const queryClient = new QueryClient();
 
@@ -66,6 +67,7 @@ const App = () => {
                 <Route path="/blogs" element={<Blogs />} />
                 <Route path="/blog/:slug" element={<BlogPost />} />
                 <Route path="/contact" element={<Contact />} />
+                <Route path="/gallery" element={<Gallery/>}/>
                 <Route path="*" element={<NotFound />} />
               </Routes>
             </main>
