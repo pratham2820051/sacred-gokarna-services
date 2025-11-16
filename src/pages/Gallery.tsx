@@ -1,6 +1,6 @@
 import React from "react";
 import { Card, CardContent } from "@/components/ui/card";
-import { ArrowRight } from "lucide-react";
+// import { ArrowRight } from "lucide-react";
 import templeComplex from "@/assets/temple-complex.jpg";
 import rudrabhisheka from "@/assets/rudrabhisheka.jpg";
 import spiritualOm from "@/assets/spiritual-om.jpg";
