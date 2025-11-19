@@ -13,6 +13,7 @@ const Poojas = () => {
   const poojaServices = [
     {
       id: 1,
+
       title: t('poojas.services.rudrabhisheka.title'),
       description: t('poojas.services.rudrabhisheka.description'),
       price: "₹2,500",
@@ -109,8 +110,31 @@ const Poojas = () => {
       image: rudrabhisheka,
       benefits: t('poojas.services.chandiHavana.benefits', { returnObjects: true }) || [],
       rating: 4.9
-    }
-    
+    },
+
+    {
+  id: 10,
+  title: t('poojas.services.mahaGanapathiPooja.title'),
+  description: t('poojas.services.mahaGanapathiPooja.description'),
+  price: "₹2,500",
+  duration: t('poojas.services.mahaGanapathiPooja.duration'),
+  participants: t('poojas.services.mahaGanapathiPooja.participants'),
+  image:  rudrabhisheka,
+  services: t('poojas.services.mahaGanapathiPooja.otherServices', { returnObjects: true }) || [],
+  rating: 4.8
+},
+{
+  id: 11,
+  title: t('poojas.services.mahabaleshwaraPooja.title'),
+  description: t('poojas.services.mahabaleshwaraPooja.description'),
+  price: "₹3,000",
+  duration: t('poojas.services.mahabaleshwaraPooja.duration'),
+  participants: t('poojas.services.mahabaleshwaraPooja.participants'),
+  image: spiritualOm, 
+  services: t('poojas.services.mahabaleshwaraPooja.otherServices', { returnObjects: true }) || [],
+  rating: 4.9
+},
+
 
   ];
 
@@ -175,18 +199,35 @@ const Poojas = () => {
                   </div>
 
                   {/* Benefits */}
-                  {Array.isArray(service.benefits) && service.benefits.length > 0 && (
-                    <div className="mb-6">
-                      <h4 className="text-sm font-semibold mb-2 text-primary">{t('poojas.services.keyBenefits')}</h4>
-                      <div className="grid grid-cols-2 gap-1">
-                        {service.benefits.map((benefit, index) => (
-                          <div key={index} className="text-xs text-muted-foreground">
-                            • {benefit}
-                          </div>
-                        ))}
-                      </div>
-                    </div>
-                  )}
+            
+{(() => {
+  const list = Array.isArray(service.benefits)
+    ? service.benefits
+    : Array.isArray(service.services)
+    ? service.services
+    : [];
+
+  if (list.length === 0) return null;
+
+  return (
+    <div className="mb-6">
+      <h4 className="text-sm font-semibold mb-2 text-primary">
+        {Array.isArray(service.benefits)
+          ? t("poojas.services.keyBenefits")
+          : "Other Services"}
+      </h4>
+
+      <div className="grid grid-cols-2 gap-1">
+        {list.map((item, index) => (
+          <div key={index} className="text-xs text-muted-foreground">
+            • {item}
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+})()}
+
 
                   {/* Price & CTA */}
                   <div className="flex items-center justify-between">

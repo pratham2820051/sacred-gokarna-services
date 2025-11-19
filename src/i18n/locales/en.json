@@ -213,6 +213,39 @@
   "participants": "Individuals or groups",
   "benefits": ["Clarity in decision-making", "Understanding life patterns", "Emotional balance", "Guidance for future planning"]
 },
+"mahaGanapathiPooja": {
+  "title": "Maha Ganapathi Pooja",
+  "description": "A sacred offering to Lord Ganesha to remove obstacles, purify the mind, and invoke divine blessings for auspicious beginnings.",
+  "duration": "1.5 Hours",
+  "participants": "Individual/Family",
+  "otherServices": [
+    "Panchamruta Abhishekam",
+    "Navadhanya Abhishekam",
+    "Rudra Abhishekam",
+    "Ekadasha Rudra Abhishekam",
+    "Shata Rudra Abhishekam",
+    "Maha Rudra Abhishekam",
+    "Ati Rudra Abhishekam"
+  ]
+},
+
+"mahabaleshwaraPooja": {
+  "title": "Mahabaleshwara Pooja",
+  "description": "A powerful ritual dedicated to Lord Mahabaleshwara of Gokarna, performed to seek divine protection, strength, and spiritual upliftment.",
+  "duration": "2 Hours",
+  "participants": "Individual/Family",
+  "otherServices": [
+    "Panchamruta Abhishekam",
+    "Navadhanya Abhishekam",
+    "Rudra Abhishekam",
+    "Ekadasha Rudra Abhishekam",
+    "Shata Rudra Abhishekam",
+    "Maha Rudra Abhishekam",
+    "Ati Rudra Abhishekam"
+  ]
+},
+
+
 
       "keyBenefits": "Key Benefits:",
       "bookNow": "Book Now"
