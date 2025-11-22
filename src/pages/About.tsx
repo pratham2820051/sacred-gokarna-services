@@ -3,6 +3,7 @@ import { useTranslation } from "react-i18next";
 import templeComplex from "@/assets/temple-complex.jpg";
 import spiritualOm from "@/assets/spiritual-om.jpg";
 import panditPhoto from "@/assets/panditPhoto.jpeg"
+import templePhoto from "@/assets/temple.jpeg"
 const About = () => {
   const { t } = useTranslation();
   const priests = [
@@ -45,7 +46,7 @@ const About = () => {
             </div>
             <div className="relative">
               <img
-                src={templeComplex}
+                src={templePhoto}
                 alt="Ancient Gokarna Temple Complex"
                 className="rounded-2xl shadow-lg w-full"
               />
