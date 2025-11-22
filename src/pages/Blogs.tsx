@@ -6,6 +6,15 @@ import templeComplex from "@/assets/temple-complex.jpg";
 import rudrabhisheka from "@/assets/rudrabhisheka.jpg";
 import spiritualOm from "@/assets/spiritual-om.jpg";
 import Astrology from "@/assets/Astrology.jpg";
+import chandi from "@/assets/chandi.png"
+import ganapati from "@/assets/ganapati.jpeg"
+import ganapatiHoma from "@/assets/ganapatiHoma.png"
+import mahabaleshwar from "@/assets/mahabaleshwar.jpg"
+import mrutyunjaya from  "@/assets/mrutyunjaya.png"
+import NagaShanti from  "@/assets/NagaShanti.jpeg"
+import narayanBali from  "@/assets/narayanBali.jpg"
+import navagraha from  "@/assets/navagraha.png"
+import Tripindi from "@/assets/Tripindi.png"
 const Blogs = () => {
   const { t } = useTranslation();
 
@@ -16,7 +25,17 @@ const imageMap: Record<string, string> = {
   "temple-complex.jpg": templeComplex,
   "rudrabhisheka.jpg": rudrabhisheka,
   "spiritual-om.jpg": spiritualOm,
-  "Astrology.jpg": Astrology
+  "Astrology.jpg": Astrology,
+  "chandi.png":chandi,
+  "ganapati.jpeg" :  ganapati,
+  "ganapatiHoma.png" :ganapatiHoma,
+  "mahabaleshwarjpg" :mahabaleshwar,
+  "mrutyunjaya.png":mrutyunjaya,
+  "NagaShanti.jpeg":NagaShanti,
+  "narayanBali.jpg":narayanBali,
+  "navagraha.png":navagraha,
+  "Tripindi.png":Tripindi
+
 };
 
   const categories = [
