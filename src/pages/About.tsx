@@ -44,6 +44,7 @@ const About = () => {
                 <p>{t('about.story.paragraph3')}</p>
               </div>
             </div>
+            
             <div className="relative">
               <img
                 src={templePhoto}
