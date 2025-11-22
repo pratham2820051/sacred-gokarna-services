@@ -6,8 +6,10 @@ import { useTranslation } from "react-i18next";
 import rudrabhisheka from "@/assets/rudrabhisheka.jpg";
 import templeComplex from "@/assets/temple-complex.jpg";
 import heroVideo from "@/assets/heroVideo.mp4";
+import Rudrabhisheka from "@/assets/Rudrabhisheka.png";
+import narayanBali from  "@/assets/narayanBali.jpg"
 
-
+import Tripindi from "@/assets/Tripindi.png"
 const Home = () => {
   const { t } = useTranslation();
 
@@ -37,19 +39,19 @@ const Home = () => {
       title: t('home.services.rudrabhisheka.title'),
       description: t('home.services.rudrabhisheka.description'),
       //price: t('home.services.rudrabhisheka.price'),
-      image: rudrabhisheka
+      image: Rudrabhisheka
     },
     {
       title: t('home.services.narayanBali.title'),
       description: t('home.services.narayanBali.description'),
       //price: t('home.services.narayanBali.price'),
-      image: templeComplex
+      image: narayanBali
     },
     {
       title: t('home.services.tripindiShraddha.title'),
       description: t('home.services.tripindiShraddha.description'),
       //price: t('home.services.tripindiShraddha.price'),
-      image: templeComplex
+      image: Tripindi
     }
   ];
 
