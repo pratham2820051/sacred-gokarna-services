@@ -3,10 +3,22 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Clock, Users, Star } from "lucide-react";
 import { useTranslation } from "react-i18next";
-import rudrabhisheka from "@/assets/rudrabhisheka.jpg";
+import Rudrabhisheka from "@/assets/Rudrabhisheka.png";
 import templeComplex from "@/assets/temple-complex.jpg";
 import spiritualOm from "@/assets/spiritual-om.jpg";
 import Astrology from "@/assets/Astrology.jpg"
+import chandi from "@/assets/chandi.png"
+import ganapati from "@/assets/ganapati.jpeg"
+import ganapatiHoma from "@/assets/ganapatiHoma.png"
+import mahabaleshwar from "@/assets/mahabaleshwar.jpg"
+import mrutyunjaya from  "@/assets/mrutyunjaya.png"
+import NagaShanti from  "@/assets/NagaShanti.jpeg"
+import narayanBali from  "@/assets/narayanBali.jpg"
+import navagraha from  "@/assets/navagraha.png"
+import Tripindi from "@/assets/Tripindi.png"
+
+
+
 const Poojas = () => {
   const { t } = useTranslation();
 
@@ -19,7 +31,7 @@ const Poojas = () => {
       price: "₹2,500",
       duration: t('poojas.services.rudrabhisheka.duration'),
       participants: t('poojas.services.rudrabhisheka.participants'),
-      image: rudrabhisheka,
+      image: Rudrabhisheka,
       benefits: t('poojas.services.rudrabhisheka.benefits', { returnObjects: true }) || [],
       rating: 4.9
     },
@@ -30,7 +42,7 @@ const Poojas = () => {
       price: "₹5,000",
       duration: t('poojas.services.narayanBali.duration'),
       participants: t('poojas.services.narayanBali.participants'),
-      image: templeComplex,
+      image: narayanBali,
       benefits: t('poojas.services.narayanBali.benefits', { returnObjects: true }) || [],
       rating: 4.8
     },
@@ -41,7 +53,7 @@ const Poojas = () => {
       price: "₹7,500",
       duration: t('poojas.services.tripindiShraddha.duration'),
       participants: t('poojas.services.tripindiShraddha.participants'),
-      image: spiritualOm,
+      image: Tripindi,
       benefits: t('poojas.services.tripindiShraddha.benefits', { returnObjects: true }) || [],
       rating: 4.9
     },
@@ -52,7 +64,7 @@ const Poojas = () => {
       price: "₹1,500",
       duration: t('poojas.services.mahamrityunjaya.duration'),
       participants: t('poojas.services.mahamrityunjaya.participants'),
-      image: spiritualOm,
+      image:mrutyunjaya,
       benefits: t('poojas.services.mahamrityunjaya.benefits', { returnObjects: true }) || [],
       rating: 4.7
     },
@@ -63,7 +75,7 @@ const Poojas = () => {
       price: "₹3,000",
       duration: t('poojas.services.ganapatiHomam.duration'),
       participants: t('poojas.services.ganapatiHomam.participants'),
-      image: templeComplex,
+      image: ganapatiHoma,
       benefits: t('poojas.services.ganapatiHomam.benefits', { returnObjects: true }) || [],
       rating: 4.8
     },
@@ -74,7 +86,7 @@ const Poojas = () => {
       price: "₹4,000",
       duration: t('poojas.services.navagrahaShanti.duration'),
       participants: t('poojas.services.navagrahaShanti.participants'),
-      image: rudrabhisheka,
+      image: navagraha,
       benefits: t('poojas.services.navagrahaShanti.benefits', { returnObjects: true }) || [],
       rating: 4.6
     },
@@ -96,7 +108,7 @@ const Poojas = () => {
       price: "₹3,500",
       duration: t('poojas.services.nagaShanti.duration'),
       participants: t('poojas.services.nagaShanti.participants'),
-      image: spiritualOm,
+      image: NagaShanti,
       benefits: t('poojas.services.nagaShanti.benefits', { returnObjects: true }) || [],
       rating: 4.9
     },
@@ -107,7 +119,7 @@ const Poojas = () => {
       price: "₹6,000",
       duration: t('poojas.services.chandiHavana.duration'),
       participants: t('poojas.services.chandiHavana.participants'),
-      image: rudrabhisheka,
+      image: chandi,
       benefits: t('poojas.services.chandiHavana.benefits', { returnObjects: true }) || [],
       rating: 4.9
     },
@@ -119,7 +131,7 @@ const Poojas = () => {
   price: "₹2,500",
   duration: t('poojas.services.mahaGanapathiPooja.duration'),
   participants: t('poojas.services.mahaGanapathiPooja.participants'),
-  image:  rudrabhisheka,
+  image:  ganapati,
   services: t('poojas.services.mahaGanapathiPooja.otherServices', { returnObjects: true }) || [],
   rating: 4.8
 },
@@ -130,7 +142,7 @@ const Poojas = () => {
   price: "₹3,000",
   duration: t('poojas.services.mahabaleshwaraPooja.duration'),
   participants: t('poojas.services.mahabaleshwaraPooja.participants'),
-  image: spiritualOm, 
+  image: mahabaleshwar, 
   services: t('poojas.services.mahabaleshwaraPooja.otherServices', { returnObjects: true }) || [],
   rating: 4.9
 },
