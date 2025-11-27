@@ -15,6 +15,7 @@ const About = () => {
   ];
 
   return (
+    
     <div className="min-h-screen">
       {/* Hero Section */}
       <section className="relative py-20 bg-gradient-sacred">
@@ -45,7 +46,7 @@ const About = () => {
               </div>
             </div>
             
-            
+
             <div className="relative">
               <img
                 src={templePhoto}
