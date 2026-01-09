@@ -22,7 +22,7 @@ const Contact = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    
+
     // Basic validation
     if (!formData.name || !formData.phone || !formData.poojaType) {
       toast({
@@ -33,10 +33,24 @@ const Contact = () => {
       return;
     }
 
+    // Construct WhatsApp message
+    const message = `Namaste, I want to enquire about a Pooja.
+
+Name: ${formData.name}
+Phone: ${formData.phone}
+Email: ${formData.email || 'Not provided'}
+Pooja Type: ${formData.poojaType}
+Preferred Date: ${formData.preferredDate || 'Not specified'}
+Message: ${formData.message || 'None'}`;
+
+    const whatsappUrl = `https://wa.me/919901801625?text=${encodeURIComponent(message)}`;
+
+    window.open(whatsappUrl, '_blank');
+
     // In a real app, this would send data to a server
     toast({
       title: t('contact.form.thankYou'),
-      description: t('contact.form.thankYouDescription'),
+      description: "Redirecting to WhatsApp to complete your inquiry...",
     });
 
     // Reset form
@@ -57,7 +71,7 @@ const Contact = () => {
   const poojaOptions = [
     "Rudrabhisheka",
     "Narayan Bali",
-    "Tripindi Shraddha", 
+    "Tripindi Shraddha",
     "Mahamrityunjaya Jap",
     "Ganapati Homam",
     "Navagraha Shanti",
@@ -89,7 +103,7 @@ const Contact = () => {
               <h2 className="text-3xl font-playfair font-bold text-primary mb-6">
                 {t('contact.form.title')}
               </h2>
-              
+
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div>
@@ -161,7 +175,7 @@ const Contact = () => {
 
                 <Button type="submit" className="btn-divine w-full">
                   <Send className="w-4 h-4 mr-2" />
-{t('contact.form.sendInquiry')}
+                  {t('contact.form.sendInquiry')}
                 </Button>
               </form>
             </div>
@@ -187,8 +201,8 @@ const Contact = () => {
                       </div>
                       <div>
                         <h3 className="font-semibold mb-1">{t('contact.info.call.title')}</h3>
-                        <a 
-                          href="tel:+919901801625" 
+                        <a
+                          href="tel:+919901801625"
                           className="text-primary hover:underline"
                         >
                           +91 9901801625
@@ -209,9 +223,9 @@ const Contact = () => {
                       </div>
                       <div>
                         <h3 className="font-semibold mb-1">{t('contact.info.whatsapp.title')}</h3>
-                        <a 
-                          href="https://wa.me/919901801625" 
-                          target="_blank" 
+                        <a
+                          href="https://wa.me/919901801625"
+                          target="_blank"
                           rel="noopener noreferrer"
                           className="text-primary hover:underline"
                         >
@@ -233,8 +247,8 @@ const Contact = () => {
                       </div>
                       <div>
                         <h3 className="font-semibold mb-1">{t('contact.info.email.title')}</h3>
-                        <a 
-                          href="mailto:gokarnapooja9@gmail.com" 
+                        <a
+                          href="mailto:gokarnapooja9@gmail.com"
                           className="text-primary hover:underline"
                         >
                           gokarnapooja9@gmail.com
@@ -255,7 +269,7 @@ const Contact = () => {
                       </div>
                       <div>
                         <h3 className="font-semibold mb-1">{t('contact.info.address.title')}</h3>
-                        <p className="text-muted-foreground text-sm" style={{whiteSpace: 'pre-line'}}>
+                        <p className="text-muted-foreground text-sm" style={{ whiteSpace: 'pre-line' }}>
                           {t('contact.info.address.address')}
                         </p>
                       </div>
@@ -271,7 +285,7 @@ const Contact = () => {
                       </div>
                       <div>
                         <h3 className="font-semibold mb-1">{t('contact.info.hours.title')}</h3>
-                        <p className="text-sm text-muted-foreground" style={{whiteSpace: 'pre-line'}}>
+                        <p className="text-sm text-muted-foreground" style={{ whiteSpace: 'pre-line' }}>
                           {t('contact.info.hours.description')}
                         </p>
                       </div>
@@ -295,7 +309,7 @@ const Contact = () => {
               {t('contact.map.subtitle')}
             </p>
           </div>
-          
+
           <div className="bg-white rounded-2xl shadow-lg overflow-hidden">
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3847.8751833333333!2d74.31683931484375!3d14.542580289862842!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bbcbc0b5c5b5b5b%3A0x1234567890abcdef!2sMahabaleshwar%20Temple%2C%20Gokarna!5e0!3m2!1sen!2sin!4v1234567890123!5m2!1sen!2sin"
@@ -322,7 +336,7 @@ const Contact = () => {
               {t('contact.faq.subtitle')}
             </p>
           </div>
-          
+
           <div className="max-w-3xl mx-auto space-y-6">
             {[
               {

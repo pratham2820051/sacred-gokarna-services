@@ -7,7 +7,8 @@ const routes = [
   { url: '/', changefreq: 'daily', priority: 1.0 },
   { url: '/about', changefreq: 'weekly', priority: 0.7 },
   { url: '/contact', changefreq: 'weekly', priority: 0.7 },
-    { url: '/blogs', changefreq: 'weekly', priority: 0.9 },
+  { url: '/blogs', changefreq: 'weekly', priority: 0.9 },
+  { url: '/blog/narayana-bali-benefits-complete-guide', changefreq: 'weekly', priority: 0.9 },
 ];
 
 async function generateSitemap() {

@@ -7,9 +7,10 @@ import rudrabhisheka from "@/assets/rudrabhisheka.jpg";
 import templeComplex from "@/assets/temple-complex.jpg";
 import heroVideo from "@/assets/heroVideo.mp4";
 import Rudrabhisheka from "@/assets/Rudrabhisheka.png";
-import narayanBali from  "@/assets/narayanBali.jpg"
+import narayanBali from "@/assets/narayanBali.jpg"
 
 import Tripindi from "@/assets/Tripindi.png"
+import { SEO } from "@/components/SEO";
 const Home = () => {
   const { t } = useTranslation();
 
@@ -21,7 +22,7 @@ const Home = () => {
       rating: 5
     },
     {
-      name: t('home.testimonials.testimonial2.name'), 
+      name: t('home.testimonials.testimonial2.name'),
       location: t('home.testimonials.testimonial2.location'),
       text: t('home.testimonials.testimonial2.text'),
       rating: 5
@@ -73,27 +74,58 @@ const Home = () => {
     }
   ];
 
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "HinduTemple",
+    "name": "Sacred Gokarna Services",
+    "image": "https://narayanabalitripindi.com/og-image.jpg",
+    "url": "https://narayanabalitripindi.com",
+    "telephone": "+919901801625",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Mahabaleshwar Temple Road",
+      "addressLocality": "Gokarna",
+      "addressRegion": "Karnataka",
+      "postalCode": "581326",
+      "addressCountry": "IN"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 14.5426,
+      "longitude": 74.3168
+    },
+    "description": "Official booking for Narayana Bali, Tripindi Shraddha, and Rudrabhisheka in Gokarna.",
+    "priceRange": "₹₹"
+  };
+
   return (
     <div className="min-h-screen">
-      {/* Hero Section */}
+      <SEO
+        title="Narayana Bali & Tripindi Shraddha Pooja in Gokarna | Book Online - Sacred Gokarna Services"
+        description="Book authentic Narayana Bali, Tripindi Shraddha, and Gokarna Pooja online with experienced Vedic priests. Official booking portal for Pitru Dosha remedies, Hindu rituals, and sacred ceremonies at Gokarna temples. Expert guidance, traditional rituals, and complete support for all pooja services."
+        keywords="narayanabali, narayanabalitripindi, gokarnapooja, gokarna pooja, gokarna, Narayana Bali, Tripindi Shraddha, Pooja booking, Hindu rituals, online pooja services, Pitru dosha remedies, narayan bali pooja, tripindi shraddha pooja, gokarna temple, vedic rituals, pitru dosha nivaran, rudrabhisheka, mahamrityunjaya jap"
+        canonical="https://narayanabalitripindi.com"
+        structuredData={jsonLd}
+      />
+      {/* Hero Section origin */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
-      <video
-        className="w-full h-full object-cover"
-        src={heroVideo}
-        autoPlay
-        loop
-        muted
-        playsInline
-      />
-    </div>
+          <video
+            className="w-full h-full object-cover"
+            src={heroVideo}
+            autoPlay
+            loop
+            muted
+            playsInline
+          />
+        </div>
         <div className="absolute inset-0 bg-gradient-temple opacity-80" />
-        
+
         <div className="relative z-10 text-center text-white px-4 max-w-4xl mx-auto">
           <h1 className="text-5xl md:text-7xl font-playfair font-bold mb-6 animate-fade-in-up">
-            {t('home.hero.title').split(' ').map((word, index) => 
-              word === 'Gokarna' || word === 'ಗೋಕರ್ಣ' || word === 'గోకర్ణ' ? 
-              <span key={index} className="text-yellow-300">{word} </span> : word + ' '
+            {t('home.hero.title').split(' ').map((word, index) =>
+              word === 'Gokarna' || word === 'ಗೋಕರ್ಣ' || word === 'గోకర్ణ' ?
+                <span key={index} className="text-yellow-300">{word} </span> : word + ' '
             )}
           </h1>
           <p className="text-xl md:text-2xl mb-8 text-white/90 animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
@@ -126,13 +158,13 @@ const Home = () => {
               {t('home.services.subtitle')}
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {services.map((service, index) => (
               <Card key={service.title} className="sacred-card divine-hover">
                 <div className="aspect-video overflow-hidden rounded-t-2xl">
-                  <img 
-                    src={service.image} 
+                  <img
+                    src={service.image}
                     alt={service.title}
                     className="w-full h-full object-cover"
                   />
@@ -145,7 +177,7 @@ const Home = () => {
                     {service.description}
                   </p>
                   <div className="flex items-center justify-between">
-                    
+
                     <Button asChild variant="outline" className="hover:bg-primary hover:text-white">
                       <Link to="/poojas">{t('home.services.bookNow')}</Link>
                     </Button>
@@ -168,7 +200,7 @@ const Home = () => {
               {t('home.whyChoose.subtitle')}
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {features.map((feature, index) => (
               <div key={feature.title} className="text-center group">
@@ -198,7 +230,7 @@ const Home = () => {
               {t('home.testimonials.subtitle')}
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {testimonials.map((testimonial, index) => (
               <Card key={testimonial.name} className="sacred-card">
@@ -223,103 +255,103 @@ const Home = () => {
       </section>
 
       {/* video section*/}
-      
-{/* Devotee Experience Video Section */}
-<section className="py-16 bg-gradient-sacred">
-  <div className="container mx-auto px-4 text-center">
-    <h2 className="text-4xl font-playfair font-bold text-primary mb-4">
-      {t("home.video.title")}
-    </h2>
-    <p className="text-muted-foreground max-w-2xl mx-auto mb-8">
-      {t("home.video.subtitle")}
-    </p>
 
-    <div className="relative max-w-4xl mx-auto rounded-2xl overflow-hidden group shadow-2xl">
-      {/* YouTube Embed */}
-      <iframe
-        id="ytplayer"
-        className="w-full h-[480px] rounded-2xl transition-all duration-500 group-hover:blur-sm"
-        src="https://www.youtube.com/embed/inySpZ5Aq2w?enablejsapi=1&autoplay=1&mute=1&loop=1&playlist=inySpZ5Aq2w"
-        frameBorder="0"
-        allow="autoplay; encrypted-media"
-        allowFullScreen
-      ></iframe>
+      {/* Devotee Experience Video Section */}
+      <section className="py-16 bg-gradient-sacred">
+        <div className="container mx-auto px-4 text-center">
+          <h2 className="text-4xl font-playfair font-bold text-primary mb-4">
+            {t("home.video.title")}
+          </h2>
+          <p className="text-muted-foreground max-w-2xl mx-auto mb-8">
+            {t("home.video.subtitle")}
+          </p>
 
-      {/* Overlay on hover */}
-      <div className="absolute inset-0 flex flex-col items-center justify-center bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-        <a
-          href="https://youtu.be/inySpZ5Aq2w"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="bg-white text-[#FF6600] font-semibold px-6 py-3 rounded-full shadow-lg hover:bg-gradient-to-r hover:from-[#FF6600] hover:to-[#FFA500] hover:text-white transition-colors flex items-center gap-2"
-        >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="currentColor"
-            viewBox="0 0 16 16"
-            className="w-5 h-5"
-          >
-            <path d="M6.79 5.093A.5.5 0 0 0 6 5.5v5a.5.5 0 0 0 .79.407l4.5-2.5a.5.5 0 0 0 0-.814l-4.5-2.5z" />
-            <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4z" />
-          </svg>
-          {t("home.video.watchOnYoutube")}
-        </a>
-      </div>
-    </div>
-  </div>
-</section>
+          <div className="relative max-w-4xl mx-auto rounded-2xl overflow-hidden group shadow-2xl">
+            {/* YouTube Embed */}
+            <iframe
+              id="ytplayer"
+              className="w-full h-[480px] rounded-2xl transition-all duration-500 group-hover:blur-sm"
+              src="https://www.youtube.com/embed/inySpZ5Aq2w?enablejsapi=1&autoplay=1&mute=1&loop=1&playlist=inySpZ5Aq2w"
+              frameBorder="0"
+              allow="autoplay; encrypted-media"
+              allowFullScreen
+            ></iframe>
+
+            {/* Overlay on hover */}
+            <div className="absolute inset-0 flex flex-col items-center justify-center bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+              <a
+                href="https://youtu.be/inySpZ5Aq2w"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-white text-[#FF6600] font-semibold px-6 py-3 rounded-full shadow-lg hover:bg-gradient-to-r hover:from-[#FF6600] hover:to-[#FFA500] hover:text-white transition-colors flex items-center gap-2"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="currentColor"
+                  viewBox="0 0 16 16"
+                  className="w-5 h-5"
+                >
+                  <path d="M6.79 5.093A.5.5 0 0 0 6 5.5v5a.5.5 0 0 0 .79.407l4.5-2.5a.5.5 0 0 0 0-.814l-4.5-2.5z" />
+                  <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4z" />
+                </svg>
+                {t("home.video.watchOnYoutube")}
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
 
 
 
       {/* CTA Section */}
-     <section className="py-16 bg-gradient-divine text-white">
-  <div className="container mx-auto px-4 text-center">
-    <h2 className="text-4xl font-playfair font-bold mb-4">
-      {t("home.cta.title")}
-    </h2>
-    <p className="text-xl mb-8 text-white/90 max-w-2xl mx-auto">
-      {t("home.cta.subtitle")}
-    </p>
-    <div className="flex flex-col sm:flex-row gap-4 justify-center">
-      {/* Call Now button */}
-      <Button
-        asChild
-        size="lg"
-        className="bg-white text-[#FF6600] border border-[#FF6600] 
+      <section className="py-16 bg-gradient-divine text-white">
+        <div className="container mx-auto px-4 text-center">
+          <h2 className="text-4xl font-playfair font-bold mb-4">
+            {t("home.cta.title")}
+          </h2>
+          <p className="text-xl mb-8 text-white/90 max-w-2xl mx-auto">
+            {t("home.cta.subtitle")}
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            {/* Call Now button */}
+            <Button
+              asChild
+              size="lg"
+              className="bg-white text-[#FF6600] border border-[#FF6600] 
                    hover:bg-gradient-to-r hover:from-[#FF6600] hover:to-[#FFA500] 
                    hover:text-white transition"
-      >
-        <Link to="/contact">
-          <Phone className="w-5 h-5 mr-2" />
-          9901801625
-        </Link>
-      </Button>
+            >
+              <Link to="/contact">
+                <Phone className="w-5 h-5 mr-2" />
+                9901801625
+              </Link>
+            </Button>
 
-      {/* WhatsApp Us button */}
-      
+            {/* WhatsApp Us button */}
 
-      <Button
-        asChild
-        size="lg"
-        className="bg-white text-[#FF6600] border border-[#FF6600] 
+
+            <Button
+              asChild
+              size="lg"
+              className="bg-white text-[#FF6600] border border-[#FF6600] 
                    hover:bg-gradient-to-r hover:from-[#FF6600] hover:to-[#FFA500] 
                    hover:text-white transition"
-      >
-        <a
-          href="https://wa.me/919901801625"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <MessageCircle className="w-5 h-5 mr-2" />
-          {t("home.cta.whatsappUs")}
-        </a>
-      </Button>
-    </div>
-  </div>
-</section>
+            >
+              <a
+                href="https://wa.me/919901801625"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <MessageCircle className="w-5 h-5 mr-2" />
+                {t("home.cta.whatsappUs")}
+              </a>
+            </Button>
+          </div>
+        </div>
+      </section>
 
       {/* Floating Icon Bottom-Left */}
-{/* <Link 
+      {/* <Link 
   to="/special-page" 
   className="fixed bottom-4 right-4 z-50"
 >
