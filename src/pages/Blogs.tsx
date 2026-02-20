@@ -29,7 +29,7 @@ const imageMap: Record<string, string> = {
   "chandi.png":chandi,
   "ganapati.jpeg" :  ganapati,
   "ganapatiHoma.png" :ganapatiHoma,
-  "mahabaleshwarjpg" :mahabaleshwar,
+  "mahabaleshwar.jpg" :mahabaleshwar,
   "mrutyunjaya.png":mrutyunjaya,
   "NagaShanti.jpeg":NagaShanti,
   "narayanBali.jpg":narayanBali,
