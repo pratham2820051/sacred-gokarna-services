@@ -21,6 +21,12 @@ import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
 import SpecialPage from "@/pages/SpecialPage";
 import Gallery from "./pages/Gallery";
+import NarayanaBaliPooja from "./pages/NarayanaBaliPooja";
+import TripindiShraddha from "./pages/TripindiShraddha";
+import PitruDoshaRemedies from "./pages/PitruDoshaRemedies";
+import VirtualPoojaBooking from "./pages/VirtualPoojaBooking";
+import Pricing from "./pages/Pricing";
+import FAQ from "./pages/FAQ";
 
 const queryClient = new QueryClient();
 
@@ -63,6 +69,12 @@ const App = () => {
                 <Route path="/special-page" element={<SpecialPage />} />
                 <Route path="/about" element={<About />} />
                 <Route path="/poojas" element={<Poojas />} />
+                <Route path="/narayana-bali-pooja" element={<NarayanaBaliPooja />} />
+                <Route path="/tripindi-shraddha" element={<TripindiShraddha />} />
+                <Route path="/pitru-dosha-remedies" element={<PitruDoshaRemedies />} />
+                <Route path="/virtual-pooja-booking" element={<VirtualPoojaBooking />} />
+                <Route path="/pricing" element={<Pricing />} />
+                <Route path="/faq" element={<FAQ />} />
                 <Route path="/how-to-reach" element={<HowToReach />} />
                 <Route path="/blogs" element={<Blogs />} />
                 <Route path="/blog/:slug" element={<BlogPost />} />

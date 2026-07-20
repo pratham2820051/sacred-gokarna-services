@@ -4,6 +4,8 @@ import templeComplex from "@/assets/temple-complex.jpg";
 import spiritualOm from "@/assets/spiritual-om.jpg";
 import panditPhoto from "@/assets/panditPhoto.jpeg"
 import templePhoto from "@/assets/temple.jpeg"
+import { SEO } from "@/components/SEO";
+
 const About = () => {
   const { t } = useTranslation();
   const priests = [
@@ -14,15 +16,83 @@ const About = () => {
     },
   ];
 
+  const localBusinessSchema = {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Narayana Bali Tripindi - Sacred Gokarna Services",
+    "image": "https://narayanabalitripindi.com/og-image.jpg",
+    "url": "https://narayanabalitripindi.com/",
+    "telephone": "+91-9901801625",
+    "priceRange": "₹10,000–₹20,000",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Kotiteertha",
+      "addressLocality": "Gokarna",
+      "addressRegion": "Karnataka",
+      "postalCode": "581326",
+      "addressCountry": "IN"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 14.5479,
+      "longitude": 74.3188
+    },
+    "openingHoursSpecification": {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+      "opens": "06:00",
+      "closes": "20:00"
+    }
+  };
+
+  const personSchema = {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Ganapati Bhat",
+    "jobTitle": "Certified Poojari",
+    "description": "10 years of experience performing Narayana Bali, Tripindi Shraddha and Nag Bali rituals at the sacred temples of Gokarna.",
+    "worksFor": {
+      "@type": "Organization",
+      "name": "Narayana Bali Tripindi - Sacred Gokarna Services"
+    },
+    "url": "https://narayanabalitripindi.com/about"
+  };
+
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://narayanabalitripindi.com/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "About",
+        "item": "https://narayanabalitripindi.com/about"
+      }
+    ]
+  };
+
   return (
     
     <div className="min-h-screen">
+      <SEO
+        title="About Us: Certified Vedic Priests in Gokarna"
+        description="Meet the priest team behind Narayana Bali Tripindi — 10 years performing authentic Vedic rituals in Gokarna. Credentials and experience."
+        keywords="vedic priests gokarna, narayana bali priest, certified poojari, gokarna temple priests"
+        canonical="https://narayanabalitripindi.com/about"
+        structuredData={[localBusinessSchema, personSchema, breadcrumbSchema]}
+      />
       {/* Hero Section */}
       <section className="relative py-20 bg-gradient-sacred">
         <div className="container mx-auto px-4">
           <div className="text-center max-w-4xl mx-auto">
             <h1 className="text-5xl font-playfair font-bold text-primary mb-6">
-              {t('about.hero.title')}
+              About Narayana Bali Tripindi — Sacred Gokarna Services
             </h1>
             <p className="text-xl text-muted-foreground mb-8">
               {t('about.hero.subtitle')}

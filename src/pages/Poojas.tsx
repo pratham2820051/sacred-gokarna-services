@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Clock, Users, Star } from "lucide-react";
 import { useTranslation } from "react-i18next";
+import { SEO } from "@/components/SEO";
 import Rudrabhisheka from "@/assets/Rudrabhisheka.png";
 import templeComplex from "@/assets/temple-complex.jpg";
 import spiritualOm from "@/assets/spiritual-om.jpg";
@@ -152,6 +153,20 @@ const Poojas = () => {
 
   return (
     <div className="min-h-screen">
+      <SEO
+        title="Sacred Pooja Services in Gokarna | All Rituals"
+        description="Browse all Vedic pooja services at Gokarna — Narayana Bali, Tripindi Shraddha, Rudrabhisheka, Navagraha Shanti and more. Book with certified priests."
+        keywords="gokarna pooja services, vedic rituals gokarna, rudrabhisheka, navagraha shanti, ganapati homam, pooja booking"
+        canonical="https://narayanabalitripindi.com/poojas"
+        structuredData={[{
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://narayanabalitripindi.com/" },
+            { "@type": "ListItem", "position": 2, "name": "Poojas", "item": "https://narayanabalitripindi.com/poojas" }
+          ]
+        }]}
+      />
       {/* Hero Section */}
       <section className="py-20 bg-gradient-sacred">
         <div className="container mx-auto px-4">

@@ -74,16 +74,17 @@ const Home = () => {
     }
   ];
 
-  const jsonLd = {
+  const localBusinessSchema = {
     "@context": "https://schema.org",
-    "@type": "HinduTemple",
-    "name": "Sacred Gokarna Services",
+    "@type": "LocalBusiness",
+    "name": "Narayana Bali Tripindi - Sacred Gokarna Services",
     "image": "https://narayanabalitripindi.com/og-image.jpg",
-    "url": "https://narayanabalitripindi.com",
-    "telephone": "+919901801625",
+    "url": "https://narayanabalitripindi.com/",
+    "telephone": "+91-9901801625",
+    "priceRange": "₹10,000–₹20,000",
     "address": {
       "@type": "PostalAddress",
-      "streetAddress": "Mahabaleshwar Temple Road",
+      "streetAddress": "Kotiteertha",
       "addressLocality": "Gokarna",
       "addressRegion": "Karnataka",
       "postalCode": "581326",
@@ -91,21 +92,32 @@ const Home = () => {
     },
     "geo": {
       "@type": "GeoCoordinates",
-      "latitude": 14.5426,
-      "longitude": 74.3168
+      "latitude": 14.5479,
+      "longitude": 74.3188
     },
-    "description": "Official booking for Narayana Bali, Tripindi Shraddha, and Rudrabhisheka in Gokarna.",
-    "priceRange": "₹₹"
+    "openingHoursSpecification": {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+      "opens": "06:00",
+      "closes": "20:00"
+    }
+  };
+
+  const webSiteSchema = {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Narayana Bali Tripindi",
+    "url": "https://narayanabalitripindi.com/"
   };
 
   return (
     <div className="min-h-screen">
       <SEO
-        title="Narayana Bali & Tripindi Shraddha Pooja in Gokarna | Book Online - Sacred Gokarna Services"
-        description="Book authentic Narayana Bali, Tripindi Shraddha, and Gokarna Pooja online with experienced Vedic priests. Official booking portal for Pitru Dosha remedies, Hindu rituals, and sacred ceremonies at Gokarna temples. Expert guidance, traditional rituals, and complete support for all pooja services."
-        keywords="narayanabali, narayanabalitripindi, gokarnapooja, gokarna pooja, gokarna, Narayana Bali, Tripindi Shraddha, Pooja booking, Hindu rituals, online pooja services, Pitru dosha remedies, narayan bali pooja, tripindi shraddha pooja, gokarna temple, vedic rituals, pitru dosha nivaran, rudrabhisheka, mahamrityunjaya jap"
+        title="Narayana Bali & Tripindi Shraddha Pooja in Gokarna | Book"
+        description="Book authentic Narayana Bali, Tripindi Shraddha & Nag Bali pooja in Gokarna with certified Vedic priests. In-person or virtual. 10 years' experience."
+        keywords="narayanabali, narayanabalitripindi, gokarnapooja, gokarna pooja, Narayana Bali, Tripindi Shraddha, Pooja booking, Hindu rituals, online pooja services, Pitru dosha remedies, narayan bali pooja, tripindi shraddha pooja, gokarna temple, vedic rituals"
         canonical="https://narayanabalitripindi.com"
-        structuredData={jsonLd}
+        structuredData={[localBusinessSchema, webSiteSchema]}
       />
       {/* Hero Section origin */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
@@ -123,10 +135,7 @@ const Home = () => {
 
         <div className="relative z-10 text-center text-white px-4 max-w-4xl mx-auto">
           <h1 className="text-5xl md:text-7xl font-playfair font-bold mb-6 animate-fade-in-up">
-            {t('home.hero.title').split(' ').map((word, index) =>
-              word === 'Gokarna' || word === 'ಗೋಕರ್ಣ' || word === 'గోకర్ణ' ?
-                <span key={index} className="text-yellow-300">{word} </span> : word + ' '
-            )}
+            Narayana Bali & Tripindi Shraddha Pooja in Gokarna
           </h1>
           <p className="text-xl md:text-2xl mb-8 text-white/90 animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
             {t('home.hero.subtitle')}
