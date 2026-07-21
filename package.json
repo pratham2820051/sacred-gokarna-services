@@ -80,6 +80,7 @@
     "globals": "^15.15.0",
     "lovable-tagger": "^1.1.9",
     "postcss": "^8.5.6",
+    "sharp": "^0.35.3",
     "sitemap": "^8.0.0",
     "tailwindcss": "^3.4.17",
     "ts-node": "^10.9.2",

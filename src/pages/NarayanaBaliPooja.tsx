@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { SEO } from "@/components/SEO";
-import narayanBali from "@/assets/narayanBali.jpg";
+import narayanBali from "@/assets/narayanBali.webp";
 
 const NarayanaBaliPooja = () => {
   const breadcrumbSchema = {

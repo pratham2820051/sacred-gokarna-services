@@ -2,13 +2,13 @@ import React from "react";
 import { useParams, Link } from "react-router-dom";
 import { ArrowLeft, Calendar, User, Clock } from "lucide-react";
 import { useTranslation } from "react-i18next";
-import narayanBali from "@/assets/narayanBali.jpg";
-import templeComplex from "@/assets/temple-complex.jpg";
-import rudrabhisheka from "@/assets/rudrabhisheka.jpg";
-import spiritualOm from "@/assets/spiritual-om.jpg";
-import Astrology from "@/assets/Astrology.jpg";
-import mahabaleshwar from "@/assets/mahabaleshwar.jpg";
-import Tripindi from "@/assets/Tripindi.png";
+import narayanBali from "@/assets/narayanBali.webp";
+import templeComplex from "@/assets/temple-complex.webp";
+import rudrabhisheka from "@/assets/rudrabhisheka.webp";
+import spiritualOm from "@/assets/spiritual-om.webp";
+import Astrology from "@/assets/Astrology.webp";
+import mahabaleshwar from "@/assets/mahabaleshwar.webp";
+import Tripindi from "@/assets/Tripindi.webp";
 
 const imageMap: Record<string, string> = {
   "narayanBali.jpg": narayanBali,

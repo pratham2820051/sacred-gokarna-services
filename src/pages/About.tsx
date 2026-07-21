@@ -1,9 +1,9 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { useTranslation } from "react-i18next";
-import templeComplex from "@/assets/temple-complex.jpg";
-import spiritualOm from "@/assets/spiritual-om.jpg";
-import panditPhoto from "@/assets/panditPhoto.jpeg"
-import templePhoto from "@/assets/temple.jpeg"
+import templeComplex from "@/assets/temple-complex.webp";
+import spiritualOm from "@/assets/spiritual-om.webp";
+import panditPhoto from "@/assets/panditPhoto.webp"
+import templePhoto from "@/assets/temple.webp"
 import { SEO } from "@/components/SEO";
 
 const About = () => {

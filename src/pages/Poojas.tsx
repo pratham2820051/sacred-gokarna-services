@@ -4,19 +4,19 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Clock, Users, Star } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import { SEO } from "@/components/SEO";
-import Rudrabhisheka from "@/assets/Rudrabhisheka.png";
-import templeComplex from "@/assets/temple-complex.jpg";
-import spiritualOm from "@/assets/spiritual-om.jpg";
-import Astrology from "@/assets/Astrology.jpg"
-import chandi from "@/assets/chandi.png"
-import ganapati from "@/assets/ganapati.jpeg"
-import ganapatiHoma from "@/assets/ganapatiHoma.png"
-import mahabaleshwar from "@/assets/mahabaleshwar.jpg"
-import mrutyunjaya from  "@/assets/mrutyunjaya.png"
-import NagaShanti from  "@/assets/NagaShanti.jpeg"
-import narayanBali from  "@/assets/narayanBali.jpg"
-import navagraha from  "@/assets/navagraha.png"
-import Tripindi from "@/assets/Tripindi.png"
+import Rudrabhisheka from "@/assets/Rudrabhisheka.webp";
+import templeComplex from "@/assets/temple-complex.webp";
+import spiritualOm from "@/assets/spiritual-om.webp";
+import Astrology from "@/assets/Astrology.webp"
+import chandi from "@/assets/chandi.webp"
+import ganapati from "@/assets/ganapati.webp"
+import ganapatiHoma from "@/assets/ganapatiHoma.webp"
+import mahabaleshwar from "@/assets/mahabaleshwar.webp"
+import mrutyunjaya from  "@/assets/mrutyunjaya.webp"
+import NagaShanti from  "@/assets/NagaShanti.webp"
+import narayanBali from  "@/assets/narayanBali.webp"
+import navagraha from  "@/assets/navagraha.webp"
+import Tripindi from "@/assets/Tripindi.webp"
 
 
 

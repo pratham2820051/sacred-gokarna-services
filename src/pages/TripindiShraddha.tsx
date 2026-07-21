@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { SEO } from "@/components/SEO";
-import Tripindi from "@/assets/Tripindi.png";
+import Tripindi from "@/assets/Tripindi.webp";
 
 const TripindiShraddha = () => {
   const breadcrumbSchema = {

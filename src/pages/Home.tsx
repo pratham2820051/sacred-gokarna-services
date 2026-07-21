@@ -4,14 +4,14 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Phone, MessageCircle, Star, Users, Shield, Clock, Play } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import { useState, useEffect, useRef } from "react";
-import rudrabhisheka from "@/assets/rudrabhisheka.jpg";
-import templeComplex from "@/assets/temple-complex.jpg";
+import rudrabhisheka from "@/assets/rudrabhisheka.webp";
+import templeComplex from "@/assets/temple-complex.webp";
 import heroVideo from "@/assets/heroVideo.mp4";
-import heroPoster from "@/assets/gokarna-hero.jpg";
-import Rudrabhisheka from "@/assets/Rudrabhisheka.png";
-import narayanBali from "@/assets/narayanBali.jpg"
+import heroPoster from "@/assets/gokarna-hero.webp";
+import Rudrabhisheka from "@/assets/Rudrabhisheka.webp";
+import narayanBali from "@/assets/narayanBali.webp"
 
-import Tripindi from "@/assets/Tripindi.png"
+import Tripindi from "@/assets/Tripindi.webp"
 import { SEO } from "@/components/SEO";
 
 // Hero section: poster image on mobile, deferred video on desktop
