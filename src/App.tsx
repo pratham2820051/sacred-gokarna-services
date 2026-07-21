@@ -3,7 +3,7 @@ import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { useState, useEffect } from "react";
+import { useState, useEffect, lazy, Suspense } from "react";
 import { useTranslation } from "react-i18next";
 import { Analytics } from "@vercel/analytics/next";
 import "./i18n";
@@ -11,22 +11,26 @@ import ScrollToTop from "./components/ScrollToTop";
 import LoadingScreen from "./components/LoadingScreen";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
+
+// Eagerly load homepage (critical path)
 import Home from "./pages/Home";
-import About from "./pages/About";
-import Poojas from "./pages/Poojas";
-import HowToReach from "./pages/HowToReach";
-import Blogs from "./pages/Blogs";
-import BlogPost from "./pages/BlogPost";
-import Contact from "./pages/Contact";
-import NotFound from "./pages/NotFound";
-import SpecialPage from "@/pages/SpecialPage";
-import Gallery from "./pages/Gallery";
-import NarayanaBaliPooja from "./pages/NarayanaBaliPooja";
-import TripindiShraddha from "./pages/TripindiShraddha";
-import PitruDoshaRemedies from "./pages/PitruDoshaRemedies";
-import VirtualPoojaBooking from "./pages/VirtualPoojaBooking";
-import Pricing from "./pages/Pricing";
-import FAQ from "./pages/FAQ";
+
+// Lazy-load all other pages (code-splitting)
+const About = lazy(() => import("./pages/About"));
+const Poojas = lazy(() => import("./pages/Poojas"));
+const HowToReach = lazy(() => import("./pages/HowToReach"));
+const Blogs = lazy(() => import("./pages/Blogs"));
+const BlogPost = lazy(() => import("./pages/BlogPost"));
+const Contact = lazy(() => import("./pages/Contact"));
+const NotFound = lazy(() => import("./pages/NotFound"));
+const SpecialPage = lazy(() => import("./pages/SpecialPage"));
+const Gallery = lazy(() => import("./pages/Gallery"));
+const NarayanaBaliPooja = lazy(() => import("./pages/NarayanaBaliPooja"));
+const TripindiShraddha = lazy(() => import("./pages/TripindiShraddha"));
+const PitruDoshaRemedies = lazy(() => import("./pages/PitruDoshaRemedies"));
+const VirtualPoojaBooking = lazy(() => import("./pages/VirtualPoojaBooking"));
+const Pricing = lazy(() => import("./pages/Pricing"));
+const FAQ = lazy(() => import("./pages/FAQ"));
 
 const queryClient = new QueryClient();
 
@@ -64,6 +68,7 @@ const App = () => {
           <div className="min-h-screen flex flex-col">
             <Header />
             <main className="flex-1">
+              <Suspense fallback={<div className="min-h-screen flex items-center justify-center"><div className="animate-spin rounded-full h-8 w-8 border-b-2 border-primary"></div></div>}>
               <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/special-page" element={<SpecialPage />} />
@@ -82,6 +87,7 @@ const App = () => {
                 <Route path="/gallery" element={<Gallery/>}/>
                 <Route path="*" element={<NotFound />} />
               </Routes>
+              </Suspense>
             </main>
             <Footer />
           </div>

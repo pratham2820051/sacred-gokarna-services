@@ -1,16 +1,108 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { Phone, MessageCircle, Star, Users, Shield, Clock } from "lucide-react";
+import { Phone, MessageCircle, Star, Users, Shield, Clock, Play } from "lucide-react";
 import { useTranslation } from "react-i18next";
+import { useState, useEffect, useRef } from "react";
 import rudrabhisheka from "@/assets/rudrabhisheka.jpg";
 import templeComplex from "@/assets/temple-complex.jpg";
 import heroVideo from "@/assets/heroVideo.mp4";
+import heroPoster from "@/assets/gokarna-hero.jpg";
 import Rudrabhisheka from "@/assets/Rudrabhisheka.png";
 import narayanBali from "@/assets/narayanBali.jpg"
 
 import Tripindi from "@/assets/Tripindi.png"
 import { SEO } from "@/components/SEO";
+
+// Hero section: poster image on mobile, deferred video on desktop
+const HeroSection = ({ t }: { t: (key: string) => string }) => {
+  const [isMobile, setIsMobile] = useState(false);
+  const [videoPlaying, setVideoPlaying] = useState(false);
+  const videoRef = useRef<HTMLVideoElement>(null);
+
+  useEffect(() => {
+    const checkMobile = () => setIsMobile(window.innerWidth < 768);
+    checkMobile();
+    window.addEventListener("resize", checkMobile);
+    return () => window.removeEventListener("resize", checkMobile);
+  }, []);
+
+  // On desktop, auto-load and play video after component mounts (deferred)
+  useEffect(() => {
+    if (!isMobile && videoRef.current) {
+      videoRef.current.src = heroVideo;
+      videoRef.current.load();
+      videoRef.current.play().then(() => setVideoPlaying(true)).catch(() => {});
+    }
+  }, [isMobile]);
+
+  const handlePlayVideo = () => {
+    if (videoRef.current) {
+      videoRef.current.src = heroVideo;
+      videoRef.current.load();
+      videoRef.current.play().then(() => setVideoPlaying(true)).catch(() => {});
+    }
+  };
+
+  return (
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+      {/* Background: poster image shown immediately, video loads on top */}
+      <div className="absolute inset-0">
+        <img
+          src={heroPoster}
+          alt="Sacred Gokarna Temple"
+          className={`w-full h-full object-cover ${videoPlaying ? 'hidden' : 'block'}`}
+          fetchPriority="high"
+        />
+        <video
+          ref={videoRef}
+          className={`w-full h-full object-cover absolute inset-0 ${videoPlaying ? 'block' : 'hidden'}`}
+          poster={heroPoster}
+          loop
+          muted
+          playsInline
+          preload="none"
+        />
+      </div>
+      <div className="absolute inset-0 bg-gradient-temple opacity-80" />
+
+      <div className="relative z-10 text-center text-white px-4 max-w-4xl mx-auto">
+        <h1 className="text-5xl md:text-7xl font-playfair font-bold mb-6 animate-fade-in-up">
+          Narayana Bali & Tripindi Shraddha Pooja in Gokarna
+        </h1>
+        <p className="text-xl md:text-2xl mb-8 text-white/90 animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
+          {t('home.hero.subtitle')}
+        </p>
+        <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in-up" style={{ animationDelay: '0.4s' }}>
+          <Button asChild size="lg" className="btn-divine text-lg px-8 py-4">
+            <Link to="/poojas">
+              {t('home.hero.bookPooja')}
+            </Link>
+          </Button>
+          <Button asChild size="lg" variant="outline" className="border-white text-orange-800 hover:bg-white hover:text-primary">
+            <a href="https://wa.me/919901801625" target="_blank" rel="noopener noreferrer" aria-label="Contact us on WhatsApp">
+              <MessageCircle className="w-5 h-5 mr-2" />
+              {t('home.hero.whatsapp')}
+            </a>
+          </Button>
+        </div>
+
+        {/* Mobile: play video button */}
+        {isMobile && !videoPlaying && (
+          <button
+            onClick={handlePlayVideo}
+            className="mt-6 inline-flex items-center gap-2 text-white/80 hover:text-white transition-colors"
+            aria-label="Play background video"
+          >
+            <Play className="w-5 h-5" />
+            <span className="text-sm">Watch Video</span>
+          </button>
+        )}
+      </div>
+    </section>
+  );
+};
+
 const Home = () => {
   const { t } = useTranslation();
 
@@ -119,42 +211,8 @@ const Home = () => {
         canonical="https://narayanabalitripindi.com"
         structuredData={[localBusinessSchema, webSiteSchema]}
       />
-      {/* Hero Section origin */}
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-        <div className="absolute inset-0">
-          <video
-            className="w-full h-full object-cover"
-            src={heroVideo}
-            autoPlay
-            loop
-            muted
-            playsInline
-          />
-        </div>
-        <div className="absolute inset-0 bg-gradient-temple opacity-80" />
-
-        <div className="relative z-10 text-center text-white px-4 max-w-4xl mx-auto">
-          <h1 className="text-5xl md:text-7xl font-playfair font-bold mb-6 animate-fade-in-up">
-            Narayana Bali & Tripindi Shraddha Pooja in Gokarna
-          </h1>
-          <p className="text-xl md:text-2xl mb-8 text-white/90 animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
-            {t('home.hero.subtitle')}
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in-up" style={{ animationDelay: '0.4s' }}>
-            <Button asChild size="lg" className="btn-divine text-lg px-8 py-4">
-              <Link to="/poojas">
-                {t('home.hero.bookPooja')}
-              </Link>
-            </Button>
-            <Button asChild size="lg" variant="outline" className="border-white text-orange-800 hover:bg-white hover:text-primary">
-              <a href="https://wa.me/919901801625" target="_blank" rel="noopener noreferrer">
-                <MessageCircle className="w-5 h-5 mr-2" />
-                {t('home.hero.whatsapp')}
-              </a>
-            </Button>
-          </div>
-        </div>
-      </section>
+      {/* Hero Section */}
+      <HeroSection t={t} />
 
       {/* Quick Services */}
       <section className="py-16 bg-background">
@@ -284,6 +342,7 @@ const Home = () => {
               frameBorder="0"
               allow="autoplay; encrypted-media"
               allowFullScreen
+              title="Devotee experience video - Narayana Bali Pooja at Gokarna"
             ></iframe>
 
             {/* Overlay on hover */}
@@ -330,7 +389,7 @@ const Home = () => {
                    hover:bg-gradient-to-r hover:from-[#FF6600] hover:to-[#FFA500] 
                    hover:text-white transition"
             >
-              <Link to="/contact">
+              <Link to="/contact" aria-label="Call us at 9901801625">
                 <Phone className="w-5 h-5 mr-2" />
                 9901801625
               </Link>
@@ -350,6 +409,7 @@ const Home = () => {
                 href="https://wa.me/919901801625"
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label="Contact us on WhatsApp"
               >
                 <MessageCircle className="w-5 h-5 mr-2" />
                 {t("home.cta.whatsappUs")}
