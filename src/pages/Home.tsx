@@ -4,8 +4,6 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Phone, MessageCircle, Star, Users, Shield, Clock, Play } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import { useState, useEffect, useRef } from "react";
-import rudrabhisheka from "@/assets/rudrabhisheka.webp";
-import templeComplex from "@/assets/temple-complex.webp";
 import heroVideo from "@/assets/heroVideo.mp4";
 import heroPoster from "@/assets/gokarna-hero.webp";
 import Rudrabhisheka from "@/assets/Rudrabhisheka.webp";
@@ -98,6 +96,54 @@ const HeroSection = ({ t }: { t: (key: string) => string }) => {
             <span className="text-sm">Watch Video</span>
           </button>
         )}
+      </div>
+    </section>
+  );
+};
+
+// YouTube section: click-to-load (no eager iframe)
+const YouTubeSection = ({ t }: { t: (key: string) => string }) => {
+  const [playVideo, setPlayVideo] = useState(false);
+
+  return (
+    <section className="py-16 bg-gradient-sacred">
+      <div className="container mx-auto px-4 text-center">
+        <h2 className="text-4xl font-playfair font-bold text-primary mb-4">
+          {t("home.video.title")}
+        </h2>
+        <p className="text-muted-foreground max-w-2xl mx-auto mb-8">
+          {t("home.video.subtitle")}
+        </p>
+
+        <div className="relative max-w-4xl mx-auto rounded-2xl overflow-hidden shadow-2xl">
+          {!playVideo ? (
+            <div
+              className="relative w-full h-[480px] cursor-pointer group"
+              onClick={() => setPlayVideo(true)}
+            >
+              <img
+                src="https://img.youtube.com/vi/inySpZ5Aq2w/hqdefault.jpg"
+                alt="Devotee experience video thumbnail"
+                className="w-full h-full object-cover rounded-2xl"
+                loading="lazy"
+                decoding="async"
+              />
+              <div className="absolute inset-0 flex items-center justify-center bg-black/30 group-hover:bg-black/40 transition-colors rounded-2xl">
+                <div className="w-16 h-16 bg-white/90 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform">
+                  <Play className="w-8 h-8 text-[#FF6600] ml-1" />
+                </div>
+              </div>
+            </div>
+          ) : (
+            <iframe
+              src="https://www.youtube.com/embed/inySpZ5Aq2w?autoplay=1&mute=1"
+              className="w-full h-[480px] rounded-2xl"
+              allow="autoplay; encrypted-media"
+              allowFullScreen
+              title="Devotee experience video - Narayana Bali Pooja at Gokarna"
+            />
+          )}
+        </div>
       </div>
     </section>
   );
@@ -227,13 +273,15 @@ const Home = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {services.map((service, index) => (
+            {services.map((service) => (
               <Card key={service.title} className="sacred-card divine-hover">
                 <div className="aspect-video overflow-hidden rounded-t-2xl">
                   <img
                     src={service.image}
                     alt={service.title}
                     className="w-full h-full object-cover"
+                    loading="lazy"
+                    decoding="async"
                   />
                 </div>
                 <CardContent className="p-6">
@@ -269,7 +317,7 @@ const Home = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {features.map((feature, index) => (
+            {features.map((feature) => (
               <div key={feature.title} className="text-center group">
                 <div className="w-16 h-16 mx-auto mb-4 bg-primary/10 rounded-full flex items-center justify-center group-hover:bg-primary/20 transition-colors">
                   <feature.icon className="w-8 h-8 text-primary" />
@@ -299,7 +347,7 @@ const Home = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {testimonials.map((testimonial, index) => (
+            {testimonials.map((testimonial) => (
               <Card key={testimonial.name} className="sacred-card">
                 <CardContent className="p-6">
                   <div className="flex items-center mb-4">
@@ -324,50 +372,7 @@ const Home = () => {
       {/* video section*/}
 
       {/* Devotee Experience Video Section */}
-      <section className="py-16 bg-gradient-sacred">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-4xl font-playfair font-bold text-primary mb-4">
-            {t("home.video.title")}
-          </h2>
-          <p className="text-muted-foreground max-w-2xl mx-auto mb-8">
-            {t("home.video.subtitle")}
-          </p>
-
-          <div className="relative max-w-4xl mx-auto rounded-2xl overflow-hidden group shadow-2xl">
-            {/* YouTube Embed */}
-            <iframe
-              id="ytplayer"
-              className="w-full h-[480px] rounded-2xl transition-all duration-500 group-hover:blur-sm"
-              src="https://www.youtube.com/embed/inySpZ5Aq2w?enablejsapi=1&autoplay=1&mute=1&loop=1&playlist=inySpZ5Aq2w"
-              frameBorder="0"
-              allow="autoplay; encrypted-media"
-              allowFullScreen
-              title="Devotee experience video - Narayana Bali Pooja at Gokarna"
-            ></iframe>
-
-            {/* Overlay on hover */}
-            <div className="absolute inset-0 flex flex-col items-center justify-center bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-              <a
-                href="https://youtu.be/inySpZ5Aq2w"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="bg-white text-[#FF6600] font-semibold px-6 py-3 rounded-full shadow-lg hover:bg-gradient-to-r hover:from-[#FF6600] hover:to-[#FFA500] hover:text-white transition-colors flex items-center gap-2"
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="currentColor"
-                  viewBox="0 0 16 16"
-                  className="w-5 h-5"
-                >
-                  <path d="M6.79 5.093A.5.5 0 0 0 6 5.5v5a.5.5 0 0 0 .79.407l4.5-2.5a.5.5 0 0 0 0-.814l-4.5-2.5z" />
-                  <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4z" />
-                </svg>
-                {t("home.video.watchOnYoutube")}
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
+      <YouTubeSection t={t} />
 
 
 
