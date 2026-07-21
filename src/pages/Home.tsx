@@ -6,7 +6,7 @@ import { useTranslation } from "react-i18next";
 import { useState, useEffect, useRef } from "react";
 import heroVideo from "@/assets/heroVideo.mp4";
 import heroPoster from "@/assets/gokarna-hero.webp";
-import Rudrabhisheka from "@/assets/Rudrabhisheka.webp";
+import RudrabhishekaImg from "@/assets/rudrabhisheka.webp";
 import narayanBali from "@/assets/narayanBali.webp"
 
 import Tripindi from "@/assets/Tripindi.webp"
@@ -178,7 +178,7 @@ const Home = () => {
       title: t('home.services.rudrabhisheka.title'),
       description: t('home.services.rudrabhisheka.description'),
       //price: t('home.services.rudrabhisheka.price'),
-      image: Rudrabhisheka
+      image: RudrabhishekaImg
     },
     {
       title: t('home.services.narayanBali.title'),

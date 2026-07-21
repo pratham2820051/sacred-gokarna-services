@@ -4,7 +4,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Clock, Users, Star } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import { SEO } from "@/components/SEO";
-import Rudrabhisheka from "@/assets/Rudrabhisheka.webp";
+import RudrabhishekaImg from "@/assets/rudrabhisheka.webp";
 import templeComplex from "@/assets/temple-complex.webp";
 import spiritualOm from "@/assets/spiritual-om.webp";
 import Astrology from "@/assets/Astrology.webp"
@@ -32,7 +32,7 @@ const Poojas = () => {
       price: "₹2,500",
       duration: t('poojas.services.rudrabhisheka.duration'),
       participants: t('poojas.services.rudrabhisheka.participants'),
-      image: Rudrabhisheka,
+      image: RudrabhishekaImg,
       benefits: t('poojas.services.rudrabhisheka.benefits', { returnObjects: true }) || [],
       rating: 4.9
     },
